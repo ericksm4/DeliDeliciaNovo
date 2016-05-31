@@ -1,0 +1,64 @@
+#banner{
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 390px;
+	width: 100%;
+	margin-top: 75px;
+}
+
+#corpoSite #content p{
+	color: #848484;
+	margin: 0;
+}
+
+#corpoSite #content h3{
+    font-family: "Roboto Medium";
+    color: #a21984;
+    margin: 15px 0 0;
+    font-weight: normal;
+    font-size: 17px;
+}
+
+#corpoSite #content img{
+	float: left;
+	border-radius: 3px;
+}
+
+#corpoSite #content > div{
+    float: left;
+    width: 690px;
+    margin-left: 60px;
+}
+
+@media screen and (max-width: 1250px){
+	#corpoSite #content > div{
+		width: 60%;
+	}
+
+	#corpoSite #content img {
+	    border-radius: 3px;
+	    width: 34%;
+	}	
+}
+
+@media screen and (max-width: 1050px){
+	#corpoSite #content > div{
+		width: 100%;
+		margin: 0;
+	}
+
+	#corpoSite #content img{
+		float: none;
+		margin: 0 auto 20px;
+		display: block;
+		max-width: 290px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 700px){
+	#banner{
+		height: 200px;
+	}
+}

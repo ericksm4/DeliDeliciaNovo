@@ -1,0 +1,176 @@
+<%#= stylesheet_link_tag 'bootstrap-datepicker/css/datepicker' %>
+<%#= stylesheet_link_tag 'bootstrap-colorpicker/css/colorpicker' %>
+<%#= stylesheet_link_tag 'bootstrap-daterangepicker/daterangepicker' %>
+<script>
+
+//desaparecer mensagem de erro, sucesso e alerta após 5s
+setTimeout(function() {
+  $("#conteudo #conteudoPrincipal span.msgSucesso, #conteudo #conteudoPrincipal span.msgErro, #conteudo #conteudoPrincipal span.msgAlerta").fadeOut("slow");
+}, 5000);
+
+</script>
+
+	<%= form_for(@lamina, :style => 'form-horizontal') do |f| %>
+		
+		<div class="form-group">
+			<label for="lamina[nome]" class="col-lg-2 col-sm-2 control-label">Lâmina</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :nome, :placeholder => "Nome de exibição da lamina", :class => 'form-control' %>
+          	</div>
+			  
+		</div>
+		<div class="clearAll">&nbsp;</div>
+ 
+	  	
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Status</label>
+			<div class="col-lg-5">
+				<%= f.select(:status, [['Não Publicado', '0'],
+			                       	   ['Publicado', '1'],
+			                           ['Oculto', '2']], {}, { :class => 'form-control' } )%>
+			</div>
+       	</div>
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+	    	<label class="col-lg-2 col-sm-2 control-label">Imagem de destaque</label>
+	    	<div class="col-lg-8 col-xs-11">
+			    <% if @lamina.imagem_destaque.blank? %>
+				 	<%= f.file_field :imagem_destaque, :class => 'form-control' %>
+				<% else %>
+				<div class="project-mask">
+			        <div class="thumbnail">
+						<%= image_tag("#{@lamina.imagem_destaque}", :class => 'imagemArea') %>
+			            <div class="descricao">
+							<%= link_to 'Excluir imagem', {:action => "excluiImagemDestaque"}, :id => @lamina.id, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluiImagemBanner btn btn-danger' %>	
+			            </div>
+			        </div>
+			    </div>
+
+				<% end %>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Imagens da lâmina</label>
+		    <div class="col-lg-10">
+		    	<%@lamina.imagens.each do |img|%>
+		    		<div class="project-mask">
+				        <div class="thumbnail">
+							<%= image_tag(img.imagem, :class => 'imagemArea') %>
+				            <div class="descricao">
+								<%= link_to 'Excluir imagem', {:action => "excluiImagemLamina", :id => img.id}, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluirImagemArea btn btn-danger' %>	
+				            </div>
+				        </div>
+				    </div>
+		    	<%end%>
+		 		<%= f.file_field :imagem, :multiple => true, :class => 'inputImportar form-control' %>	
+			</div>
+	    </div>
+				
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Data Início</label>
+		    <div class="col-lg-4 col-xs-11">
+			  	<div id="datetimepicker" class="input-group date form_datetime-component datePicker">
+			  		<%= if @lamina.data_inicio.blank?
+			        		f.text_field :data_inicio, :class=> 'form-control startdate', :size => '16', :value => Time.now.to_datetime.strftime("%d/%m/%Y")
+			        	else
+			        		f.text_field :data_inicio, :class=> 'form-control startdate', :size => '16', :value => @lamina.data_inicio.try(:strftime, '%d/%m/%Y')
+			        	end
+			        %>
+			        <span class="input-group-btn">
+			            <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+			        </span>
+			    </div>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+	  	<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Data Fim</label>
+		    <div class="col-lg-4 col-xs-11">
+			  	<div id="datetimepicker" class="input-group date form_datetime-component datePicker">
+
+			        <%= if @lamina.data_fim.blank?
+			        		f.text_field :data_fim, :class=> 'form-control enddate', :size => '16' 
+			        	else
+			        		f.text_field :data_fim, :class=> 'form-control enddate', :size => '16', :value => @lamina.data_fim.try(:strftime, '%d/%m/%Y')
+			        	end
+			        %>
+			        <span class="input-group-btn">
+			             <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+			        </span>
+			    </div>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="divisaoBtnForm">
+			<div class="botoesForm botoesFormSaveCancel">
+				<%= link_to "Voltar", {:action => "index"}, :class => "btn btn-default" %>
+				
+				<%= f.submit 'Salvar', :class => 'btn btn-info' %>
+			</div>
+		</div>
+		<%= f.hidden_field :id, :class=> 'form-control' %>
+<% end %>
+
+<script>
+
+	$('.thumbnail').hover(function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: 0
+	    }, 200);
+	}, function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: '-100%'
+	    }, 200);
+	});
+
+	$('.datePicker').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'pt-BR'
+    })
+
+    $("form").validate({
+       rules: {
+        'admin_lamina[nome]': {
+          required: true
+        },
+        'admin_lamina[data_fim]': {
+            greaterThan: ["#admin_lamina_data_inicio"]
+        }
+      },
+      messages: {
+        'admin_lamina[nome]': {
+         	required: "O nome da lâmina é obrigatório."
+     	},
+     	'admin_lamina[data_fim]':
+        { 
+            greaterThan:"Data fim menor que data inicio."
+        }
+      }
+  	});
+
+
+	$.validator.addMethod("greaterThan", 
+	function(value, element, params) {
+		data_inicial = value.split('/')
+        data_inicial = new Date(data_inicial[1]+'-'+data_inicial[0]+'-'+data_inicial[2])
+
+        data_final = $(params).val().split('/')
+        data_final = new Date(data_final[1]+'-'+data_final[0]+'-'+data_final[2])
+
+	    if (!/Invalid|NaN/.test(data_inicial)) {
+	        return data_inicial > data_final;
+	    }
+
+	    return  data_inicial > data_final; 
+	},'Data início maior que data fim.');
+
+	$(".enddate").rules('add', { greaterThan: ".startdate" });
+
+</script>

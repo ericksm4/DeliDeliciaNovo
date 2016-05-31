@@ -1,0 +1,212 @@
+
+<div class="formAddNovo novaAreaWidth ">
+	
+	<%= form_for(@categoria, :class=> 'form-horizontal') do |f| %>
+		
+	    <%= f.hidden_field :url, :id => 'urlDestinoCategorias', :value => "http://#{request.host_with_port}/categorias/" %>
+		
+		<%= f.hidden_field :id, :id => 'idCategoria', :value => @categoria.id %>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Área</label>
+			<div class="col-lg-6 col-xs-11">
+				<%= f.select(:area_id, Admin::Area.all.collect {|a| [ a.nome, a.id ] }, { :include_blank => false }, :id => 'nomeArea', :style=> 'width: 100%') %>
+			</div>
+		</div>
+		    <div class="clearAll">&nbsp;</div>
+			
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Categoria pai</label>
+			<div class="col-lg-6 col-xs-11">
+				<%= f.select(:categoria_id, @categorias.map {|c| [ c.nome, c.id ] }, { :include_blank => "Sem categoria pai" }, :id => 'nomeCategoriaPai', :style=> 'width: 100%') %>
+			</div>
+		</div>
+			<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+			<label for="categoria[nome]" class="col-lg-2 col-sm-2 control-label">Nome</label>
+		    <div class="col-lg-6 col-xs-11">
+                <%= f.text_field :nome, :placeholder => "Nome de exibição da categoria", :class => 'form-control' %>		
+              </div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+	  
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Ordem</label>
+		    <div class="col-lg-10">
+			    <div id="ordem">
+	              <div class="input-group input-small">
+	                
+	                  <%= if @categoria.url.blank?
+				 		 f.text_field :ordem, :min => 1, :value => @categorias.count + 1, :class => 'spinner-input form-control'  
+			 		  else
+					     f.text_field :ordem, :min => 1, :class => 'spinner-input form-control'
+					  end %>
+	                  <div class="spinner-buttons input-group-btn btn-group-vertical">
+	                      <button type="button" class="btn spinner-up btn-xs btn-default">
+	                          <i class="fa fa-angle-up"></i>
+	                      </button>
+	                      <button type="button" class="btn spinner-down btn-xs btn-default">
+	                          <i class="fa fa-angle-down"></i>
+	                      </button>
+	                  </div>
+	              </div>
+	          	</div>
+	        </div>
+		</div>
+			<div class="clearAll">&nbsp;</div>
+	  
+	  	<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Url da categoria</label>
+		    <div class="col-lg-6 col-xs-11">
+		    	<%= if @categoria.url.blank?
+			 		f.text_field :url, :value => "http://#{request.host_with_port}/categorias/" , :class=> 'form-control'
+		 		else
+					f.text_field :url, :class=> 'form-control'
+				end %>
+			</div>
+		</div>
+			<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Abrir em</label>
+			<div class="col-lg-5 col-xs-11">
+				<%= f.select(:target_url, [['Na mesma janela', '_self'],
+			                       ['Em uma nova janela', '_blank']], {}, { :class => 'form-control', })%>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Status</label>
+			<div class="col-lg-6 col-xs-11">
+				<%= f.select(:status, [['Não publicado', '0'],
+			                       ['Publicado', '1'],
+			                       ['Oculto', '2']], {}, { :class => 'form-control' } )%>
+			</div>                       
+       	</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div style="display:none">
+		<!---------------------------->
+				<div class="form-group">
+				    <span>Imagem</span>
+				    <% if @categoria.imagem.blank? %>
+					 		<%= f.file_field :imagem, :class => 'inputImportar' %>
+							
+							<%= f.submit 'Importar', :class => "btnCriarNovo btnImportar"%>
+							
+			 		<% else %>
+						<div class="project-mask">
+					        <div class="thumbnail">
+								<%= image_tag("#{@categoria.imagem}", :class => 'imagemArea') %>
+					            <div class="descricao">
+						
+									<%= link_to 'Excluir imagem', {:action => "excluiImagemCategoria"}, :id => @categoria.id, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluirImagemArea' %>
+											
+					            </div>
+					        </div>
+					    </div>
+				</div>
+				<div class="clearAll">&nbsp;</div>
+				<div data-intro='Aqui você pode inserir um link para quando o usário clicar na imagem.' data-step='9' data-position='top' class="divTour">
+				    <span>Imagem Url</span>
+				    <%= f.text_field :imagem_url, :placeholder => "Link da imagem de destaque" %>
+				</div>
+						<div class="clearAll">&nbsp;</div>
+				
+				<div data-intro='E escolher como ele será aberto, em uma nova ou na mesma janela.' data-step='10' data-position='top' class="divTour divTourDrop">
+					    <span>Target</span>
+						<%= f.select(:imagem_target_link, [['Abrir em nova janela', '_blank'],
+						                       ['Abrir na mesma janela', '_self']], {}, { :class => 'dropDownEstilizado' } )%>
+											   
+					<% end %>
+				</div>
+				<div class="clearAll">&nbsp;</div>
+			<!---------------------------->	
+		</div>
+</div>
+
+<div class="divisaoBtnForm col-lg-8">
+	<div class="botoesForm botoesFormSaveCancel">
+		<%= link_to "Voltar", {:action => "index"}, :class => "btn btn-default" %>
+		
+		<%= f.submit 'Salvar', :class => 'btn btn-info' %>
+	</div>
+</div>
+<% end %>
+
+<script>
+	$('#ordem').spinner();
+	$('#nomeArea').select2();
+	$('#nomeCategoriaPai').select2();
+
+	var urlCategoria = $( "#categoria_url" ).val();
+	var urlDestino = $( "#urlDestinoCategorias" ).val();
+	
+	$( "#categoria_nome" ).keyup(function( event ) {
+		if ($( "#categoria_url" ).val().indexOf(urlCategoria) >= 0)
+		{
+			var value = urlDestino + $( "#categoria_nome" ).val().replace(/\s/g, '+');
+			$( "#categoria_url" ).val( value );
+			
+			urlCategoria = $( "#categoria_url" ).val();
+		}
+	});
+	
+	$('.thumbnail').hover(function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: 0
+	    }, 200);
+	}, function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: '-100%'
+	    }, 200);
+	});
+	
+	$('#admin_categoria_area_id').change(function() {
+		$.ajax({
+	        url: "/admin/categorias/select/1?area_id=" + $('#admin_categoria_area_id').val() + '&categoria_id=' + $('#idCategoria').val(),
+	        dataType: "script"
+	    });
+	});
+
+  	$.ajax({
+  		url: "/admin/categorias/select/1?area_id=" + $('#admin_categoria_area_id').val() + '&categoria_id=' + $('#idCategoria').val(),
+  	    dataType: "script"
+  	});
+
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+  		//button customizado
+	    $('.botoesCustom input').iCheck({
+	        checkboxClass: 'icheckbox_minimal',
+	        increaseArea: '20%' // optional
+	    });
+
+	   
+
+	    //color picker do titulo
+        
+
+		//Validação do formulário
+    	$("form.edit_admin_categoria, form.new_admin_categoria").validate({
+           rules: {
+            'admin_categoria[nome]': 
+            {
+              required: true
+            }
+          },
+          messages: {
+            'admin_categoria[nome]': {
+             	required: "O nome da categoria é obrigatório."
+         	}
+          }
+      	});
+
+  	});
+ 
+</script>
+  

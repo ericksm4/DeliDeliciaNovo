@@ -1,0 +1,308 @@
+/*Box Fornecedor*/
+
+#boxCentro
+{
+    margin: 10px auto;
+    width: 800px;
+}
+
+#boxFornecedor
+{
+    float: left;
+    margin: 0 0 40px;
+}
+
+#conteudo .boxForm .tituloForm
+{
+	margin-bottom:15px; 
+}
+
+#boxFornecedor #tituloBoxFornecedor
+{
+	float: left;
+    margin: 0 0 10px;
+    padding: 0 2%;
+    width: 96%;
+}
+
+#boxFornecedor #tituloBoxFornecedor h2
+{
+	color: #555;
+	float: left;
+	font: 20px arial;
+	line-height: 30px;
+}
+
+#boxFornecedor #boxInfoComprador
+{
+	border-bottom: 1px solid #C1C1C1;
+    float: left;
+    margin: 0 2% 15px;
+    width: 96%;
+}
+
+#boxFornecedor #boxInfoComprador img
+{
+	border: 1px solid #DCDCDC;
+    float: left;
+    width: 70px;
+}
+
+#boxFornecedor #boxInfoComprador #infoComprador
+{
+	float: left;
+	margin: 0 0 15px 15px;
+	width: 500px;
+}
+
+#boxFornecedor #boxInfoComprador #infoComprador div
+{
+	float: left;
+	margin: 10px 0 20px;
+	width: 100%;
+}
+
+#boxFornecedor #boxInfoComprador #infoComprador div#infoCompradorTelEmail span
+{
+	margin: 0 5px 0 0; 
+	width: auto;
+}
+
+#boxFornecedor #boxInfoComprador #infoComprador span
+{
+	float: left;
+	font: bold 14px arial; 
+	margin:0 0 5px;
+	width: 100%;
+}
+
+#boxFornecedor #boxInfoComprador #infoComprador p
+{
+	float: left;
+	font: 14px arial;
+	margin: 0; 
+}
+
+#boxFornecedor #boxInfoComprador #infoComprador div#infoCompradorTelEmail
+{
+	margin:0 0 15px; 
+}
+
+#boxFornecedor #boxInfoComprador #infoComprador div#infoCompradorTelEmail p
+{
+	margin: 0 15px 0 0; 
+}
+
+#boxFornecedor #msgFornecedor
+{
+	border-bottom: 1px solid #C1C1C1;
+	float: left;
+	margin: 0 2% 15px;
+	width: 96%;
+}
+
+#boxFornecedor #msgFornecedor p
+{
+	color: #4a4a4a;
+	float: left;
+	font: bold 14px arial;
+	margin:10px 0; 
+	width: 100%;
+}
+
+#boxFornecedor #msgFornecedor p a
+{
+	 color: #0000FF;
+}
+
+#boxFornecedor #agendamentoConf
+{
+	float: left;
+	margin: 0 2% 15px;
+	width: 96%;
+}
+
+#boxFornecedor #agendamentoConf h3
+{
+	color: #1D58B5;
+	float: left;
+	font: 18px arial;
+	margin:0 0 10px; 
+	width: 100%;
+}
+
+#boxFornecedor #agendamentoConf span.semAgendamento
+{
+	color: #444;
+	float: left;
+	font: 14px arial;
+	text-align: left;
+	width: 100%;
+}
+
+/*Box Fornecedor*/
+
+/*Box de agendamento (home e agenda)*/
+
+#centralBoxAgendamento
+{
+	margin: 0 auto;
+	width: 700px;
+}
+
+#boxAgendamento
+{
+	background-color: #fcfcfc;
+	border: 1px solid #C9C9C9;
+    border-radius: 5px;
+    float: left;
+    margin: 10px 0;
+    width: 100%;
+}
+
+#boxAgendamento #tituloBoxAgendamento
+{
+	background-color: #F9F9F9;
+    border-bottom: 1px solid #E7E7E7;
+    border-radius: 5px 5px 0 0;
+    float: left;
+    font: bold 16px arial;
+    margin: 0 0 10px;
+    padding: 10px 2%;
+    width: 96%;
+}
+
+#boxAgendamento #tituloBoxAgendamento h4
+{
+	color: #333;
+	float: left;
+}
+
+#boxAgendamento #finalBoxAgendamento
+{
+	background-color: #F4F4F4;
+    border-radius: 0 0 5px 5px;
+    border-top: 1px solid #E7E7E7;
+    float: left;
+    font: 12px arial;
+    padding: 0 3%;
+    width: 94%;
+}
+
+#boxAgendamento #conteudoBoxAgendamento
+{
+	float: left;
+	margin: 0 0 15px;
+    padding: 0 2%;
+    width: 96%;
+}
+
+#boxAgendamento #conteudoBoxAgendamento .divisaoDadosBoxAg
+{
+	float: left;
+	margin:5px 0; 
+	width: 100%;
+}
+
+#boxAgendamento #conteudoBoxAgendamento .divisaoDadosBoxAg span
+{
+	float: left;
+	font: bold 14px arial;
+	margin: 0 5px 0 0px; 
+}
+
+#boxAgendamento #conteudoBoxAgendamento .divisaoDadosBoxAg p
+{
+	float: left;
+	font: 14px arial;
+}
+
+#boxAgendamento #conteudoBoxAgendamento input#alternate
+{
+	background: none;
+    border: medium none;
+    color: #333;
+    float: left;
+    font: 14px arial;
+    width: 220px;
+}
+
+#boxAgendamento #conteudoBoxAgendamento span.spanDropDown
+{
+	margin: 5px 5px 0 0;
+}
+
+#boxAgendamento #conteudoBoxAgendamento .select
+{
+	float: left;
+    padding: 5px;
+    text-align: center;
+}
+
+#boxAgendamento #finalBoxAgendamento .btnCancelAgend
+{
+	background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom , #FFFFFF, #E6E6E6);
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-image: -ms-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    font: 12px/17px arial;
+    margin: 10px auto;
+    outline: medium none;
+    padding: 4px 7px;
+    text-align: center;
+    text-decoration: none;
+    width: 60px;
+}
+
+#boxAgendamento #finalBoxAgendamento .btnCancelAgend:hover
+{
+	background-color: #e6e6e6;
+    background-image: linear-gradient(to bottom , #E6E6E6, #E6E6E6);
+    background-image: -moz-linear-gradient(center top , #E6E6E6, #E6E6E6);
+    background-image: -ms-linear-gradient(center top , #E6E6E6, #E6E6E6);
+}
+
+#boxAgendamento #finalBoxAgendamento .btnConfAgend
+{
+	background-color: #125B3A;
+    background-image: linear-gradient(to bottom , #125B3A, #0E482E);
+    background-image: -moz-linear-gradient(center top , #125B3A, #0E482E);
+    background-image: -ms-linear-gradient(center top , #125B3A, #0E482E);
+    border-color: #214535;
+    color: #fff;
+}
+
+#boxAgendamento #finalBoxAgendamento .btnConfAgend:hover
+{
+	background-color: #0E482E;
+    background-image: linear-gradient(to bottom , #0E482E, #0E482E);
+    background-image: -moz-linear-gradient(center top , #0E482E, #0E482E);
+    background-image: -ms-linear-gradient(center top , #0E482E, #0E482E);
+}
+
+#boxAgendamento #finalBoxAgendamento .btnConfCanc
+{
+	float: right;
+	margin: 0 auto;
+	width: 200px;
+}
+
+#boxAgendamento #finalBoxAgendamento .btnConfCanc .btnCancelAgend,
+#boxAgendamento #finalBoxAgendamento .btnConfCanc .btnConfAgend
+{
+	float: left;
+	margin: 10px; 
+}
+
+#boxAgendamento.jaPossuiAgendamento .btnConfCanc .btnConfAgend
+{
+	display: none;
+}
+
+/*Box de agendamento (home e agenda)*/

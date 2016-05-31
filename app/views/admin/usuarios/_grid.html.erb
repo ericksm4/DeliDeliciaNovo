@@ -1,0 +1,118 @@
+<script>
+//centralizar paginacao
+var a = $('.paginacao a').not('previous_page, next_page').length + 2;
+var b = $('.paginacao a').not('previous_page, next_page').outerWidth(true);
+var largura_total = (a * b) + 52;
+$('.paginacao').width(largura_total);
+
+$('.tabela tbody tr.tabelaHeader td a, #conteudo .paginacao a').on('click', function () {  
+  $.get(this.href, $(this).serialize(), null, 'script');  
+  return false;  
+}); 
+
+//desaparecer mensagem de erro, sucesso e alerta após 5s
+setTimeout(function() {
+  $("#conteudo #conteudoPrincipal span.msgSucesso, #conteudo #conteudoPrincipal span.msgErro, #conteudo #conteudoPrincipal span.msgAlerta").fadeOut("slow");
+}, 5000);
+
+$(function(){
+
+	//esconder o loader e a máscara caso seja clicado no botão 'não' do modal
+	$('body').on('click','button.ui-button:first-child', function() {
+		$('span.loader').show();
+        $('div.maskLoader').show();
+	});
+	
+	//quando clicar na paginação, exibir loader
+     $('.formAddNovo .btn.btn-info, .paginacao a, .table th a').click(function () {
+        $('span.loader').show();
+        $('div.maskLoader').show();
+    });
+
+});
+$(document).ready(function(){
+	$('.paginacao').show();
+})
+
+</script>
+
+<%= hidden_field_tag :direction, params[:direction] %>  
+<%= hidden_field_tag :sort, params[:sort] %> 
+
+	<div class="col-lg-12">
+		<section class="panel">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+						<th><%= sortable "nome", "Nome" %></td>
+				    	<th><%= sortable "email", "Email" %></td>
+				        <th>Editar</td>
+				        <th>Excluir</td>
+					</tr>
+				</thead>
+				<tbody>
+			    <% @usuarios.each_with_index do |user, index| %>
+			      <tr>
+			      	<td><%= user.nome %></td>
+			        <td><%= user.email %></td>
+					<td>	
+						<%= link_to('/register/edit/'+user.id.to_s) do %>
+							<i class="editar fa fa-edit"></i>
+						<% end %>
+					</td>
+					<td>
+						<%= button_to '', '#', 'data-confirm' => 'Tem certeza que deseja excluir esse usuário?', :class => "excluir", :id => user.id.to_s  %><i class="fa fa-times"></i>
+					</td>
+			      </tr>
+				  
+			    <% end %>
+			    </tbody>
+			</table>
+		</section>	
+	</div>
+<div>
+	
+	<%= will_paginate @usuarios,
+    	:class => 'paginacao', 
+		:previous_label => '<img src="/images/setaPaginacaoEsq.png"/>',
+		:next_label => '<img src="/images/setaPaginacaoDir.png"/>' 
+	%>       
+</div>           
+
+<script type="text/javascript">
+
+   
+
+    $('.excluir').click(function(e){
+    	e.preventDefault();
+    	dis = $(this)
+    	if(confirm('Deseja realmente excluir esse usuário?')){
+    		$('span.loader').show();
+    		$('div.maskLoader').show();
+	    	$.ajax({
+				"crossDomain": true,
+				"type":"POST",
+				beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+				"url":"/usuarios/delete",
+				"data": {id: $(this).attr('id')},
+				"dataType":"json",
+				"success":function(resp){
+					dis.closest('tr').remove()
+					 $('span.loader').hide();
+   					 $('div.maskLoader').hide();
+				}
+
+			})
+	    }
+	    else{
+	    	e.preventDefault();
+	    }
+	  })
+</script>
+    
+	   	<script type="text/javascript">
+
+    $('span.loader').hide();
+    $('div.maskLoader').hide();
+
+</script>

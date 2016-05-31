@@ -1,0 +1,17 @@
+/* Formulário padrão */
+
+.inputOrdem
+{
+	width:35px !important;
+}
+
+.inputCheckBox
+{
+	width: 35px !important;
+	margin: 13px 0 15px 0 !important;
+}
+
+.inputDropDown
+{
+	margin: 11px 15px 15px 0 !important;
+}

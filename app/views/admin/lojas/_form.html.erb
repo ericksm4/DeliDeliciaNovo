@@ -1,0 +1,127 @@
+<%#= stylesheet_link_tag 'bootstrap-datepicker/css/datepicker' %>
+<%#= stylesheet_link_tag 'bootstrap-colorpicker/css/colorpicker' %>
+<%#= stylesheet_link_tag 'bootstrap-daterangepicker/daterangepicker' %>
+<script>
+
+//desaparecer mensagem de erro, sucesso e alerta após 5s
+setTimeout(function() {
+  $("#conteudo #conteudoPrincipal span.msgSucesso, #conteudo #conteudoPrincipal span.msgErro, #conteudo #conteudoPrincipal span.msgAlerta").fadeOut("slow");
+}, 5000);
+
+</script>
+
+	<%= form_for(@loja, :style => 'form-horizontal') do |f| %>
+		
+		<div class="form-group">
+			<label for="loja[nome]" class="col-lg-2 col-sm-2 control-label">Nome</label>
+			<div class="col-lg-4 col-xs-11">
+              	<%= f.text_field :nome, :placeholder => "Nome de exibição da loja", :class => 'form-control' %>
+          	</div>
+			  
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Endereço</label>
+			<div class="col-lg-5 col-xs-11">
+              	<%= f.text_field :endereco, :placeholder => "Endereço da loja", :class => 'form-control' %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Cidade</label>
+			<div class="col-lg-4 col-xs-11">
+              	<%= f.text_field :cidade, :placeholder => "Cidade da loja", :class => 'form-control' %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Horário de funcionamento</label>
+			<div class="col-lg-4 col-xs-11">
+              	<%= f.text_field :horario_funcionamento, :placeholder => "Horário de funcionamento", :class => 'form-control' %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Telefone</label>
+			<div class="col-lg-3 col-xs-11">
+              	<%= f.text_field :telefone, :placeholder => "Telefone", :class => 'form-control' %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Url tour virtual</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :url_tour, :placeholder => "Url do tour virtual", :class => 'form-control' %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Url mapa</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :url_maps, :placeholder => "Url do maps", :class => 'form-control' %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Imagem</label>
+		    <div class="col-lg-8">
+		    	<%unless @loja.imagem.blank?%>
+		    		<div class="project-mask">
+				        <div class="thumbnail">
+							<%= image_tag(@loja.imagem, :class => 'imagemArea') %>
+				            <div class="descricao">
+								<%= link_to 'Excluir imagem', {:action => "excluiImagemLoja"}, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluirImagemArea btn btn-danger' %>	
+				            </div>
+				        </div>
+				    </div>
+				<%else%>
+		    		<%= f.file_field :imagem, :class => 'inputImportar form-control' %>	
+		    	<%end%>
+			</div>
+	    </div>
+				
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="divisaoBtnForm">
+			<div class="botoesForm botoesFormSaveCancel">
+				<%= link_to "Voltar", {:action => "index"}, :class => "btn btn-default" %>
+				
+				<%= f.submit 'Salvar', :class => 'btn btn-info' %>
+			</div>
+		</div>
+		<%= f.hidden_field :id, :class=> 'form-control' %>
+<% end %>
+
+<script>
+
+	$('.thumbnail').hover(function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: 0
+	    }, 200);
+	}, function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: '-100%'
+	    }, 200);
+	});
+
+    $("form").validate({
+       rules: {
+        'admin_loja[nome]': {
+          required: true
+        }
+      },
+      messages: {
+        'admin_loja[nome]': {
+         	required: "O nome da loja é obrigatório."
+     	}
+      }
+  	});
+
+</script>

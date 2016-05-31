@@ -1,0 +1,231 @@
+
+#master #tituloCadastro
+{
+	float: left;
+	margin: 10px 0 40px;
+	width: 100%;
+}
+
+#master a.btn,
+#master input.btn
+{
+	background-color: #e3a426;
+	border: none;
+	border-bottom: 5px solid #bc881f;
+	color: #fff;
+    cursor: pointer;
+    float: left;
+    font: 20px 'museo500';
+    margin: 10px 0 20px 0;
+    padding: 10px;
+    text-align: center;
+    width: 200px
+}
+
+#master a.btn:hover,
+#master input.btn:hover
+{
+	background-color: #DA9C23;
+}
+
+#master a.btn:active,
+#master input.btn:active
+{
+	background-color: #bc881f;
+}
+
+#master a.cadastrar,
+#master input.cadastrar
+{
+	background-color: #641d5d;
+	border-color: #4a1544;
+	float: left;
+	font: 28px 'museo700';
+}
+
+#master a.cadastrar:hover,
+#master input.cadastrar:hover
+{
+	background-color: #591A53;
+}
+
+#master a.cadastrar:active,
+#master input.cadastrar:active
+{
+	background-color: #4a1544;
+}
+
+#master #tituloCadastro > div
+{
+	float: left;
+	width: 450px;
+}
+
+#master #tituloCadastro h1
+{
+	color: #631C5B;
+    float: left;
+    font: 34px/34px 'museo700';
+    margin: 0 0 5px;
+    padding: 0;
+    width: 100%;
+}
+
+#master #tituloCadastro h3
+{
+	color: #878787;
+	float: left;
+	font: 24px 'museo300';
+	width: 100%;
+}
+
+#master #formCadastro
+{
+	float: left;
+	width: 100%;
+}
+
+#master #formCadastro div
+{
+	float: left;
+	margin: 0 0 15px;
+	width: 100%;
+}
+
+#master #formCadastro div label.labelCadastro
+{
+	color: #878787;
+	float: left;
+	font: 22px 'museo700';
+	margin: 0 0 7px;
+	width: 100%;
+}
+
+#master #formCadastro .form-inputs div input
+{
+	border: 1px solid #DCDCDC;
+    color: #555555;
+    float: left;
+    font: 20px 'museo500';
+    height: 30px;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+
+#master #formCadastro .form-inputs div input:hover
+{
+	border-color: #CFCFCF;
+}
+
+#master #formCadastro .form-inputs div input:focus
+{
+	background-color: #fcfcfc;
+	border-color: #aaa;
+	border-radius: 5px;
+	box-shadow: 0 0 3px #d5d5d5;
+}
+
+#master #formCadastro .form-inputs div.input
+{
+	float: left;
+	margin: 0;
+}
+
+#master #formCadastro .form-inputs div.nomeCompletoCadastro input
+{
+	width: 680px;
+}
+
+#master #formCadastro .form-inputs div.emailCadastro input
+{
+	width: 520px;
+}
+
+#master #formCadastro .form-inputs div.senhaCadastro input,
+#master #formCadastro .form-inputs div.telefoneCadastro input,
+#master #formCadastro .form-inputs div.sexoDataCadastro input
+{
+	width: 320px;
+}
+
+#master #formCadastro .form-inputs div.senhaCadastro > div,
+#master #formCadastro .form-inputs div.telefoneCadastro > div,
+#master #formCadastro .form-inputs div.sexoDataCadastro > div
+{
+	width: 360px;
+}
+
+#master #formCadastro .form-inputs div.cpfCadastro input
+{
+	width: 320px;
+}
+
+
+#master #formCadastro .form-inputs div.sexoDataCadastro > div label.sexoCadastro
+{
+	color: #878787;
+    float: left;
+    font: 18px 'museo300';
+    margin: 0 0 10px 20px;
+    position: relative;
+    width: 80%;
+}
+
+#master #formCadastro .form-inputs div.sexoDataCadastro label input
+{
+	height: auto;
+    left: -21px;
+    margin: 3px 5px 0 0;
+    padding: 0;
+    position: absolute;
+    width: 20px;
+} 
+
+#master #formCadastro .form-inputs label.receberNews
+{
+	color: #878787;
+	float: left;
+	font: 14px 'museo300';
+	margin: 0 0 20px;
+}
+
+#master #formCadastro div.errorForm
+{
+	color: #FF2200;
+    display: none;
+    float: left;
+    font: 20px 'museo700';
+    text-align: left;
+    width: 100%;
+}
+
+#master #formCadastro .form-inputs input.error
+{
+	border-color: #f20;
+}
+
+#master #formCadastro .form-inputs label.error
+{
+	color: #f20;
+    float: left;
+    font: 14px arial;
+    margin: 4px 0 0;
+}
+
+#master #formCadastro .form-inputs span.spanCPFInvalido
+{
+	color: #FF2200;
+	display: none;
+    float: left;
+    font: 13px 'museo500';
+    margin: 4px 0 0;
+}
+
+#master #resultPass
+{
+	color: #008000;
+    float: left;
+    font: 13px 'museo500';
+    margin: 4px 0 0;
+}

@@ -1,0 +1,140 @@
+﻿
+#master #contato
+{
+    background-color: #fff;
+    float: left;
+    padding: 30px 0;
+    width: 100%;
+}
+
+    #master #contato h1
+    {
+        color: #E3A426;
+        margin: 0 0 10px;
+    }
+
+    #master #contato #formContato
+    {
+        float: left;
+        position: relative;
+    }
+
+    #master #contato .campoContato
+    {
+        float: left;
+        margin: 10px 0;
+        width: 100%;
+    }
+
+        #master #contato .campoContato span
+        {
+            color: #444444;
+            float: left;
+            font: 16px 'museo300';
+            margin: 9px 5px 0 0;
+            text-align: right;
+            width: 90px;
+        }
+
+            #master #contato .campoContato span.checkNews
+            {
+                float: left;
+                margin: 0 0 0 10px;
+                width: auto;
+            }
+
+    #master #contato .checkBox
+    {
+        margin: 10px 0 20px 125px;
+        width: 400px;
+    }
+
+        #master #contato .checkBox input
+        {
+            float: left;
+        }
+
+    #master #contato .campoContato .inputContato
+    {
+        background-color: #fff;
+        border: 1px solid #D9D9D9;
+        border-radius: 5px;
+        color: #444444;
+        float: left;
+        font: 14px arial;
+        padding: 10px 6px;
+        transition-duration: 0.4s;
+        transition-property: all;
+        -moz-transition-property: all;
+        -moz-transition-duration: 0.4s;
+        -webkit-transition-property: all;
+        -webkit-transition-duration: 0.4s;
+        -ms-transition-property: all;
+        -ms-transition-duration: 0.4s;
+        width: 500px;
+    }
+
+        #master #contato .campoContato .inputContato:hover
+        {
+            border-color: #BAB9B9;
+        }
+
+        #master #contato .campoContato .inputContato:focus
+        {
+            border-color: #c993c2;
+            border-radius: 0;
+            box-shadow: 0 0 2px #c993c2;
+        }
+
+    #master #contato .campoContato .inputContatoTel
+    {
+        float: left;
+        width: 200px;
+    }
+
+    #master #contato .campoContato input.error:hover,
+    #master #contato .campoContato textarea.error:hover
+    {
+        border-color: #f20;
+    }
+
+    #master #contato .campoContato input.error,
+    #master #contato .campoContato textarea.error,
+    #master #contato .campoContato input.error:focus,
+    #master #contato .campoContato textarea.error:focus
+    {
+        border-color: #EB1F00;
+    }
+
+        #master #contato .campoContato input.error:focus,
+        #master #contato .campoContato textarea.error:focus
+        {
+            box-shadow: 0 0 2px #FFBBB1;
+        }
+
+    #master #contato .campoContato label.error
+    {
+        color: #EB1F00;
+        float: left;
+        font: 14px arial;
+        margin: 10px 0 0 95px;
+    }
+
+    #master #contato .campoContato .inputSubmitForm
+    {
+        background-color: #894F81;
+        border: 1px solid #82517C;
+        border-radius: 5px;
+        color: #FFFFFF;
+        cursor: pointer;
+        float: left;
+        font: bold 14px arial;
+        margin: 0 0 0 120px;
+        padding: 7px 8px;
+        width: 130px;
+    }
+
+        #master #contato .campoContato .inputSubmitForm:hover
+        {
+            background-color: #673B61;
+        }

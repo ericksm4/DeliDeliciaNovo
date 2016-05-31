@@ -1,0 +1,73 @@
+<% content_for :style do -%>
+  <%= stylesheet_link_tag 'StyleAreas' %>
+  <%= stylesheet_link_tag 'StyleCores' %>
+  <!--gestao-->
+  <%= stylesheet_link_tag 'jquery-easy-pie-chart/jquery.easy-pie-chart' %>
+  <%= stylesheet_link_tag 'gestao/owl.carousel' %>
+
+<% end -%>
+    <div class="row">
+        <div class="col-lg-12">
+          <div class="row">
+            <div class="col-lg-12">
+                  <!--breadcrumbs start -->
+                  <ul class="breadcrumb" style="background: #fff">
+                      <li><a href="/admin/home"><i class="fa fa-home"></i> Home</a></li>
+                      <li class="active"><a href="#">Sazonais</a></li>
+                  </ul>
+                  <!--breadcrumbs end -->
+              </div>
+          </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">Lista de sazonais
+                      <% if can? :manage, :all%>
+                        <%= link_to 'Novo sazonal', new_admin_deli_sazonal_path, :class => 'btn btn-default' %>
+                      <% end %>
+                    </div>
+                </div>
+                <div class="panel-body">
+                    <!---->
+                    <div class="boxForm">
+                        
+                        <div class="clearAll">&nbsp;</div>
+                        
+                        <%= if flash[:notice]
+                            raw('<div class="alert alert-success fade in msgSucesso"><button data-dismiss="alert" class="close close-sm" type="button"><i class="fa fa-times"></i></button>' + flash[:notice] + '</div>')
+                        end %>
+
+                        <div class="formAddNovo">
+
+                            <div class="divTourBusca">
+                            <%= form_tag('/admin/deli_sazonal', :method => 'get',  :id => "products_search")  do %> 
+                                <%= text_field_tag :search, params[:search], :placeholder => "Digite o título do registro", :class => 'search1 form-control'%>  
+                                <%= submit_tag "Buscar", :name => nil, :class => 'btn btn-info' %>  
+                                <% end %>
+                            </div>
+                            <div class="divTourGrid posRelative">
+                                <div id="gridItens">
+                                    <div class="row">
+                                        <div class="col-lg-12" id="gridItens">
+                                          <%= render 'grid' %>
+
+                                        </div>    
+                                    </div>
+                                </div>
+                                <div class="maskLoader"></div>
+                            </div>
+                            
+                            
+                            <div class="clearAll">&nbsp;</div>
+                        </div>
+                    </div>
+                    <span class="loader"><img src="/images/loaderHand.gif" /></span>
+                    <!---->
+                </div>
+            </div>
+        </div> 
+        
+    </div>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+
+  <title>DeliDelícia</title>
+
+  <link rel="shortcut icon" href="/images/website/favico.ico" type="image/x-icon" />
+ 
+  <%= javascript_include_tag "jquery-2.2.3.min" %>
+  <%= javascript_include_tag "jquery.unveil"%>
+  <%= javascript_include_tag "slick.min"%>
+
+  <%= stylesheet_link_tag 'font-awesome-4.6.2/css/font-awesome.min' %>
+  <%= stylesheet_link_tag 'slick' %>
+  <%= stylesheet_link_tag 'website/Style' %>
+
+  <script type="text/javascript">
+    $(function(){
+      $('#liHeader').click(function(){
+          if($(this).hasClass('active')){
+              $(this).removeClass('active');
+              $('.li-interno').each(function(){
+                  $(this).css("top", (0)+"px" );
+              })
+          }
+          else{
+              $(this).addClass('active');
+              $('.li-interno[li-pos="1"]').css("top", "39px" );
+              $('.li-interno[li-pos="2"]').css("top", "70px" );
+              $('.li-interno[li-pos="3"]').css("top", "101px" );
+          }
+
+          $('.li-interno').off();
+
+          $('.li-interno').click(function(){
+              $('#liHeader label').text($(this).text());
+
+              $('#liHeader').removeClass('active');
+              $('.li-interno').each(function(){
+                  $(this).css("top", (0)+"px" )
+              })
+          })          
+      })
+
+      $('header .fa.fa-bars, #bgMenu').click(function(){
+        $('ul#menu, header, #banner, #corpoSite, footer').toggleClass('active');
+        $('#bgMenu').fadeToggle();
+      })
+
+      $('header #rightMenu span .fa').click(function(){
+        $('#rightMenu span input').fadeToggle(100)
+      })
+
+      $("#aconteceLancamentoOferta > div img, #artefatos .item-artefato .maskItemImg img").unveil(200);
+
+      $('#btnSendNewsletter').click(function(){
+        $('#cadastroNewsletter .fa').addClass('fa-circle-o-notch');
+        $('#cadastroNewsletter .fa').addClass('fa-spin');
+        $('#cadastroNewsletter .fa').removeClass('fa-angle-right');
+        $.ajax({
+            "crossDomain": true,
+            "type":"GET",
+            beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+            "url":"/cadastroNewsletter",
+            "data": {email: $('#cadastroNewsletter input[name="email"]').val(), loja: $('#liHeader label').text()},
+            "dataType":"json",
+            "success":function(resp){
+                if(resp){
+                    $('#cadastroNewsletter .fa').removeClass('fa-spin');
+                    $('#cadastroNewsletter .fa').removeClass('fa-circle-o-notch');
+                    $('#cadastroNewsletter .fa').addClass('fa-check');
+                }
+                else{
+                    $('#cadastroNews div a').html('<font color="red">Email já cadastrado</font>')
+                }
+            }
+        })
+      })
+
+    })
+  </script>
+
+</head>
+
+<body>
+  
+  <header>
+    <div>
+      <i class="fa fa-bars"></i>
+
+      <%=image_tag 'website/logo.png', :id=>"logo" %>
+
+      <div id="rightMenu">
+        <span><label><input type="text" placeholder="O que você procura?"></label><i class="fa fa-search"></i></span>
+        <i class="fa fa-instagram"></i>
+        <i class="fa fa-facebook"></i>
+      </div>
+
+    </div>
+  </header>
+
+<ul id="menu">
+  <li id="logoMenu">
+    <a href="/">
+      <%=image_tag 'website/logo.png' %>
+    </a>
+  </li>
+
+  <% @menu.each do |item| %>
+    <li><a href="<%= item.url unless item.url.blank? %>"><%= item.nome %></a></li>
+  <% end %>
+
+</ul>
+
+<div id="bgMenu"></div>
+  
+  <%= yield %>
+
+  <footer>
+    <div id="cadastroNewsletter">
+      <h4>Receba as novidades da DeliDelícia</h4>
+      <input type="text" name="email" placeholder="Insira seu email">
+
+      <ul>
+          <li id="liHeader"><label>Loja mais próxima</label> <font> &nbsp;</font></li>
+          <li class="li-interno" li-pos="1">Loja Barra Jardim Oceânio</li>
+          <li class="li-interno" li-pos="2">Loja Barra Península</li>
+          <li class="li-interno" li-pos="3">Loja Botafogo</li>
+      </ul>
+
+      <a id="btnSendNewsletter">
+        <i class="fa fa-angle-right"></i>
+      </a>
+
+    </div>
+
+    <div id="beijaFlorFooter"></div>
+
+    <div id="info">
+      <div id="menuFooter">
+
+        <label>Navegue pela Deli</label>
+
+        <ul>
+          <li>
+            <ul>
+                <% @menuFooter1.each do |menu| %>
+                  <li><a href="<%= menu.url unless menu.url.blank? %>"><%= menu.nome%></a></li>
+                <%end%>
+            </ul>
+          </li>
+          <li>
+            <ul>
+                <% @menuFooter2.each do |menu| %>
+                  <li><a href="<%= menu.url unless menu.url.blank? %>"><%= menu.nome%></a></li>
+                <%end%>
+            </ul>
+          </li>
+        </ul>
+      </div>
+
+      <div id="instagram-resp">
+        <label>Instagram</label>
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/6b30ef0a527f5aababce8063979fc89e.html" id="lightwidget_6b30ef0a52" name="lightwidget_6b30ef0a52"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      </div>
+
+      <div id="lojasFooter">
+        <label>Peça no Delivery ou nas Lojas</label>
+        <div class="clearAll"></div>
+        <ul>
+          <li>Botafogo</li>
+          <li><i class="fa fa-phone"></i> (21) 2537-6915</li>
+          <li><i class="fa fa-whatsapp"></i> 9 9739-9775</li>
+        </ul>
+
+        <ul>
+          <li>Barra Jardim Oveânico</li>
+          <li><i class="fa fa-phone"></i> (21) 2537-6915</li>
+          <li><i class="fa fa-whatsapp"></i> 9 9564-2437</li>
+        </ul>
+
+        <ul>
+          <li>Barra Península</li>
+          <li><i class="fa fa-phone"></i> (21) 2537-6915</li>
+          <li><i class="fa fa-whatsapp"></i> 9 7228-5682</li>
+        </ul>
+      </div>
+
+      <div id="instagram">
+        <label>Instagram</label>
+        <!-- LightWidget WIDGET --><script src="//lightwidget.com/widgets/lightwidget.js"></script><iframe src="//lightwidget.com/widgets/8faa481ccb81544d8172f59cf8c219aa.html" id="lightwidget_8faa481ccb" name="lightwidget_8faa481ccb"  scrolling="no" allowtransparency="true" class="lightwidget-widget" style="width: 100%; border: 0; overflow: hidden;"></iframe>
+      </div>
+    </div>
+
+  </footer>
+
+</body>
+
+</html>

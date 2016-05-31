@@ -1,0 +1,7 @@
+/*mascara do modal de excluir*/
+.ui-widget-overlay
+{
+	background: url(/assets/maskModal.png) repeat left top;
+	left: 0;
+	top:0;
+}

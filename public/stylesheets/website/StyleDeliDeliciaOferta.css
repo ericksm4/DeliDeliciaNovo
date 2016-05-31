@@ -1,0 +1,394 @@
+﻿
+/*Oferta produto - inicio*/
+
+#master #oferta
+{
+    border-bottom: 1px solid #E7E7E7;
+    padding: 0 0 20px;
+}
+
+    #master #oferta, #master #oferta #ofertaConteudo
+    {
+        background-color: #fff;
+        float: left;
+        width: 100%;
+    }
+
+        #master #oferta #ofertaConteudo #ofertaImgAvaliacao
+        {
+            float: left;
+            margin: 0 0 30px;
+            position: relative;
+            width: 100%;
+        }
+
+            #master #oferta #ofertaConteudo #ofertaImgAvaliacao > img
+            {
+                float: left;
+                max-width: 920px;
+            }
+
+        #master #oferta #ofertaConteudo #ofertaAvaliacao
+        {
+            right: 20px;
+            position: absolute;
+            top: 20px;
+            width: 145px;
+        }
+
+            #master #oferta #ofertaConteudo #ofertaAvaliacao span
+            {
+                float: right;
+                font: 14px arial;
+                margin: 15px 0 5px;
+                text-align: left;
+                width: 100%;
+            }
+
+            #master #oferta #ofertaConteudo #ofertaAvaliacao #star
+            {
+                float: right;
+                margin: 0 25px 0 0;
+                width: 100px;
+            }
+
+        #master #oferta #ofertaConteudo #ofertaDescricao
+        {
+            float: left;
+            width: 100%;
+        }
+
+            #master #oferta #ofertaConteudo #ofertaDescricao h1
+            {
+                color: #e3a427;
+                float: left;
+                font-size: 32px;
+                margin: 0 0 5px;
+                width: 100%;
+            }
+
+            #master #oferta #ofertaConteudo #ofertaDescricao img
+            {
+                float: left;
+                margin: 10px 0;
+                max-width: 600px;
+            }
+
+            #master #oferta #ofertaConteudo #ofertaDescricao p
+            {
+                color: #555;
+                float: left;
+                font-family: 'museo100';
+                font-size: 21px;
+                margin: 13px 0;
+                width: 100%;
+            }
+
+        #master #oferta #ofertaConteudo #ofertaPreco
+        {
+            float: left;
+            width: 100%;
+        }
+
+            #master #oferta #ofertaConteudo #ofertaPreco #ofertaPrecoItens
+            {
+                float: left;
+                margin: 0 0 10px;
+                width: 100%;
+            }
+
+                #master #oferta #ofertaConteudo #ofertaPreco #ofertaPrecoItens h2
+                {
+                    color: #970573;
+                    float: left;
+                    font-family: 'museo100';
+                    margin: 0 0 20px;
+                    width: 100%;
+                }
+
+                #master #oferta #ofertaConteudo #ofertaPreco #ofertaPrecoItens ul,
+                #master #oferta #ofertaConteudo #ofertaPreco #ofertaPrecoItens ul li
+                {
+                    float: left;
+                    margin: 3px 0;
+                    width: 100%;
+                }
+
+                    #master #oferta #ofertaConteudo #ofertaPreco #ofertaPrecoItens ul li p,
+                    #master #oferta #ofertaConteudo #ofertaPreco #ofertaPrecoItens ul li span
+                    {
+                        color: #970573;
+                        float: left;
+                        font: 21px 'museo100';
+                    }
+
+                    #master #oferta #ofertaConteudo #ofertaPreco #ofertaPrecoItens ul li span
+                    {
+                        color: #000;
+                        font-size: 13px;
+                        margin: 7px 0 0 10px;
+                    }
+
+            #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial
+            {
+                float: left;
+                width: 100%;
+            }
+
+                #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial #ofertaRedeSocial
+                {
+                    float: left;
+                    margin:15px 0 0;
+                    width: 160px;
+                }
+
+                #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial a
+                {
+                    float: left;
+                    margin: 10px 5px;
+                }
+
+                    #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial a span
+                    {
+                        background: url(/images/website/sprite_rede_social2.png) no-repeat left top;
+                        cursor: pointer;
+                        float: left;
+                        height: 40px;
+                        width: 40px;
+                        /*transition-property: all;
+                        transition-duration: 0.4s;
+                        -moz-transition-property: all;
+                        -moz-transition-duration: 0.4s;
+                        -webkit-transition-property: all;
+                        -webkit-transition-duration: 0.4s;
+                        -ms-transition-property: all;
+                        -ms-transition-duration: 0.4s;*/
+                    }
+
+                        #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial a span:hover
+                        {
+                            background-position: 0 -40px;
+                        }
+
+                        #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial a span.twitterRodape
+                        {
+                            background-position: -40px 0;
+                        }
+
+                            #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial a span.twitterRodape:hover
+                            {
+                                background-position: -40px -40px;
+                            }
+
+                        #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial a span.youtubeRodape
+                        {
+                            background-position: -80px 0;
+                        }
+
+                            #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial a span.youtubeRodape:hover
+                            {
+                                background-position: -80px -40px;
+                            }
+
+                #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial #ofertaPrecoTotal
+                {
+                    float: right;
+                    margin: 0 20px 0 0;
+                }
+
+                    #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial #ofertaPrecoTotal span
+                    {
+                        color:#000;
+                        float: right;
+                        font:21px 'museo100';
+                        margin: 0;
+                    }
+
+                    #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial #ofertaPrecoTotal span.precoTotal
+                    {
+                        color: #970573;
+                        font: 41px 'museo500';
+                        text-align:right;
+                        width:100%;
+                    }
+
+                     #master #oferta #ofertaConteudo #ofertaPreco #precoRedeSocial #ofertaPrecoTotal span.descontoOferta
+                    {
+                        float: none;
+                        font-size:12px;
+                    }
+
+/*Oferta produto - fim*/
+
+/*Tags*/
+
+#master #tag, #master #tag #tagConteudo
+{
+    background-color: #FBFBFB;
+    float: left;
+    width: 100%;
+}
+
+#master #tag
+{
+    border-bottom: 1px solid #E7E7E7;
+    padding: 10px 0;
+}
+
+    #master #tag #tagConteudo #tagTitulo
+    {
+        float: left;
+        margin: 15px 0;
+        width: 110px;
+    }
+
+        #master #tag #tagConteudo #tagTitulo h2
+        {
+            color: #e3a427;
+            float: left;
+            font: 21px 'museo100';
+            width: 100%;
+        }
+
+    #master #tag #tagConteudo #nuvemTag
+    {
+        float: left;
+        width: 850px;
+    }
+
+        #master #tag #tagConteudo #nuvemTag span a
+        {
+            color: #d2a4cd;
+            float: left;
+            margin: 5px;
+        }
+
+            #master #tag #tagConteudo #nuvemTag span a:hover
+            {
+                text-decoration: underline;
+            }
+
+        #master #tag #tagConteudo #nuvemTag span.tagAlternada a
+        {
+            color: #976992;
+        }
+
+/*Tags*/
+
+/*Slider Produtos Relacionados*/
+
+.swiper-container, .swiper-slide
+{
+    height: 335px;
+}
+
+#divSliderProdutosRelacionados
+{
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+    #divSliderProdutosRelacionados h1
+    {
+        color: #E3A427;
+        float: left;
+        font-size: 28px;
+        margin: 20px 0;
+        width: 100%;
+    }
+
+    #divSliderProdutosRelacionados .device
+    {
+        border: medium none;
+        border-radius: 0;
+        box-shadow: none;
+        height: 330px;
+        padding: 10px;
+        width: 98%;
+    }
+
+    #divSliderProdutosRelacionados #sliderProdutosRelacionados
+    {
+        float: left;
+        width: 100%;
+    }
+
+/*Box produto relacionado*/
+
+#sliderProdutosRelacionados .boxProdutoRelacionado
+{
+    float: left;
+    margin: 0 5px;
+    width: 180px;
+}
+
+
+    #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoImg
+    {
+        background-color: #fff;
+        border: 1px solid #e1e1e1;
+        float: left;
+        height: 172px;
+        margin: 5px 0;
+        padding: 4px 0;
+        width: 99%;
+    }
+
+
+        #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoImg img
+        {
+            display: block;
+            margin: 0 auto;
+            height: 170px;
+            max-width: 178px;
+            width: auto;
+        }
+
+    #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoAvaliacao
+    {
+        margin: 2px 0;
+        float: left;
+        width: 100%;
+    }
+
+
+        #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoAvaliacao img
+        {
+            float: right;
+            margin: 0 5px 0 0;
+        }
+
+    #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoNome
+    {
+        margin: 12px 0 5px;
+        float: left;
+        width: 100%;
+    }
+
+
+        #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoNome h3
+        {
+            color: #000;
+            float: left;
+            font-size: 17px;
+        }
+
+    #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoPreco
+    {
+        margin: 3px 0 5px;
+        float: left;
+        width: 100%;
+    }
+
+
+        #sliderProdutosRelacionados .boxProdutoRelacionado .boxProdutoRelacionadoPreco span
+        {
+            color: #970573;
+            float: left;
+            font: 17px 'museo300';
+        }
+
+/*Box produto relacionado*/
+
+/*Slider Produtos Relacionados*/

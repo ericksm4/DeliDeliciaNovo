@@ -1,0 +1,510 @@
+#master h1
+{
+	color: #970573;
+	float: left;
+	margin: 0 0 10px;
+	width: 95%;
+}
+
+/*Listagem de categorias e busca*/
+
+#master #listagemCategoriasBusca
+{
+	float: left;
+	margin: 0 0 15px;
+	width: 100%;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias
+{
+	float: left;
+	width: 610px;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul
+{
+	float: left;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li
+{
+	color: #e3a426;
+	float: left;
+	margin: 0 0 2px 3px;
+    padding: 4px;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li.ativo
+{
+	background: url(/images/website/fecharModal2.png) no-repeat scroll 7px center #FBE9C7;
+	cursor: pointer;
+	padding: 3px 4px 3px 16px;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li.ativo:hover
+{
+	background-color: #eee;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li.ativo:hover a
+{
+	color: #999;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li.ativo span
+{
+	border-color: #FBE9C7;
+	display: none;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li.ativo a:hover
+{
+	text-decoration: none;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul span
+{
+	border-right: 1px solid #E3A426;
+    color: #E3A426;
+    float: left;
+    height: 24px;
+    margin: 2px 0 0 2px;
+    width: 1px;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li a
+{
+	color: #e3a426;
+	float: left;
+	font: 18px 'museo700';
+	margin: 0 5px;
+}
+
+#master #listagemCategoriasBusca #listagemCategorias ul li a:hover
+{
+	text-decoration: underline;
+}
+
+#master #listagemCategoriasBusca #buscaProduto
+{
+	float: right;
+	position: relative;
+	width: 350px;
+}
+
+#master #listagemCategoriasBusca #buscaProduto input.inputBuscaProduto
+{
+	background: url(/images/website/bg_busca_produto.png) no-repeat 8px center #F8F8F8;
+	border: 1px solid #eee; 
+	border-top: 2px solid #eee;
+	border-left: 2px solid #eee;
+	color: #8F8F8F;
+	float: left;
+	font: 16px 'museo700';
+	height: 22px;
+    max-width: 235px;
+    padding: 10px 75px 10px 40px;
+    position: relative;
+    transition: all 0.3s;
+    width: 100%;
+    z-index: 2;
+}
+
+#master #listagemCategoriasBusca #buscaProduto input.inputBuscaProduto:hover
+{
+	background-color: #fff;
+	border-color: #e7e7e7;
+	border-top-color: #e7e7e7;
+	border-left-color: #e7e7e7; 
+}
+
+#master #listagemCategoriasBusca #buscaProduto input.inputBuscaProduto:focus
+{
+	background-color: #fff;
+	border-color: #e3e3e3;
+	border-top-color: #dcdcdc;
+	border-left-color: #dcdcdc;
+	border-radius: 4px; 
+    transition: all 0.3s;
+}
+
+#master #listagemCategoriasBusca #buscaProduto input.inputSubmitBuscaProduto
+{
+	background-color: #631c5b;
+	border: none;
+	border-bottom: 2px solid #4a1544;
+	border-radius: 5px;
+	color: #D4D4D4;
+    cursor: pointer;
+    float: left;
+    padding: 3px 5px;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 58px;
+    z-index: 5;
+}
+
+#master #listagemCategoriasBusca #buscaProduto input.inputSubmitBuscaProduto:active
+{
+	background-color: #4a1544;
+}
+
+/*Listagem de categorias e busca*/
+
+
+
+/*Listagem dos produtos*/
+#master #listaProdutos
+{
+	position: relative;
+	margin: 0 0 75px;
+}
+
+#master #listaProdutos,
+#master #listagemProdutos
+{
+	float: left;
+	width: 100%;
+}
+
+#master #listagemProdutos
+{
+}
+
+#master #listaProdutos .boxProduto
+{
+	background-color: #fff;
+	border: 1px solid #878787;
+	float: left;
+	height: 270px;
+	margin: 20px 20px;
+	padding: 10px;
+	position: relative;
+	width: 180px;
+	z-index: 1;
+}
+
+#master #listaProdutos .boxProduto img
+{
+	display: block;
+	margin: 5px auto 15px;
+	height: 110px;/*----------------------------*/
+	max-height: 110px;
+	max-width: 160px;
+	width: auto;
+}
+
+#master #listaProdutos .boxProduto .tituloQtdMinimaProduto
+{
+	float: left;
+	height: 102px;
+	width: 100%;
+}
+
+#master #listaProdutos .boxProduto .tituloQtdMinimaProduto h4
+{
+	height: 75px;
+}
+
+#master #listaProdutos .boxProduto .tituloQtdMinimaProduto h4 a
+{
+	color: #878787; 
+	float: left;
+	font: 14px 'museo700';
+	margin: 7px 0;
+	max-height: 75px; 
+	text-align: center;
+	width: 100%;
+}
+
+#master #listaProdutos .boxProduto .tituloQtdMinimaProduto span
+{
+	color: #5d2760; 
+	float: left;
+	font: 12px 'museo300';
+	margin: 7px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#master #listaProdutos .boxProduto .precoProduto
+{
+	border-top: 1px solid #d2d2d2;
+	float: left;
+	margin: 5px 0 0;
+	padding: 10px 0;
+	width: 100%;
+}
+
+#master #listaProdutos .boxProduto .precoProduto span
+{
+	color: #692162; 
+	float: left;
+	font: 18px 'museo700';
+	text-align: center;
+	width: 100%;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho
+{
+	display: none;
+	background-color: #fff;
+	border: 1px solid #878787;
+	border-top: none;
+	/*box-shadow: 0 3px 2px #9A9A9A;*/
+	float: left;
+    margin: 0 0 0 -11px;
+	padding: 8px 0;
+    width: 200px;
+}
+
+#master #listaProdutos .boxProduto:hover
+{
+	/*box-shadow: 0 0 2px #9A9A9A;*/
+	z-index: 2;
+}
+
+#master #listaProdutos .boxProduto:hover .qtdAddCarrinho
+{
+	display: block;
+}
+
+#master #listaProdutos .boxProduto:hover .precoProduto
+{
+	border-bottom: 1px solid #d2d2d2;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho label
+{
+	color: #692162;
+	float: left;
+	font: 12px 'museo300';
+	margin: 0 0 10px;
+	text-align: center;
+	width: 100%;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho div.divAlteraQtdInput
+{
+	float: none;
+    margin: 0 auto;
+    width: 147px;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho div.divAlteraQtdInput span.alterarQtd
+{
+	background-color: #631c5b;
+	border-bottom: 2px solid #4a1544;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font: 27px/25px 'museo300';
+	height: 25px;
+	margin: 4px 7px 0;
+	text-align: center;
+	width: 27px;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho div.divAlteraQtdInput span.alterarQtd:active
+{
+	background-color: #4A1544;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho div.divAlteraQtdInput input
+{
+	border: 1px solid #dcdcdc;
+	border-radius: 15px;
+	box-shadow: 0 2px 1px #EEEEEE inset;
+	color: #878787;
+	float: left;
+	font: 18px 'museo700';
+	max-width: 50px;
+	padding: 5px;
+	text-align: center;
+	width: 100%;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho span.adicionarCarrinho,
+#master #listaProdutos .boxProduto .qtdAddCarrinho span.produtoIndisponivel
+{
+	background-color: #631c5b;
+	border-bottom: 3px solid #4a1544;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font: 14px/35px 'museo700';
+	height: 32px;
+	margin: 25px 0 10px 14px;
+	text-align: center;
+	width: 170px;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho span.produtoIndisponivel
+{
+	background-color: #777;
+	border-color: #5f5f5f;
+	cursor: default;
+}
+
+#master #listaProdutos .boxProduto .qtdAddCarrinho span.adicionarCarrinho:active
+{
+	background-color: #4a1544;
+}
+
+/*Listagem dos produtos*/
+
+
+/*Box para confirmar se deseja adicionar outra quantidade ao carrinho*/
+
+#boxConfirmacaoAddCarrinho
+{
+	border-radius: 3px;
+    box-shadow: 0 0 5px #222222;
+    display: none;
+    float: left;
+    left: 40%;
+    position: fixed;
+    top: 50%;
+    width: 400px;
+    z-index: 101;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoTitulo
+{
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #E7E7E7;
+    border-radius: 5px 5px 0 0;
+    float: left;
+    font: bold 14px arial;
+    padding: 3%;
+    width: 94%;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoTitulo span
+{
+	color:#060606;
+	float: left;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoTitulo #btnFechar
+{
+	background: url("/images/website/fecharModal2.png") no-repeat scroll left top;
+    border: medium none;
+    cursor: pointer;
+    float: right;
+    height: 9px;
+    margin: 3px 3px 0 0;
+    opacity: 0.6;
+    width: 9px;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoTitulo #btnFechar:hover
+{
+	opacity: 1;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoMensagem
+{
+	background-color: #F9F9F9;
+    border-bottom: 1px solid #E7E7E7;
+    float: left;
+    font: 12px arial;
+    padding: 20px 3%;
+    width: 94%;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoBtn
+{
+	background-color: #F4F4F4;
+    border-radius: 0 0 5px 5px;
+    float: left;
+    font: 12px arial;
+    padding: 3%;
+    width: 94%;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoBtn .btnConfirmacaoAddCarrinho
+{
+	background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    float: right;
+    font: 12px/17px arial;
+    margin: 0 0 0 10px;
+    outline: medium none;
+    padding: 4px 7px;
+    text-align: center;
+    width: 60px;
+}
+
+#boxConfirmacaoAddCarrinho #boxConfirmacaoAddCarrinhoBtn .btnConfirmacaoAddCarrinho:first-child
+{
+	background-color: #466542;
+    background-image: -moz-linear-gradient(center top , #466542, #204D23);
+    background-repeat: repeat-x;
+    border-color: #2F5230;
+    color: #FFFFFF;
+    margin-right: 5px;
+}
+
+#mask, #maskBuscaCategorias
+{
+	background-color: #dedede;
+	display: none;
+	float: left;
+	height: 100%;
+	left: 0;
+	opacity: 0.7;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 11;
+    filter: alpha(opacity=70);
+    -ms-filter: "alpha(opacity=70)";	
+}
+
+#maskBuscaCategorias
+{
+	background-color: #F7F7F7;
+	position: absolute;
+}
+
+#loader
+{
+	display: none;
+    float: left;
+    height: 52px;
+    left: 50%;
+    position: absolute;
+    top: 48%;
+    width: 52px;
+    z-index: 100;
+}
+
+/*Box para confirmar se deseja adicionar outra quantidade ao carrinho*/
+
+/* Mensagem de confirmação que adicionou ao carrinho */
+
+span#msgAddCarrinho
+{
+	background: url("/images/website/img_add_carrinho.png") no-repeat scroll 35px 14px #f4f4f4;
+    border: 1px solid #970573;
+    border-bottom: none;
+    border-radius: 10px 10px 0 0;
+    bottom: -100px;
+    color: #970573;
+    float: left;
+    font: 16px 'museo700';
+    left: 37.5%;
+    padding: 20px 40px 20px 75px;
+    position: fixed;
+    width: 355px;
+    z-index: 1000;
+}
+
+/* Mensagem de confirmação que adicionou ao carrinho */

@@ -1,0 +1,146 @@
+#conteudo #conteudoPrincipal .formAddNovo .divTour .datePicker
+{
+	float: left;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTour .datePicker input
+{
+	max-width: 110px !important;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTour .datePicker .spanAte
+{
+	margin-right: 5px;
+    width: 28px;
+}
+
+/*Grid de adicionar produtos as promoções*/
+
+#conteudo #conteudoPrincipal #gridTabela span.adicionarProduto
+{
+	background: url("/assets/add2.png") no-repeat scroll 5px center #F4F4F4;
+    border: 1px solid #9A9A9A;
+    border-radius: 3px;
+    color: #333333;
+    cursor: pointer;
+    float: right;
+    font-size: 12px;
+    margin: 5px 15px 3px 0;
+    padding: 5px 7px 5px 30px;
+}
+
+#conteudo #conteudoPrincipal #gridTabela span.adicionarProduto:hover
+{
+	background-color: #fff;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .divisaoGrid input
+{
+	color: #555;
+	border: 1px solid #E3E3E3;
+    float: left;
+    font-family: arial;
+    font-size: 12px;
+    margin: 0 20px 0 0;
+    max-width: 330px;
+    outline: medium none;
+    padding: 10px;
+    transition: box-shadow 0.4s ease 0s, border-radius 0.4s ease 0s, border-color 0.4s ease 0s;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .divisaoGrid input:hover
+{
+	border-color: #BFBFBF;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .divisaoGrid input:focus
+{
+	border-color: #BEBEBE;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #D7D7D7 inset;
+    outline: none;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .divisaoGrid input.inputPreco
+{
+	max-width: 140px;
+	text-align: center;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .divisaoGrid span.editar,
+#conteudo #conteudoPrincipal #gridTabela .divisaoGrid span.excluir
+{
+	margin: 10px 0 0 27px !important;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .divisaoGrid .imgProduto img
+{
+	border: 1px solid #E4E4E4;
+	display: block;
+    height: 80px;
+    margin: 0 auto;
+    width: 80px;
+}
+
+.tabela tbody tr td
+{
+	margin:25px 0;
+}
+
+.tabela tbody .tabelaHeader td
+{
+	margin:0;
+}
+
+.tabela tbody tr td.imgProduto
+{
+	margin:0; 
+}
+
+#fancybox-content #header, #fancybox-content #menuLateral,
+{
+	display: none;
+}
+
+/*Grid de adicionar produtos as promoções*/
+
+#divTags .select2-choices
+{
+    background: none;
+    border-color: #E3E3E3;
+    box-shadow: none;
+    float: left;
+    max-width: 328px;
+    outline: medium none;
+    padding: 6px;
+    transition: box-shadow 0.4s ease 0s, border-radius 0.4s ease 0s, border-color 0.4s ease 0s;
+    width: 100%;
+}
+
+#divTags .select2-choices:hover
+{
+    border-color: #bfbfbf;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #divTags .select2-choices input.select2-input
+{
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #divTags .select2-choices input.select2-input:focus
+{
+    box-shadow: none;
+}
+
+.select2-results
+{
+    padding: 6px;
+}
+
+.select2-drop-active
+{
+    border-color: #e3e3e3;
+}

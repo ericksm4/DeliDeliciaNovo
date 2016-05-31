@@ -1,0 +1,2 @@
+module LaminaHelper
+end

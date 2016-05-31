@@ -1,0 +1,460 @@
+
+/*Slider*/
+
+.pagination2
+{
+    bottom: 5px;
+}
+
+.swiper-container2
+{
+    height: 300px;
+}
+
+#divSliderEncontrosCursos, #divSliderAgenda
+{
+    background-color: #fff;
+    float: left;
+    margin: 0 0 20px;
+    width: 100%;
+}
+
+#divSliderAgenda #sliderAgenda
+{
+    float: left;
+    width: 100%;
+}
+
+    #divSliderEncontrosCursos .device
+    {
+        border: medium none;
+        border-radius: 0;
+        box-shadow: none;
+        height: 320px;
+        margin: 0 auto;
+        padding: 10px;
+        width: 98%;
+    }
+
+    #divSliderEncontrosCursos #sliderEncontrosCursos h1, #divSliderAgenda #sliderAgenda h1
+    {
+        color: #970573;
+        float: left;
+        margin: 0 0 20px;
+        width: 95%;
+    }
+
+#divSliderEncontrosCursos .device .swiper-container2 .swiper-slide img
+{
+    max-height: 100%;
+    width: 100%;
+}
+
+/*SLIDER AGENDA*/
+
+.swiper-container
+{
+    height: 95px;
+}
+
+#divSliderAgenda .device
+{
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 100px;
+    margin: 15px auto 0;
+    padding: 10px 26px;
+    width: 650px;
+}
+
+.device .arrow-left, 
+.device .arrow-right
+{
+    background: url(/images/website/seta_agenda.png) no-repeat scroll left top;
+    height: 95px;
+    margin-top: -15px;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+    width: 16px;
+}
+
+.device .arrow-right
+{
+    background-position: -20px 0;
+}
+
+#divSliderAgenda .swiper-slide
+{
+    /*width: 57px;*/
+}
+
+/*SLIDER AGENDA*/
+
+/*Dia agenda*/
+
+.divDiaAgenda
+{
+    background-color: #fff;
+    border: 1px solid #eee;
+    float: left;
+    width: 55px;
+}
+
+.divDiaAgenda .mesAgenda
+{
+    background-color: #eee;
+    float: left;
+    padding: 3px 0;
+    width: 100%;
+}
+
+.divDiaAgenda .mesAgenda span,
+.divDiaAgenda .diaMesSemana span
+{
+    color: #970573;
+    float: left;
+    font: 12px 'museo300';
+    text-align: center;
+    width: 100%;
+}
+
+.divDiaAgenda .mesAgenda span
+{
+    font: 16px 'museo500';
+    text-transform: capitalize;
+}
+
+.divDiaAgenda .diaMesSemana
+{
+    float: left;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.divDiaAgenda .diaMesSemana span
+{
+    margin: 0 0 5px;
+}
+
+.divDiaAgenda .diaMesSemana span.diaMes
+{
+    color: #970573;
+    margin: 0;
+    font: 26px 'museo500';
+}
+
+.divDiaAgenda:hover
+{
+    background-color: #c993c2;
+} 
+
+.divDiaAgenda:hover .diaMesSemana span
+{
+    color: #fff;
+}
+
+/*Agenda 'desativada'*/
+
+.divDiaAgenda.divDiaSemEvento
+{
+    background-color: #f7f7f7;
+    border-color: #eee;
+}
+
+
+.divDiaAgenda.divDiaSemEvento .diaMesSemana span
+{
+    color: #969696;
+}
+
+/*Agenda 'desativada'*/
+
+
+/*dia atual*/
+
+.divDiaAgenda.divDiaAtual
+{
+    background-color: #970573;
+    border-color: #eee;
+}
+
+.divDiaAgenda.divDiaAtual .diaMesSemana span
+{
+    color: #fff;
+}
+
+/*dia atual*/
+
+
+/*Dia agenda*/
+
+/*Slider*/
+
+
+/*Listagem de eventos*/
+
+#master #listagemEventos
+{
+    float: left;
+    width: 100%;
+}
+
+#master #listagemEventos h2
+{
+    background-color: #C0A0BD;
+    border-radius: 5px;
+    color: #FFFFFF;
+    float: left;
+    font: 22px 'museo300';
+    margin: 10px 0 10px;
+    padding: 8px 2%;
+    width: 96%;
+}
+
+#master #listagemEventos .listaEvento
+{
+    float: left;
+    margin: 0 0 15px;
+    padding: 0 0 15px;
+    width: 100%;
+}
+
+#master #listagemEventos .listaEventoDivisaoShow
+{
+    border-bottom: 1px dashed #CFCFCF;
+    margin: 0 0 20px;
+}
+
+#master #listagemEventos .listaEvento > div
+{
+    float: left;
+    width: 840px;
+}
+
+#master #listagemEventos .listaEventoShow > div
+{
+    width: 605px;
+}
+
+#master #listagemEventos .listaEvento img
+{
+    border: 1px solid #C0A0BD;
+    border-radius: 3px;
+    float: left;
+    margin: 0 10px 0 0;
+    width: 110px;
+}
+
+#master #listagemEventos .listaEvento div > span
+{
+    color: #444;
+    float: left;
+    font: 14px 'museo700';
+    margin: 0 5px 5px 0;
+}
+
+#master #listagemEventos .listaEvento div span span
+{
+    color: #666;
+    float: none;
+    font-family: 'museo300';
+}
+
+#master #listagemEventos .listaEvento div p a
+{
+    color: #970573;
+    float: left;    
+    margin: 0 0 5px;
+}
+
+#master #listagemEventos .listaEvento div p a:hover
+{
+    
+}
+
+#master #listagemEventos .listaEvento.listaEventoSemImg > div
+{
+    width: 100%;
+}
+
+#master #listagemEventos span.semEvento
+{
+    border: 1px solid #EEEEEE;
+    border-radius: 5px;
+    color: #970573;
+    float: left;
+    font: 16px arial;
+    margin: 10px 0;
+    padding: 10px;
+    text-align: center;
+    width: 97%;
+}
+
+/*Listagem de eventos*/
+
+/*Descricao evento*/
+
+#master #descricaoEvento
+{
+    float: left;
+    width: 100%;
+}
+
+#master #descricaoEvento h1
+{
+    color: #970573;
+    float: left;
+    margin: 0 0 10px;
+    width: 95%;
+}
+
+#master #descricaoEvento p
+{
+    float: left;
+    margin: 10px 0;
+}
+
+#master #descricaoEvento img
+{
+    display: block;
+    margin: 10px auto 20px;
+    width: auto;
+}
+
+/*Descricao evento*/
+
+/*Informações sobre o evento*/
+
+#master #infoEvento
+{
+    float: left;
+    width: 100%;
+}
+
+#master #infoEvento .boxInfoEvento .tituloBoxEvento
+{
+    background-color: #C0A0BD;
+    border-radius: 5px 5px 0 0;
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+
+#master #infoEvento .boxInfoEvento
+{
+    float: left;
+    margin: 0 0 30px;
+    width: 100%;
+}
+
+#master #infoEvento .boxInfoEvento:first-child
+{
+    margin: 20px 0 30px;
+}
+
+#master #infoEvento .boxInfoEvento .tituloBoxEvento span.toggleInfoEvento
+{
+    background: url(/images/website/toggle_box_info_evento.png) no-repeat 0 -13px;
+    cursor: pointer;
+    float: right;
+    height: 13px;
+    margin: 13px 20px 0 0;
+    width: 20px;
+}
+
+#master #infoEvento .boxInfoEvento .tituloBoxEvento span.toggleInfoEventoClosed
+{
+    background-position: 0 0;
+}
+
+#master #infoEvento .boxInfoEvento .tituloBoxEvento h2
+{
+    background-color: #C0A0BD;
+    border-radius: 5px 5px 0 0;
+    color: #FFFFFF;
+    float: left;
+    font: 22px 'museo500';
+    margin: 0;
+    padding: 5px 2%;
+    width: 90%;
+}
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento
+{
+    background-color: #FFFCFF;
+    border-radius: 0 0 5px 5px;
+    float: left;
+    padding: 5px 2%;
+    margin: 0 0 20px;
+    width: 96%;
+}
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento .divisaoInfo
+{
+    float: left;
+    width: 100%;
+}
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento .divisaoInfo span
+{
+    float: left;
+    font: 16px 'museo500';
+    margin: 7px 5px 7px 0;
+    width: 80px;
+}
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento .divisaoInfo span.infosEvento
+{
+    float: left;
+    font-family: 'museo300';
+    width: auto;
+}
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento .divisaoInfo > div
+{
+    float: right;
+    margin: 0 30px 0 0;
+}
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento .divisaoInfo > div span.infosEvento
+{
+    width: 140px;
+}
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento .divisaoInfo > div:first-child
+{
+    float: left;
+}
+
+
+#master #infoEvento .boxInfoEvento .infoDetalhesEvento .divisaoInfo > div:first-child span.infosEvento
+{
+    width: auto;
+}
+
+#master #infoEvento .boxInfoEvento #infoMapa
+{
+    float: left;
+    margin: 0;
+    width: 100%;
+}
+
+#master #infoEvento .boxInfoEvento #comentariosEvento
+{
+    float: left;
+    padding: 0;
+    width: 100%;
+}
+
+/*Informações sobre o evento*/
+
+
+/*Mensagem quando não tem conteúdo*/
+
+#conteudoDireita h1.semEventos
+{
+    color: #E3A427;
+    float: left;
+}

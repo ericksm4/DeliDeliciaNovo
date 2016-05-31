@@ -1,0 +1,238 @@
+<%#= stylesheet_link_tag 'bootstrap-datepicker/css/datepicker' %>
+<%#= stylesheet_link_tag 'bootstrap-colorpicker/css/colorpicker' %>
+<%#= stylesheet_link_tag 'bootstrap-daterangepicker/daterangepicker' %>
+<script>
+
+//desaparecer mensagem de erro, sucesso e alerta após 5s
+setTimeout(function() {
+  $("#conteudo #conteudoPrincipal span.msgSucesso, #conteudo #conteudoPrincipal span.msgErro, #conteudo #conteudoPrincipal span.msgAlerta").fadeOut("slow");
+}, 5000);
+
+</script>
+
+	<%= form_for(@area, :style => 'form-horizontal') do |f| %>
+		
+		<div class="form-group">
+			<label for="area[nome]" class="col-lg-2 col-sm-2 control-label">Nome</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :nome, :placeholder => "Nome de exibição da área", :class => 'form-control' %>
+          	</div>
+			  
+		</div>
+		<div class="clearAll">&nbsp;</div>
+ 
+	  	<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Ordem</label>
+			<div class="col-lg-10">
+			    <div id="ordem">
+	              <div class="input-group input-small">
+	                
+	                  <%= if @area.ordem.blank?
+				 		 f.text_field :ordem, :min => 1, :value => @areas.length + 1, :class => 'spinner-input form-control'  
+			 		  else
+					     f.text_field :ordem, :min => 1, :class => 'spinner-input form-control'
+					  end %>
+	                  <div class="spinner-buttons input-group-btn btn-group-vertical">
+	                      <button type="button" class="btn spinner-up btn-xs btn-default">
+	                          <i class="fa fa-angle-up"></i>
+	                      </button>
+	                      <button type="button" class="btn spinner-down btn-xs btn-default">
+	                          <i class="fa fa-angle-down"></i>
+	                      </button>
+	                  </div>
+	              </div>
+	          	</div>
+	        </div> 	
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+	  	<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Url da área</label>
+		    <div class="col-lg-6">
+			    <%= f.text_field :url, :class=> 'form-control' %>
+			</div>	
+		</div>
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+			<div class="botoesCustom">
+				<label class="col-lg-2 col-sm-2 control-label">Exibe no menu</label>
+				<div class="col-lg-2 col-xs-11">
+					<%= f.check_box :exibe_menu, :class => 'form-control' %>
+				</div>
+			</div>
+		</div>
+
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Status</label>
+			<div class="col-lg-5">
+				<%= f.select(:status, [['Não Publicado', '0'],
+			                       	   ['Publicado', '1'],
+			                           ['Oculto', '2']], {}, { :class => 'form-control' } )%>
+			</div>
+       	</div>
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Imagem</label>
+		    <div class="col-lg-10">
+		    <% if @area.imagem.blank? %>
+		 		<%= f.file_field :imagem, :class => 'inputImportar form-control' %>	
+	 		<% else %>
+				<div class="project-mask">
+			        <div class="thumbnail">
+						<%= image_tag("#{@area.imagem}", :class => 'imagemArea') %>
+			            <div class="descricao">
+							<%= link_to 'Excluir imagem', {:action => "excluiImagemArea"}, :id => @area.id, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluirImagemArea btn btn-danger' %>	
+			            </div>
+			        </div>
+			    </div>
+			</div>
+	    </div>
+				
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+			    <label class="col-lg-2 col-sm-2 control-label">Url da Imagem</label>
+			    <div class="col-lg-6">
+			    	<%= f.text_field :imagem_url, :class=> 'form-control' %>
+				</div>
+				<div class="clearAll">&nbsp;</div>
+		</div>
+		<div class="form-group">
+			    <label class="col-lg-2 col-sm-2 control-label">Target</label>
+				<div class="col-lg-5">
+					<%= f.select(:imagem_target_link, [['Abrir em nova janela', '_blank'],
+				                       ['Abrir na mesma janela', '_self']], {}, { :class => 'dropDownEstilizado form-control' } )%>
+				</div>					   
+			<% end %>
+		</div>
+		
+		<div class="clearAll">&nbsp;</div>
+	
+
+	<div class="divisaoBtnForm">
+		<div class="botoesForm botoesFormSaveCancel">
+			<%= link_to "Voltar", {:action => "index"}, :class => "btn btn-default" %>
+			
+			<%= f.submit 'Salvar', :class => 'btn btn-info' %>
+		</div>
+	</div>
+	<%= f.hidden_field :id, :class=> 'form-control' %>
+<% end %>
+
+<script>
+
+	$('.botoesCustom input').iCheck({
+        checkboxClass: 'icheckbox_minimal',
+        increaseArea: '20%' // optional
+    });
+
+	$('.thumbnail').hover(function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: 0
+	    }, 200);
+	}, function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: '-100%'
+	    }, 200);
+	});
+	
+
+	/*$('#admin_area_nome').on('keyup', function(){
+		valor = $(this).val();
+		valor = valor.replace(/_/g,'-');
+		valor = valor.replace(/ /g,'-');
+		valor = valor.toLowerCase();
+		$('#admin_area_url').val('/'+valor)
+	});*/
+
+	//color picker do titulo
+	var cor;
+
+	$('#ordem').spinner();
+
+	$("form.edit_admin_area").validate({
+       rules: {
+        'admin_area[nome]': 
+        {
+          required: true
+        }
+      },
+      messages: {
+        'admin_area[nome]': {
+         	required: "O nome da área é obrigatório."
+     	}
+      },
+      submitHandler: function(form){
+			nome = $('#admin_area_nome').val();
+			id = $('#admin_area_id').val();
+			$.ajax({
+				"crossDomain": true,
+				"type":"POST",
+				beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+				"url":"/admin/area/areaRepetida",
+				"data": {nome: nome, id: id},
+				"dataType":"json",
+				"success":function(resp){
+					if(resp == 1){
+						$('#admin_area_nome').after('<label class="error" style="margin: 20px 0 0">Já existe uma área com esse nome</label>')	
+						return false;
+					}
+					else{
+						form.submit()
+					}
+				}
+			});
+			
+		}
+  	});
+
+  	$("form.new_admin_area").validate({
+       rules: {
+        'admin_area[nome]': 
+        {
+          required: true
+        }
+      },
+      messages: {
+        'admin_area[nome]': {
+         	required: "O nome da área é obrigatório."
+     	}
+      },
+      submitHandler: function(form){
+			nome = $('#admin_area_nome').val();
+			$.ajax({
+				"crossDomain": true,
+				"type":"POST",
+				beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+				"url":"/admin/area/areaRepetida",
+				"data": {nome: nome},
+				"dataType":"json",
+				"success":function(resp){
+					if(resp == 1){
+						$('#admin_area_nome').after('<label class="error" style="margin: 20px 0 0">Já existe uma área com esse nome</label>')	
+						return false;
+					}
+					else{
+						form.submit()
+					}
+				}
+			});
+			
+		}
+  	});
+
+	$('#admin_area_exibe_menu').on('ifChecked', function(event){
+	  checked = 1
+	  $('input[name*="admin_area[exibe_menu]"]').val(checked);
+	});
+
+	$('#admin_area_exibe_menu').on('ifUnchecked', function(event){
+	  checked = 0
+	   $('input[name*="admin_area[exibe_menu]"]').val(checked);
+	});
+	
+</script>

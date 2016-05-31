@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleConteudo.css' %>
+
+<script type="text/javascript">
+ 
+</script>
+
+<div id="banner" style="background-image: url('<%= @conteudo.imagem_banner unless @conteudo.blank? %>');"></div>
+
+<div id="corpoSite">
+    <div id="content">
+      <% unless @conteudo.blank? %>
+
+      	<%=image_tag @conteudo.imagem_destaque%>
+
+        <div>
+          <%=raw(@conteudo.conteudo)%>
+        </div>
+
+      <%end%>
+    </div>
+</div>

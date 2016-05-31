@@ -1,0 +1,617 @@
+﻿
+#pop-up
+{
+    background-color: #fff;
+    border: 1px solid #EEEEEE;
+    box-shadow: 0 0 3px #000000;
+    float: left;
+    left: 40%;
+    position: fixed;
+    top: 30%;
+    z-index: 99999;
+}
+
+#pop-up #fecharPopUp
+{
+    cursor: pointer;
+    float: right;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    z-index: 999999;
+}
+
+#banner1, #banner2, #oferta1, #oferta2, #exibeVideo, #mural
+{
+    float: left;
+    width: 100%;
+}
+
+#banner1
+{
+    background-color: #fff;
+}
+
+#banner2
+{
+    background-color: #f8f6f1;
+}
+
+#oferta1, #oferta2
+{
+    background: url(/images/website/gradiente_oferta1.jpg) repeat left top;
+    padding:10px 0 0;
+}
+
+#exibeVideo
+{
+    background-color: #bac94c;
+}
+
+#mural
+{
+    background-color: #fff;
+}
+
+
+/*Banner 1 - ofertas*/
+
+#banner1 .device
+{
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 370px;
+    padding: 10px;
+    width: 98%;
+}
+
+#master #banner1 .wrapper .boxOfertaDestaque
+{
+    background: none;
+}
+
+/*Banner 1 - ofertas*/
+
+/*Box Slider Novidades - Início*/
+
+#banner2 #bannerNovidades h1,
+#mural #muralConteudo #muralTitulo h1
+{
+    color: #e3a427;
+    float: left;
+    margin: 35px 0 0 0;
+    width: 95%;
+}
+
+#banner2 #bannerNovidades .swiper-slide
+{
+    width: 220px;
+}
+
+#banner2 .device
+{
+    border: medium none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 495px;
+    padding: 0;
+    width: 975px;
+}
+
+#banner2 .boxSliderNovidades
+{
+    float: left;
+    height: 460px;
+    margin: 10px 0;
+    width: 218px;
+}
+
+    #banner2 .boxSliderNovidades .boxSliderNovidadesImg
+    {
+        float: left;
+        height: 160px;
+        margin: 0 0 15px;
+        width: 100%;
+    }
+
+        #banner2 .boxSliderNovidades .boxSliderNovidadesImg img
+        {
+            display: block;
+            margin: 0 auto;
+            max-height: 160px;
+            max-width: 215px;
+            width: auto;
+        }
+
+    #banner2 .boxSliderNovidades .boxSliderNovidadesTitulo
+    {
+        float: left;
+        width: 100%;
+    }
+
+        #banner2 .boxSliderNovidades .boxSliderNovidadesTitulo h2
+        {
+            color: #970573;
+            float: left;
+            font-family: 'museo300';
+            font-size: 18px;
+            margin: 3px 4px;
+        }
+
+    #banner2 .boxSliderNovidades .boxSliderNovidadesSubTitulo
+    {
+        float: left;
+        margin: 3px 0 7px;
+        width: 100%;
+    }
+
+        #banner2 .boxSliderNovidades .boxSliderNovidadesSubTitulo h3
+        {
+            color: #000;
+            float: left;
+            font: 20px/24px 'museo500';
+            margin: 0 2px 7px 4px;
+        }
+
+    #banner2 .boxSliderNovidades .boxSliderNovidadesDescricao
+    {
+        float: left;
+        width: 100%;
+    }
+
+        #banner2 .boxSliderNovidades .boxSliderNovidadesDescricao p
+        {
+            color: #3F2C1D;
+            float: left;
+            font-size: 16px;
+            line-height: 20px;
+            margin: 0 2px 0 4px;
+        }
+
+        #banner2 .boxSliderNovidades .boxSliderNovidadesDescricao p a
+        {
+            color: #3F2C1D;
+        }
+
+        #banner2 .boxSliderNovidades .boxSliderNovidadesDescricao p a:hover
+        {
+            color: #000;
+        }
+
+/*Box com imagem de inauguracao*/
+
+#banner2 .imgInauguracao .boxSliderNovidadesImg
+{
+    position: relative;
+}
+
+    #banner2 .imgInauguracao .boxSliderNovidadesImg img:first-child
+    {
+        left: -6px;
+        position: absolute;
+        top: -5px;
+        z-index: 5;
+    }
+
+/*Box com imagem de inauguracao*/
+
+/*Box Slider Novidades - Fim*/
+
+
+/*Box Oferta Destaque - Início*/
+
+#master .boxOfertaDestaque
+{
+    float: left;
+    height: 350px;
+    margin: 0;
+    position: relative;
+    width: 100%;
+}
+
+    #master .boxOfertaDestaque .boxOfertaDestaqueImg
+    {
+        bottom: 20px;
+        float: left;
+        margin: 0 40px 0 20px;
+        position: absolute;
+        width: 470px;
+    }
+
+        #master .boxOfertaDestaque .boxOfertaDestaqueImg img
+        {
+            display: block;
+            margin: 0 auto;
+            max-width: 470px;
+            width: auto;
+        }
+
+    #master .boxOfertaDestaque .boxOfertaDestaqueDescricao
+    {
+        bottom: 40px;
+        float: left;
+        right: 30px;
+        position: absolute;
+        width: 430px;
+    }
+
+        #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaqueTitulo
+        {
+            float: left;
+            width: 100%;
+        }
+
+            #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaqueTitulo h2
+            {
+                color: #e3a427;
+                font-family: 'museo700';
+                font-size: 23px;
+                margin: 0 0 20px;
+                text-align: right;
+            }
+
+        #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaqueDescProduto
+        {
+            float: left;
+            width: 100%;
+        }
+
+            #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaqueDescProduto p,
+            #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaquePreco p,
+            #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaquePreco span
+            {
+                color: #000;
+                float: left;
+                font-family: 'museo100';
+                font-size: 21px;
+                margin: 0;
+                text-align: right;
+            }
+
+            #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaqueDescProduto a.cliqueConfira
+            {
+                float: right;
+                font: bold 21px 'museo300';
+                color: #970573;
+            }
+
+                #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaqueDescProduto a.cliqueConfira:hover
+                {
+                    text-decoration: underline;
+                }
+
+        #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaquePreco
+        {
+            float: left;
+            width: 100%;
+        }
+
+            #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaquePreco p
+            {
+                margin: 18px 0 0;
+                width: 100%;
+            }
+
+            #master .boxOfertaDestaque .boxOfertaDestaqueDescricao .boxOfertaDestaquePreco span,
+            #exibeVideo #exibeVideoConteudo #exibeVideoConteudoDir span
+            {
+                color: #970573;
+                float: none;
+                margin: 0;
+                font-size: 41px;
+                font-family: 'museo500';
+            }
+
+#master .boxOfertaDestaqueImgEsq
+{
+}
+
+    #master .boxOfertaDestaqueImgEsq .boxOfertaDestaqueImg
+    {
+        float: right;
+        margin: 0 0 0 40px;
+        right: 0;
+    }
+
+    #master .boxOfertaDestaqueImgEsq .boxOfertaDestaqueDescricao
+    {
+        bottom: 30px;
+        left: 30px;
+    }
+
+
+/*Box Oferta Destaque - Fim*/
+
+
+/*Div com vídeo - Início*/
+
+#exibeVideo
+{
+    padding: 70px 0;
+}
+
+    #exibeVideo #exibeVideoConteudo
+    {
+        float: left;
+        width: 100%;
+    }
+
+        #exibeVideo #exibeVideoConteudo #exibeVideoConteudoEsq
+        {
+            border: 4px solid #fff;
+            float: left;
+            margin: 0 50px 0 0;
+            width: 472px;
+        }
+
+        #exibeVideo #exibeVideoConteudo #exibeVideoConteudoEsq object
+        {
+            float: left;
+        }
+
+        #exibeVideo #exibeVideoConteudo #exibeVideoConteudoDir
+        {
+            float: left;
+            width: 430px;
+        }
+
+            #exibeVideo #exibeVideoConteudo #exibeVideoConteudoDir h1
+            {
+                color: #fff;
+                float: left;
+                font-size: 28px;
+                margin: 0 0 20px 0;
+                width: 100%;
+            }
+
+            #exibeVideo #exibeVideoConteudo #exibeVideoConteudoDir h2
+            {
+                color: #000;
+                float: left;
+                font-size: 20px;
+                margin: 0 0 20px 0;
+                width: 100%;
+            }
+
+            #exibeVideo #exibeVideoConteudo #exibeVideoConteudoDir p
+            {
+                color: #000;
+                float: left;
+                font-size: 20px;
+                margin: 0 0 20px 0;
+                width: 100%;
+            }
+
+            #exibeVideo #exibeVideoConteudo #exibeVideoConteudoDir a
+            {
+                float: left;
+                font: 18px 'museo500';
+                margin: 15px 50px 0 0;
+            }
+
+                #exibeVideo #exibeVideoConteudo #exibeVideoConteudoDir a:hover
+                {
+                    text-decoration: underline;
+                }
+
+/*Div com vídeo - Fim*/
+
+
+/*Mural - Início*/
+
+#mural
+{
+    padding: 60px 0;
+}
+
+    #mural #muralConteudo
+    {
+        float: left;
+        width: 100%;
+    }
+
+        #mural #muralConteudo #muralTitulo
+        {
+            float: left;
+            margin: 0 0 20px;
+            width: 100%;
+        }
+
+            #mural #muralConteudo #muralTitulo h1
+            {
+                margin: 0;
+                width: auto;
+            }
+
+            #mural #muralConteudo #muralTitulo a.comentario
+            {
+                background: url(/images/website/icone_mais.png) no-repeat scroll 200px center;
+                border: 1px solid #970573;
+                border-radius: 5px;
+                float: right;
+                font-weight: bold;
+                margin: 0 20px 0 0;
+                padding: 10px 35px 10px 10px;
+                width: 185px;
+            }
+
+                #mural #muralConteudo #muralTitulo a.comentario:hover
+                {
+                    background-color: #eee;
+                }
+
+        #mural #muralConteudo #muralConteudoBox
+        {
+            float: left;
+            width: 100%;
+        }
+
+            #mural #muralConteudo #muralConteudoBox .boxMuralColuna
+            {
+                float: left;
+                margin-left: 18px;
+                width: 230px;
+            }
+
+                #mural #muralConteudo #muralConteudoBox .boxMuralColuna:first-child
+                {
+                    margin-left: 0;
+                }
+
+
+            #mural #muralConteudo #muralConteudoBox .boxMural
+            {
+                background-color: #F5F1E6;
+                float: left;
+                margin: 15px 0;
+                padding: 15px 15px;
+                width: 200px;
+            }
+
+
+                #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralTitulo
+                {
+                    float: left;
+                    margin: 0;
+                    width: 100%;
+                }
+
+                #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralTituloAlerta
+                {
+                    position:relative;
+                }
+
+                    #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralTituloAlerta > img
+                    {
+                        position:absolute;
+                        right:0;
+                        top:-3px;
+                        z-index:2;
+                    }
+
+                    #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralTitulo h2
+                    {
+                        color: #6e401c;
+                        float: left;
+                        font: 18px 'museo700';
+                        text-transform: uppercase;
+                    }
+
+                #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralData
+                {
+                    float: left;
+                    margin: 5px 0;
+                    width: 100%;
+                }
+
+                    #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralData span
+                    {
+                        color: #000;
+                        float: left;
+                        font: 13px arial;
+                    }
+
+                #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralImg
+                {
+                    float: left;
+                    margin: 5px 0;
+                    width: 100%;
+                }
+
+                    #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralImg img
+                    {
+                    }
+
+                #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralDesc
+                {
+                    float: left;
+                    margin: 5px 0;
+                    width: 100%;
+                }
+
+                    #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralDesc p
+                    {
+                        color: #3f2c1d;
+                        float: left;
+                        font-size: 15px;
+                        line-height: 20px;
+                    }
+
+                #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralAvaliacao
+                {
+                    float: left;
+                    width: 100%;
+                }
+
+                    #mural #muralConteudo #muralConteudoBox .boxMural .boxMuralAvaliacao img
+                    {
+                        float: right;
+                    }
+
+            #mural #muralConteudo #muralConteudoBox .boxMuralRosa
+            {
+                background-color: #f4e6f1;
+            }
+
+                #mural #muralConteudo #muralConteudoBox .boxMuralRosa .boxMuralTitulo h2
+                {
+                    color: #970573;
+                }
+
+                #mural #muralConteudo #muralConteudoBox .boxMuralRosa .boxMuralDesc p
+                {
+                    color: #000;
+                }
+
+/*Mural - Fim*/
+
+
+/* Banner Destaque (em cima de novidades) */
+
+#bannerDestaque,
+#bannerDestaque #bannerDestaqueConteudo,
+#bannerDestaque #bannerDestaqueConteudo a,
+#bannerDestaque #bannerDestaqueConteudo img
+{
+    float: left;
+    width: 100%;
+}
+
+#bannerDestaque #bannerDestaqueConteudo
+{
+}
+
+#bannerDestaque #bannerDestaqueConteudo a
+{
+}
+
+/* Banner Destaque (em cima de novidades) */
+
+
+/* Banner Cesta */
+
+#bannerCesta
+{
+    background-color: #FFF;
+}
+
+#bannerCesta,
+#bannerCesta #bannerCestaConteudo,
+#bannerCesta #bannerCestaConteudo a,
+#bannerCesta #bannerCestaConteudo img
+{
+    float: left;
+    width: 100%;
+    padding: 5px 0; 
+}
+
+#bannerCesta #bannerCestaConteudo
+{
+}
+
+#bannerCesta #bannerCestaConteudo a
+{
+}
+
+/* Banner Cesta (em cima de novidades) */

@@ -1,0 +1,298 @@
+img.logoImpressao
+{
+	display: none;
+	float: left;
+	margin: 0 0 10px;
+}
+
+#desenvolvidoPorImpressao
+{
+	float: right;
+	display: none;
+	margin: 10px 0 0;
+	width: 180px;
+}
+
+#desenvolvidoPorImpressao span
+{
+	color: #555;
+	float: left;
+	font: 14px arial;
+	margin: 0 0 5px;
+	width: 100%
+}
+
+/* LISTAGEM DOS PEDIDOS (GRID) */
+
+#conteudo #conteudoPrincipal .formAddNovo .divTourBusca
+{
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTourBusca .select2-container
+{
+	float: left;
+	margin-right: 15px;
+	max-width: 220px;
+}
+
+/* LISTAGEM DOS PEDIDOS (GRID) */
+
+
+.tituloForm #imprimirPedido
+{
+	float: right;
+	margin: 14px 30px 0 0;
+	position: relative;
+	width: 95px;
+}
+
+.tituloForm #imprimirPedido a
+{
+	color: #fff;
+	float: left;
+    font: bold 14px arial;
+    left: 35px;
+    position: relative;
+    top: 0;
+}
+
+.tituloForm #imprimirPedido a img
+{
+	float: left;
+    left: -30px;
+    position: absolute;
+    top: -2px;
+    width: 22px;
+}
+
+.tituloForm #imprimirPedido a:hover
+{
+	text-decoration: underline;
+}
+
+#conteudo #conteudoPrincipal .excluirLocal.cancelarPedido
+{
+	background-image: url(/images/cancelar_pedido.png);
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.spanConteudo
+{
+	font: bold 16px arial;
+	text-align: left;
+	width: 110px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido
+{
+	float: left;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTour
+{
+	margin: 0 0 20px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido
+{
+	float: left;
+	margin: 0 0 15px;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido span
+{
+	color: #4e4e4e;
+	float: left;
+	font: bold 16px arial; 
+	margin: 0 5px 0 0;
+	text-align: left;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido label
+{
+	float: left;
+	font: 16px arial;
+}
+
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .boxInfoPedido
+{
+	background-color: #F9F9F9;
+    border-bottom: 1px solid #E7E7E7;
+    border-right: 1px solid #E7E7E7;
+    float: left;
+    height: 170px;
+    margin: 0 0 0 15px;
+    padding: 10px;
+    width: 205px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .boxInfoPedido:first-child
+{
+	margin-left: 0px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido h3
+{
+	border-bottom: 1px solid #7D7D7D;
+    color: #5E5E5E;
+    float: left;
+    font: bold 22px arial;
+    margin: 0 0 20px;
+    padding: 0 0 10px;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .boxInfoPedido > div
+{
+	float: left;
+	margin: 0 0 10px;
+	width: 100%;
+}
+
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido
+{
+    float: left;
+    margin: 0 0 25px;
+    padding: 0 0 15px;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo
+{
+	float: left;
+	margin: 0 0 10px;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label,
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos label
+{
+	float: left;
+	font: bold 16px arial; 
+    text-align: center;
+    width: 110px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label
+{
+	color: #4e4e4e;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label.listaProdutosNomeProduto,
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos label.listaProdutosNomeProduto
+{
+	text-align: left;
+	width: 440px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label:first-child,
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos label:first-child
+{
+	width: 110px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos
+{
+	float: left;
+	margin: 0 0 7px;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label
+{
+	width: 130px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos label
+{
+	font-weight: normal; 
+	width: 130px;
+}
+
+
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido.enderecoEntrega
+{
+    padding: 0 0 10px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido.enderecoEntrega span,
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido.enderecoEntrega label
+{
+	margin: 0 0 10px;
+	text-align: left;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido.enderecoEntrega span
+{
+	width: 173px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .linhaInfoPedido.enderecoEntrega label
+{
+	margin: 0 0 5px;
+}
+
+
+/*box cancelar pedido*/
+
+#conteudo #conteudoPrincipal .maskLoader
+{
+	left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 99;
+}
+
+#conteudo #conteudoPrincipal #boxCancelarPedido
+{
+	background-color: #F5F5F5;
+    border: 1px solid #B3AEAE;
+    border-radius: 5px;
+    display: none;
+    float: left;
+    left: 34%;
+    padding: 10px 20px;
+    position: absolute;
+    top: 250px;
+    width: 350px;
+    z-index: 100;
+}
+
+#conteudo #conteudoPrincipal #boxCancelarPedido h3
+{
+	float: left;
+	margin: 0 0 10px;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal #boxCancelarPedido > div
+{
+	margin: 0 auto;
+    width: 204px;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzul
+{
+	margin-right: 0 !important;
+}
+
+#conteudo #conteudoPrincipal #boxCancelarPedido label.error
+{
+	color: #f20;
+	float: left;
+	left: 0;
+}
+
+#conteudo #conteudoPrincipal #boxCancelarPedido textarea.error
+{
+	border-color: #f20;
+}
+
+/*box cancelar pedido*/

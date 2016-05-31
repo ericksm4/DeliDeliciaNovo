@@ -1,0 +1,188 @@
+#banner{
+	background-image: url('/assets/website/banner_contato.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 390px;
+	width: 100%;
+	margin-top: 75px;
+}
+
+.evento{
+	margin-top: 30px;
+}
+
+.evento p{
+	color: #474747;
+}
+
+.evento .maskImg{
+	width: 100%;
+	height: 270px;
+	margin-bottom: 15px;
+}
+
+.form{
+	overflow: hidden;
+	margin: 0 auto;
+	width: 836px;
+}
+
+.evento h2{
+	font-family: "Roboto";
+    margin: 0 0 10px;
+    padding: 0 25px;
+    display: table;
+    font-size: 20px;
+    background: url('/assets/website/h2-bg1.png') no-repeat left,
+    url('/assets/website/h2-bg2.png') no-repeat right;
+    font-weight: normal;
+    color: #a21984;
+}
+
+.form h3{
+    color: #b02f84;
+    font-family: "Roboto Medium";
+    text-align: center;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+.form .form-line{
+	float: left;
+	clear: both;
+	margin-bottom: 15px;
+	overflow: hidden;
+	width: 100%;
+}
+
+.form .form-line input,
+.form .form-line textarea{
+	width: 406px;
+	margin-right: 10px;
+	border: solid 1px #acacac;
+	border-radius: 4px;
+	padding: 9px 7px;
+	color: #acacac;
+	transition: 0.4s;
+	box-sizing: border-box;
+	font-size: 16px;
+}
+
+.form .form-line input:focus,
+.form .form-line textarea:focus{
+	border: solid 1px #aa0e79;
+}
+
+.form .form-line.form-line2 input,
+.form .form-line.form-line2 textarea{
+	width: 825px;
+}
+
+.form .form-line.form-line2 textarea{
+	max-width: 825px;
+	font-family: 'Roboto';
+	min-height: 250px;
+}
+
+.form .form-line input[type="checkbox"],
+.form .form-line label
+{
+	width: auto;
+	float: left;
+}
+
+.form .form-line input[type="submit"]{
+    float: right;
+    width: auto;
+    background: #fff;
+    border: solid 1px #aa0e79;
+    color: #aa0e79;
+    transition: 0.4s;
+    cursor: pointer;
+    padding: 5px 60px;
+    text-transform: uppercase;
+    font-family: "Roboto Medium";
+    font-size: 15px;
+}
+
+.form .form-line input[type="submit"]:hover{
+	color: #FFF;
+	background: #aa0e79;
+}
+
+#maskLoader{
+	background: #fff;
+	opacity: 0.8;
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 999999999999998;
+	display: none;
+}
+
+#loader{
+	position: fixed;
+	width: 48px;
+	left: 50%;
+	top: 50%;
+	margin-left: -24px;
+	margin-top: -24px;
+	display: none;
+	z-index: 999999999999999;
+}
+
+.form .form-line label.error{
+	float: right;
+    color: red;
+    margin: 5px 11px 0px 0px;
+}
+
+label.success{
+	float: left;
+    color: #24A924;
+    display: block;
+    margin: 0 0 20px;
+}
+
+@media screen and (max-width: 1240px){
+	.form{
+		float: none;
+    	width: 100%;
+    	margin: 0 auto;
+	}
+
+	.form form{
+		width: 100%;
+		margin: 0 auto;
+		max-width: 836px;
+	}
+}
+
+@media screen and (max-width: 875px){
+	#banner{
+		height: 200px;
+	}
+
+	.form .form-line input, 
+	.form .form-line.form-line2 input, 
+	.form .form-line.form-line2 textarea{
+		width: 100%;
+		display: block;
+		margin-bottom: 15px;
+		max-width: 836px;
+	}
+
+	.form .form-line{
+		margin-bottom: 0;
+	}
+
+	.form .form-line input[type="submit"]{
+	    margin: 0 auto;
+	    display: table;
+	    float: none;
+	    clear: both;
+	}
+}

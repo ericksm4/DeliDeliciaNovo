@@ -1,0 +1,275 @@
+﻿
+/*Box nova galeria*/
+
+#conteudo #conteudoPrincipal #novaGaleria
+{
+    float: left;
+}
+
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes
+    {
+        float: left;
+    }
+
+/*Box nova galeria*/
+
+#conteudo #conteudoPrincipal #boxListagemImgGaleria
+{
+    background-color: #F8F8F8;
+    margin: 0 auto;
+    width: 470px;
+}
+
+/*Box galeria de imagens*/
+
+#conteudo #conteudoPrincipal #listagemImagensGaleria
+{
+    float: left;
+    width: 470px;
+}
+
+
+#conteudo #conteudoPrincipal .boxGaleriaImagens
+{
+    background-color: #F8F8F8;
+    border: 1px solid #FFFFFF;
+    box-shadow: 0 0 3px #D5D5D5;
+    float: left;
+    margin: 15px 0;
+    max-width: 600px;
+    padding: 10px;
+    width: 100%;
+}
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens h2 span
+    {
+        color: #6D6D6D;
+        float: left;
+        font-weight: normal;
+        text-align: center;
+    }
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens span
+    {
+        float: left;
+        font-weight: bold;
+        margin: 5px 0;
+        width: 100%;
+    }
+
+#conteudo #conteudoPrincipal .boxGaleriaImagensCriar .listaGaleria:first-child
+{
+    background-color: #EEF5FE;
+    border: 1px solid #383EAA;
+    border-radius: 3px;
+}
+
+#conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria
+{
+    /*border-bottom: 1px solid #E0E0E0;*/
+    border-left: 3px solid #919191;
+    float: left;
+    margin: 0 0 15px;
+    padding: 5px 0;
+}
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria img
+    {
+        float: left;
+        margin: 0 15px 0 0;
+        width: 130px;
+    }
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria .listaGaleriaDescricao
+    {
+        float: left;
+        width: 67%;
+    }
+
+        #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria .listaGaleriaDescricao h2 span
+        {
+            color: #555;
+            float: left;
+            font-size: 18px;
+            margin: 0 0 5px;
+            text-align: left;
+            width: 100%;
+        }
+
+        #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria .listaGaleriaDescricao span
+        {
+            float: left;
+            font-weight: normal;
+            width: 100%;
+        }
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria .edicaoTemplate
+    {
+        float: right;
+        margin: 0 5px 0 10px;
+        position: static;
+        right: 0;
+        top: 0;
+    }
+
+#conteudo #conteudoPrincipal #boxListagemImgGaleria #paginacao,
+#conteudo #conteudoPrincipal .boxGaleriaImagens #paginacao,
+#conteudo #conteudoPrincipal .boxConteudoDivisaoBtn #paginacao
+{
+    float: none;
+    margin: 0 auto;
+}
+
+/*Box galeria de imagens*/
+
+
+
+
+
+#conteudo #conteudoPrincipal #centralizarListagemGaleria
+{
+    float:none;
+    margin:0 auto;
+    width:650px;
+}
+
+
+
+
+
+/*Janela de edição da galeria*/
+.modalEdicaoTemplateBox span
+{
+    font-weight: bold;
+    width: 100%;
+}
+
+
+
+/* criar/editar box galeria (principal) */
+
+#conteudo #conteudoPrincipal #novaGaleria
+{
+    border-bottom: 1px solid #D9D9D9;
+    float: left;
+    margin: 0 0 15px;
+    width: 100%;
+}
+
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes
+    {
+        float: none;
+        margin: 0 auto;
+        width: 760px;
+    }
+
+        #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesEsq,
+        #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesDir
+        {
+            float: left;
+            padding: 15px;
+            width: 230px;
+        }
+
+            #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesEsq span,
+            #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesDir span
+            {
+                float: left;
+                font-weight: bold;
+                margin: 0 0 5px;
+                width: 100%;
+            }
+
+            #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesEsq .botoesCustom span
+            {
+                font-weight: normal;
+            }
+
+            #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesEsq img
+            {
+                background-color: #F9F9F9;
+                border: 1px solid #E3E3E3;
+                float: left;
+                width: 215px;
+            }
+
+        #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesDir
+        {
+            width: 470px;
+        }
+
+
+
+#conteudo #conteudoPrincipal a.btnAlterarImagem
+{
+    background-color: #6D6D6D;
+    margin: 10px 0 10px 40px;
+}
+
+    #conteudo #conteudoPrincipal a.btnAlterarImagem:hover
+    {
+        background-color: #8F8F8F;
+    }
+
+#conteudo #conteudoPrincipal .boxConteudo .boxConteudoDivisaoBtn .boxConteudoBotoesInf
+{
+    width: 300px;
+}
+
+/* criar/editar box galeria (principal) */
+
+
+
+
+/*Listagem da galeria de imagens (pagina de criar nova galeria)*/
+
+#conteudo #conteudoPrincipal .boxGaleriaImagensCriar
+{
+    width: 94%;
+}
+
+#conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleriaCriar
+{
+    background: url("../Imagens/iconeDrag.png") no-repeat scroll 5px 3px;
+    border: none;
+    cursor: move;
+    padding: 5px 0 5px 15px;
+}
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleriaCriar img
+    {
+        height: auto;
+        width: 90px;
+    }
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleriaCriar .listaGaleriaDescricaoCriar
+    {
+        width: 63%;
+    }
+
+        #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleriaCriar .listaGaleriaDescricaoCriar h2 span
+        {
+            font-size: 16px;
+        }
+
+        #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleriaCriar .listaGaleriaDescricaoCriar span
+        {
+            font-size: 12px;
+        }
+
+/*Listagem da galeria de imagens (pagina de criar nova galeria)*/
+
+
+
+
+#conteudo .btnImportarImagem
+{
+    background-color: #989141;
+    float: right;
+    margin: 0 5px 0 0;
+}
+
+    #conteudo .btnImportarImagem:hover
+    {
+        background-color: #A9A24C;
+    }

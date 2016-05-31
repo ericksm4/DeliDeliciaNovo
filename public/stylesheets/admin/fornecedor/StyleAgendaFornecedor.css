@@ -1,0 +1,229 @@
+/*Personalização datepicker*/
+
+#boxFornecedor #datepicker .ui-state-highlight
+{
+	float: none;
+	height: auto;
+	width: auto;
+}
+
+#boxFornecedor #datepicker .ui-widget-header .ui-icon
+{
+
+}
+
+#boxFornecedor #datepicker .ui-datepicker .ui-datepicker-prev span, 
+#boxFornecedor #datepicker .ui-datepicker .ui-datepicker-next span
+{
+	background: url(/images/setas_calendario_agendamento.png) no-repeat -7px top;
+	height: 10px;
+	margin: -5px 0 0 -4px;
+    width: 7px;
+}
+
+#boxFornecedor #datepicker .ui-datepicker .ui-datepicker-prev span
+{
+	background-position: 0 0;
+}
+
+.ui-datepicker td span, .ui-datepicker td a
+{
+	text-align: center;
+}
+
+#boxFornecedor #datepicker .ui-widget-header
+{
+	background-color: #fff;
+    border: medium none;
+    color: #444;
+}
+
+#boxFornecedor #datepicker .ui-widget-content
+{
+	background-color: #fff;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 3px #CDCDCD;
+    color: #555;
+}
+
+#boxFornecedor #datepicker .ui-widget-header .ui-state-hover
+{
+	background-color: #eee !important;
+	border-color: #eee !important;
+}
+
+#boxFornecedor #datepicker .ui-state-default
+{
+	border: medium none;
+    color: #333333;
+    font-family: arial;
+    font-weight: normal;
+}
+
+#boxFornecedor #datepicker .ui-state-disabled, 
+#boxFornecedor #datepicker .ui-widget-content .ui-state-disabled,
+#boxFornecedor #datepicker .ui-widget-header .ui-state-disabled
+{
+	opacity: 1;
+    filter: alpha(opacity=100);
+    -ms-filter: "alpha(opacity=100)";
+}
+
+
+#boxFornecedor #datepicker .ui-state-disabled span, 
+#boxFornecedor #datepicker .ui-widget-content .ui-state-disabled span,
+#boxFornecedor #datepicker .ui-widget-header .ui-state-disabled span
+{
+	color: #DCDCDC;
+}
+
+#boxFornecedor #datepicker .ui-widget-content a
+{
+	border-radius: 3px;
+	transition:none;
+}
+
+#boxFornecedor #datepicker .ui-widget-content .ui-state-hover
+{
+	background-color: #DDF4FF;
+	border-radius: 3px;
+}
+
+#boxFornecedor #datepicker .ui-state-active
+{
+	background-color: #0067cc !important;
+	border-radius: 3px;
+	color: #fff;
+}
+
+
+ /*Cores para diferenciar os dias*/
+
+#boxFornecedor #datepicker .ui-widget-content a.naoAtendidos
+{
+	color: #DCDCDC;
+}
+
+#boxFornecedor #datepicker .ui-widget-content a.diponiveisNaoLiberados
+{
+	background-color: #CF954A;
+	border-radius: 50%;
+    color: #FFFFFF;
+}
+
+#boxFornecedor #datepicker .ui-widget-content a.liberados
+{
+	background-color: #28B779;
+	border-radius: 50%;
+    color: #FFFFFF;
+}
+
+#boxFornecedor #datepicker .ui-widget-content a.jaAtendidos
+{
+	background-color: #9F9F9F;
+	border-radius: 50%;
+    color: #FFFFFF;
+}
+
+#boxFornecedor #datepicker .ui-widget-content a.internetNaoPermitido
+{
+	background-color: #7E2727;
+	border-radius: 50%;
+    color: #FFFFFF;
+}
+
+ /*Cores para diferenciar os dias*/
+
+
+/*Personalização datepicker*/
+
+
+
+#conteudo #conteudoPrincipal #calendario
+{
+	margin: 0 auto; 
+	width: 275px;
+}
+
+#conteudo #conteudoPrincipal #calendario > span
+{
+	float: left;
+	font: 14px arial;
+	margin: 0 0 10px; 
+	width: 100%;
+} 
+
+#conteudo #conteudoPrincipal #calendario #datepicker
+{
+	float: left;
+}
+
+
+/*Legenda calendário*/
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario
+{
+	float: left;
+	margin: 5px 0 0 25px;
+    width: 240px;
+}
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario span
+{
+	background: url(/images/sprite_legenda_agenda.png) no-repeat 0 0;
+	float: left;
+	height: 12px;
+	margin: 6px 3px 0 0;
+	width: 12px;
+}
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario p
+{
+	float: left;
+    font: 12px arial;
+    margin: 4px 0;
+    width: 90%;
+}
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario span.legNaoAtendidos
+{
+	background-position: 0 0;
+}
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario span.legDisponiveisNaoLiberados
+{
+	background-position: 0 -13px;
+}
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario span.legLiberados
+{
+	background-position: 0 -26px;
+}
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario span.legJaAtendidos
+{
+	background-position: 0 -39px;
+}
+
+#conteudo #conteudoPrincipal #calendario #legendaCalendario span.legInternetNaoPermitido
+{
+	background-position: 0 -52px;
+}
+
+/*Legenda calendário*/
+
+
+
+/*Mensagem confirmação agendamento*/
+
+/*#conteudo #conteudoPrincipal #msgConfirmacaoAgendamento
+{
+
+}
+
+#conteudo #conteudoPrincipal #msgConfirmacaoAgendamento span
+{
+	
+}*/
+
+/*Mensagem confirmação agendamento*/

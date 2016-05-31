@@ -1,0 +1,202 @@
+#banner{
+	background-image: url('/assets/website/banner_novidades.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 390px;
+	width: 100%;
+	margin-top: 75px;
+}
+
+#navigation{
+	border-bottom: solid 1px #ff9201;
+	width: 100%;
+	padding-top: 20px;
+	margin-bottom: 30px;
+}
+
+#navigation ul {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	max-width: 1200px;
+}
+
+#navigation ul li{
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	border-bottom: solid 4px #FFF;
+	font-size: 19px;
+	cursor: pointer;
+	padding: 5px 20px;
+	margin-right: 50px;
+	opacity: 0.7;
+}
+
+#navigation ul li:hover,
+#navigation ul li.active{
+	opacity: 1;
+	border-bottom: solid 4px #ff9201;
+}
+
+#navigation .fa-bars{
+	display: none;
+}
+
+#lancamentos, 
+#conceitos{
+	display: none;
+}
+
+#corpoSite p{
+	color: #474747;
+}
+
+#listagemNovidades{
+	width: 100%;
+	text-align: center;
+	margin-top: 50px;
+}
+
+#listagemNovidades .novidade{
+	width: 100%;
+	display: inline-block;
+	margin: 0;
+}
+
+#listagemNovidades .novidade img{
+	width: 100%;
+}
+
+#listagemNovidades h2,
+#novidadeInterna h2{
+	font-family: "Roboto";
+    margin: 0 0 10px;
+    padding: 0 25px;
+    display: table;
+    font-size: 20px;
+    background: url('/assets/website/h2-bg1.png') no-repeat left,
+    url('/assets/website/h2-bg2.png') no-repeat right;
+    font-weight: normal;
+    color: #a21984;
+}
+
+#listagemNovidades h2 a{
+	color: #a21984;
+}
+
+#listagemNovidades .novidade p{
+	text-align: left;
+}
+
+#listagemNovidades .novidade .maskImgListagem{
+	height: 280px;
+	width: 100%;
+}
+
+#novidadeInterna{
+	overflow: hidden;
+}
+
+#novidadeInterna .maskImgInterna{
+	width: 280px;
+	position: relative;
+	float: left;
+	height: 305px;
+}
+
+#novidadeInterna #conteudo{
+	float: left;
+	width: 875px;
+	margin-left: 40px;
+}
+
+#novidadeInterna .maskImgInterna span{
+	position: absolute;
+	bottom: 0;	
+	color: #000;
+	padding: 10px 0;
+	width: 100%;
+	background-color: #faa635;
+	font-size: 14px;
+	text-align: center;
+}
+
+#novidadeInterna .maskImgInterna span label{
+	color: #a21984;
+	font-family: "Roboto Bold";
+	font-style: italic;
+	font-size: 22px;
+}
+
+@media screen and (max-width: 1250px){
+	#novidadeInterna #conteudo{
+		width: 66%;
+	}
+}
+
+@media screen and (max-width: 1000px){
+	#novidadeInterna .maskImgInterna{
+		    height: 200px;
+		    float: none;
+		    margin: 0 auto;
+	}
+
+	#novidadeInterna #conteudo{
+		float: none;
+		width: auto;
+		margin: 20px 0 0;
+	}
+
+	#novidadeInterna h2{
+		margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 900px){
+	#navigation .fa-bars{
+		color: #ff9201;
+		padding: 0 10px 7px;
+		display: inline-block;
+		font-size: 33px;
+		cursor: pointer;
+		transition: 0.4s;
+	}
+
+	#navigation .fa-bars.active,
+	#navigation .fa-bars:hover{
+		color: #C77405;
+	}
+
+	#navigation ul{
+		position: absolute;
+	    width: 205px;
+	    display: none;
+	    background: #fff;
+    	border-left: 0;
+    	box-shadow: 2px 2px 2px #B5B5B5;
+	}
+
+	#navigation ul li{
+	    padding: 5px 0;
+	    margin-right: 0;
+	    opacity: 0.7;
+	    width: 100%;
+	    border-bottom: solid 1px #ff9201;
+	    transition: 0.4s;
+	}
+
+	#navigation ul li.active,
+	#navigation ul li:hover{
+		border-bottom: solid 1px #ff9201;
+		color: #fff;
+		background: #ff9201;
+	}
+}
+
+@media screen and (max-width: 700px){
+	#banner{
+		height: 200px;
+	}
+}

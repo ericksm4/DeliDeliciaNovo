@@ -1,0 +1,17 @@
+﻿/*Newsletter criar novo usuario, ajuste do form*/
+#conteudo #conteudoPrincipal .novaAreaWidth
+{
+    margin: 140px auto 30px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input
+{
+    max-width:340px;
+}
+
+    #conteudo #conteudoPrincipal .formAddNovo input.inputImportar
+    {
+        width:250px;
+    }
+
+/*Newsletter criar novo usuario, ajuste do form*/

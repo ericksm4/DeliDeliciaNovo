@@ -1,0 +1,13 @@
+/*Inputs na mesma linha*/
+
+#conteudo #conteudoPrincipal .formAddNovoConteudo .divDoisInputs input
+{
+	max-width: 110px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovoConteudo span.spanInputDireita
+{
+	width: 75px;
+}
+
+/*Inputs na mesma linha*/

@@ -1,0 +1,817 @@
+/*Tela onde pode alterar itens do carrinho*/
+
+.wrapper > h1
+{
+	background: url(/images/website/bg_titulo_carrinho.png) no-repeat scroll left center;
+    color: #73155C;
+    float: left;
+    font-family: 'museo700';
+    line-height: 55px;
+    margin: 0 0 45px;
+    padding: 0 0 0 65px;
+    width: 90%;
+}
+
+#listaProdutos
+{
+	float: left;
+	margin: 0 0 30px;
+	position: relative;
+	width: 100%;
+}
+
+#listaProdutos #cabecalhoListagemProdutos
+{
+	border-bottom: 1px solid #5f5f5f;
+	float: left;
+	padding: 0 0 15px 15px;
+    width: 98%;
+}
+
+#listaProdutos #cabecalhoListagemProdutos span
+{
+	color: #631b5b;
+	float: left;
+	font: 20px 'museo700';
+	margin: 0 10px 0 0;
+	text-align: center;
+	width: 150px;
+}
+
+#listaProdutos #cabecalhoListagemProdutos span.cabecalhoProduto
+{
+	float: left;
+	text-align: left;
+	width: 340px;
+}
+
+#listaProdutos #cabecalhoListagemProdutos span.cabecalhoExcluir
+{
+	width: 105px;
+}
+
+#listaProdutos #listaTodosProdutos
+{
+	float: left;
+	margin: 0 0 20px;
+	width: 100%;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto
+{
+	float: left;
+	margin: 0 0 10px;
+	padding: 13px 0;
+	width: 100%;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto > div
+{
+	float: left;
+	margin: 15px 10px 0 0;
+	width: 150px;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto > div span,
+#listaProdutos #listaTodosProdutos .linhaProduto > div h4
+{
+	color: #692162;
+	float: left;
+	font: 20px 'museo500';
+	text-align: center;
+	width: 100%;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoDetalheProduto
+{
+	margin: 0 10px 0 0;
+	width: 355px;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoDetalheProduto img
+{
+	float: left;
+	height: auto;
+	margin: 0 10px 0 0;
+	max-width: 100px;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoDetalheProduto h4
+{
+	color: #878787;
+	font-family: 'museo300';
+	margin: 10px 0 0;
+	text-align: left;
+	width: 245px;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoCancelarItem
+{
+	margin: 10px 0 0;
+	width: 105px;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoCancelarItem span.excluirProduto
+{
+	background: url(/images/website/icon_excluir_produto.png) no-repeat left top;
+	cursor: pointer;
+	height: 29px;
+	margin-left: 45px;
+	width: 22px;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoQuantidade
+{
+
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoQuantidade div.divAlteraQtdInput span.alterarQtd
+{
+	background-color: #631C5B;
+    border-bottom: 2px solid #4A1544;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: left;
+    font: 27px/25px 'museo300';
+    height: 25px;
+    margin: 4px 7px 0;
+    text-align: center;
+    width: 27px;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoQuantidade div.divAlteraQtdInput span.alterarQtd:active
+{
+	background-color: #4A1544;
+}
+
+#listaProdutos #listaTodosProdutos .linhaProduto .linhaProdutoQuantidade div.divAlteraQtdInput input
+{
+	border: 1px solid #DCDCDC;
+    border-radius: 15px;
+    box-shadow: 0 2px 1px #EEEEEE inset;
+    color: #878787;
+    float: left;
+    font: 18px 'museo700';
+    max-width: 50px;
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+}
+
+
+#listaProdutos #valorEntrega
+{
+	border-bottom: 1px solid #5f5f5f;
+	float: left;
+	padding: 0 0 15px 15px;
+	width: 98%;
+}
+
+#listaProdutos #valorEntrega p
+{
+	color: #631c5b;
+	float: left;
+	font: 20px 'museo500';
+	margin: 0 15px 0 0;
+}
+
+#listaProdutos #valorEntrega input
+{
+	border: 1px solid #E7E7E7;
+    box-shadow: 1px 1px 1px #E0E0E0 inset;
+    float: left;
+    font: 18px 'museo300';
+    margin: -5px 15px 0 0;
+    padding: 8px;
+    width: 100px;
+}
+
+#listaProdutos #valorEntrega input:hover
+{
+	border-color: #D9D9D9;
+}
+
+#listaProdutos #valorEntrega input:focus
+{
+	border-color: #BABABA;
+    box-shadow: 2px 2px 2px #E0E0E0 inset;
+}
+
+#listaProdutos #valorEntrega a
+{
+	color: #641d5d;
+	float: left;
+	font-size: 20px;
+	margin: 0 10px;
+}
+
+#listaProdutos #valorEntrega a:hover
+{
+	text-decoration: underline;
+}
+
+#listaProdutos #valorEntrega span
+{
+	color: #6a2362;
+	float: right;
+	font: 20px 'museo700';
+	margin: 0 15px 0 0;
+}
+
+#finalizacaoPedido
+{
+	float: right;
+	width: 220px;
+}
+
+#finalizacaoPedido span
+{
+	color: #641d5d;
+	float: left;
+	font: 20px 'museo300';
+	margin: 0 0 25px;
+	text-align: right;
+	width: 100%;
+}
+
+#finalizacaoPedido label
+{
+	color: #692162;
+	float: left;
+	font: 30px 'museo700';
+	margin: 0 0 35px;
+	text-align: right;
+	width: 100%;
+}
+
+#finalizacaoPedido a, #finalizacaoPedido input,
+.cadastraEndereco input[type=submit]
+{
+	background-color: #e3a426;
+	border: none;
+	border-bottom: 5px solid #bc881f;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font: 25px 'museo700';
+	margin: 0 0 20px;
+	padding: 15px 0;
+	text-align: center;
+	width: 100%;
+}
+
+#finalizacaoPedido a:hover, #finalizacaoPedido input:hover
+{
+	background-color: #DA9C23;
+}
+
+#finalizacaoPedido a:active, #finalizacaoPedido input:active
+{
+	background-color: #bc881f;
+}
+
+
+#finalizacaoPedido a.finalizarCompra, #finalizacaoPedido input.finalizarCompra,
+#finalizacaoPedido a.fazerLogin, .cadastraEndereco input[type=submit]
+{
+	background-color: #641d5d;
+	border-color: #4a1544;
+}
+
+#finalizacaoPedido a.finalizarCompra:hover, #finalizacaoPedido input.finalizarCompra:hover,
+#finalizacaoPedido a.fazerLogin:hover, .cadastraEndereco input[type=submit]:hover
+{
+	background-color: #591A53;
+}
+
+#finalizacaoPedido a.finalizarCompra:active, #finalizacaoPedido input.finalizarCompra:active,
+#finalizacaoPedido a.fazerLogin:active, .cadastraEndereco input[type=submit]:active
+{
+	background-color: #4a1544;
+}
+
+p.carrinhoVazio
+{
+	float: left;
+    font: 22px 'museo500';
+    padding: 40px 0 30px;
+    text-align: center;
+    width: 100%;
+}
+
+/*Tela onde pode alterar itens do carrinho*/
+
+#mask, #maskEnviaPedido, #maskAlteraEndereco
+{
+	background-color: #FBFBFB;
+	display: none;
+	float: left;
+	height: 100%;
+	left: 0;
+	opacity: 0.7;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 11;
+    filter: alpha(opacity=70);
+    -ms-filter: "alpha(opacity=70)";	
+}
+
+#loader, #loaderEnviaPedido
+{
+	display: none;
+    float: left;
+    height: 52px;
+    left: 50%;
+    position: absolute;
+    top: 38%;
+    width: 52px;
+    z-index: 100;
+}
+
+#maskEnviaPedido, #maskAlteraEndereco
+{
+	background-color: #fff;
+	position: fixed;
+	opacity: 0.8;
+    filter: alpha(opacity=80);
+    -ms-filter: "alpha(opacity=80)";
+}
+
+#loaderEnviaPedido
+{
+	position: fixed;
+}
+
+#mensagemEnviaPedido
+{
+	color: #73155C;
+	display: none;
+    float: left;
+    font: 22px 'museo500';
+    left: 0;
+    position: fixed;
+    text-align: center;
+    top: 53%;
+    width: 100%;
+    z-index: 100;
+}
+
+
+
+
+/* CARRINHO PASSO 2 - confirmação dos produtos */
+
+#listaProdutos.carrinhoPasso2
+{
+
+}
+
+#listaProdutos.carrinhoPasso2 #listaTodosProdutos .linhaProduto
+{
+	border-bottom: 1px solid #5F5F5F;
+	margin: 0 0 5px;
+}
+
+#listaProdutos.carrinhoPasso2 #listaTodosProdutos .linhaProduto > div span
+{
+	font-family: 'museo300';
+}
+
+#listaProdutos.carrinhoPasso2 #cabecalhoListagemProdutos span.cabecalhoProduto
+{
+	width: 465px;
+}
+
+#listaProdutos.carrinhoPasso2 #listaTodosProdutos .linhaProduto .linhaProdutoDetalheProduto
+{
+	width: 480px;
+}
+
+#listaProdutos.carrinhoPasso2 #listaTodosProdutos .linhaProduto .linhaProdutoDetalheProduto h4
+{
+	width: 365px;
+}
+
+#finalizacaoPedido.carrinhoPasso2
+{
+	width: 390px;
+}
+
+#finalizacaoPedido.carrinhoPasso2 div
+{
+	float: left;
+	margin: 0 0 30px;
+	width: 100%;
+}
+
+#finalizacaoPedido.carrinhoPasso2 div span
+{
+	font-family: 'museo500';
+	margin: 0;
+	text-align: right;
+	width: 245px
+}
+
+#finalizacaoPedido.carrinhoPasso2 div span.valorEntregaPasso2
+{
+	text-align: right;
+	width: 130px;
+}
+
+#finalizacaoPedido.carrinhoPasso2 div label
+{
+	float: right;
+    font: 20px 'museo500';
+    margin: 0 0 0 5px;
+    width: auto;
+}
+
+#finalizacaoPedido.carrinhoPasso2 a, #finalizacaoPedido.carrinhoPasso2 input
+{
+	float: right;
+	margin: 0 5px;
+	width: 140px;
+}
+
+/* CARRINHO PASSO 2 - confirmação dos produtos */
+
+
+/* CARRINHO PASSO 3 - escolha da data, forma de pagamento e endereço */
+
+#master #detalhesEntrega
+{
+	float: left;
+	width: 100%;
+}
+
+#master #detalhesEntrega label
+{
+	color: #631c5b;
+	float: left;
+	font: 20px 'museo700';
+	margin: 0 0 10px;
+	width: 100%;
+}
+
+#master #detalhesEntrega #dataHoraEntrega
+{
+	border-bottom: 1px solid #5F5F5F;
+    float: left;
+    padding: 15px 1% 30px;
+    width: 98%;
+}
+
+#master #detalhesEntrega #dataHoraEntrega > div
+{
+	float: left;
+	margin: 0 50px 0 0;
+	width: 200px;
+}
+
+#master #detalhesEntrega #dataHoraEntrega > div #dataEntrega,
+#master #detalhesEntrega #dataHoraEntrega > div #horaEntrega
+{
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+#master #detalhesEntrega #dataHoraEntrega > div input
+{
+	border: 1px solid #DCDCDC;
+    float: left;
+    font: 16px 'museo300';
+    height: 19px;
+    max-width: 110px !important;
+    padding: 8px;
+    text-align: center;
+}
+
+#master #detalhesEntrega #formaPagamentoEntrega
+{
+	border-bottom: 1px solid #5F5F5F;
+    float: left;
+    margin: 0 0 10px;
+    padding: 15px 1% 20px;
+    width: 98%;
+}
+
+#master #detalhesEntrega #formaPagamentoEntrega > div
+{
+	float: left;
+	margin: 5px 0;
+	width: 100%;
+}
+
+#master #detalhesEntrega #formaPagamentoEntrega > div input
+{
+	float: left;
+	margin: 1px 5px 0 0;
+}
+
+#master #detalhesEntrega #formaPagamentoEntrega > div span,
+#master #detalhesEntrega #formaPagamentoEntrega > div label
+{
+	color: #333;
+	float: left;
+	font: 16px 'museo300';
+	margin: 0 0 0 10px;
+}
+
+#master #detalhesEntrega #formaPagamentoEntrega > div label
+{
+	width: 100%;
+}
+
+
+
+
+
+
+#master #detalhesEntrega #enderecoEntrega
+{
+    float: left;
+    padding: 15px 1% 30px;
+    width: 98%;
+}
+
+#master #detalhesEntrega #enderecoEntrega > div
+{
+	float: left;
+	margin: 5px 0 10px;
+    width: 100%;
+}
+
+#master #detalhesEntrega #enderecoEntrega > div span
+{
+	color: #333;
+	float: left;
+	font: 16px 'museo300';
+	margin: 3px 0;
+	width: 100%;
+}
+
+#master #detalhesEntrega span.valorFinalEntrega
+{
+	clear: both;
+	color: #641D5D;
+    float: right;
+    font: 20px 'museo300';
+    margin: 0 0 15px;
+    text-align: right;
+    width: 260px;
+}
+
+#master #detalhesEntrega span.valorFinalEntrega label
+{
+	color: #631C5B;
+    float: right;
+    font: 20px 'museo700';
+    margin: 0 0 10px;
+    text-align: right;
+    width: 120px;
+}
+
+#master #detalhesEntrega #enderecoEntrega a.alterarEnderecoEntrega
+{
+	background-color: #e3a426;
+	border: none;
+	border-bottom: 5px solid #bc881f;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font: 14px 'museo700';
+	margin: 0 0 20px;
+	padding: 7px 10px;
+	text-align: center;
+	width: 130px;
+}
+
+#master #detalhesEntrega #enderecoEntrega a.alterarEnderecoEntrega:hover, 
+#master #detalhesEntrega #enderecoEntrega input.alterarEnderecoEntrega:hover
+{
+	background-color: #DA9C23;
+}
+
+#master #detalhesEntrega #enderecoEntrega a.alterarEnderecoEntrega:active, 
+#master #detalhesEntrega #enderecoEntrega input.alterarEnderecoEntrega:active
+{
+	background-color: #bc881f;
+}
+
+
+
+#finalizacaoPedido.carrinhoPasso3
+{
+	width: 410px;
+}
+
+#finalizacaoPedido.carrinhoPasso3 div
+{
+	float: left;
+	margin: 0 0 30px;
+	width: 100%;
+}
+
+#finalizacaoPedido.carrinhoPasso3 a,
+#finalizacaoPedido.carrinhoPasso3 input,
+.cadastraEndereco input[type=submit]
+{
+	float: right;
+	margin: 0 5px;
+	width: 140px;
+}
+
+#finalizacaoPedido.carrinhoPasso3 a.finalizarCompra, 
+#finalizacaoPedido.carrinhoPasso3 input.finalizarCompra,
+.cadastraEndereco input[type=submit]
+{
+	height: 64px;
+	width: 240px;
+}
+
+.cadastraEndereco input[type=submit]
+{
+	width: 260px;
+}
+
+#finalizacaoPedido.carrinhoPasso3 a.finalizarCompra.cadastraEndereco
+{
+	height: 29px;
+	width: 250px;
+}
+
+.cadastraEndereco 
+{
+	float: left;
+}
+
+
+/* CARRINHO PASSO 3 - escolha da data, forma de pagamento e endereço */
+
+
+/*Fancybox de alterar endereço de entrega - Passo 3*/
+
+.scrollable .viewport
+{
+	width: 100% !important;
+}
+
+#listaEnderecoPasso3
+{
+	background-color: #fbfbfb;
+    border: 1px solid #888888;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #5C5A5A;
+    /*display: none;*/
+    float: left;
+    left: 35%;
+    padding: 13px;
+    position: fixed;
+    top: 20%;
+    width: 600px;
+    z-index: 100000;
+}
+
+#listaEnderecoPasso3 > div
+{
+    float: left;
+    height: 500px;
+    width: 100%;
+}
+
+#listaEnderecoPasso3 span#closeEndereco
+{
+	background: url("/images/website/btn_Fechar_Pop_up.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    cursor: pointer;
+    float: left;
+    height: 31px;
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    width: 31px;
+    z-index: 10000;
+}
+
+#listaEnderecoPasso3 div.divBoxEntrega 
+{
+	border-bottom: 1px solid #BCBCBC;
+    float: left;
+    padding: 20px 0;
+    width: 595px;
+}
+
+#listaEnderecoPasso3 .boxEnderecoEntrega
+{
+    float: left;
+    width: 460px;
+}
+
+#listaEnderecoPasso3 .boxEnderecoEntrega span
+{
+	color: #333333;
+    float: left;
+    font: 16px 'museo300';
+    margin: 3px 0;
+    padding: 0 2%;
+    width: 96%;
+}
+
+#listaEnderecoPasso3 a.selecionarEndereco,
+#listaEnderecoPasso3 a.cadastrarNovoEndereco,
+.wrapper a.cadastrarNovoEndereco,
+.formCadastraEndereco input[type=submit]
+{
+	background-color: #e3a426;
+	border: none;
+	border-bottom: 5px solid #bc881f;
+	color: #fff;
+	cursor: pointer;
+	float: right;
+	font: 14px 'museo700';
+	margin: 15px 10px 10px 0;
+	padding: 7px 7px;
+	text-align: center;
+	width: 180px;
+}
+
+#listaEnderecoPasso3 a.selecionarEndereco
+{
+	background-color: #641D5D;
+	border-color: #4A1544;
+	margin: 5px 5px 0 0;
+	width: 75px;
+}
+
+#listaEnderecoPasso3 a.selecionarEndereco:hover
+{
+	background-color: #591a53;
+}
+
+#listaEnderecoPasso3 a.selecionarEndereco:active
+{
+	background-color: #4A1544;
+}
+
+#listaEnderecoPasso3 a.cadastrarNovoEndereco:hover,
+.wrapper a.cadastrarNovoEndereco:hover,
+.formCadastraEndereco input[type=submit]:hover
+{
+	background-color: #DA9C23;
+}
+
+#listaEnderecoPasso3 a.cadastrarNovoEndereco:active,
+.wrapper a.cadastrarNovoEndereco:active,
+.formCadastraEndereco input[type=submit]:active
+{
+	background-color: #bc881f;
+}
+
+#listaEnderecoPasso3 a.cancelarAlterarEndereco
+{
+	background-color: #939393;
+	border-color: #6D6C6C;
+	float: right;
+	width: 120px;
+}
+
+#listaEnderecoPasso3 a.cancelarAlterarEndereco:hover
+{
+	background-color: #858484;
+}
+
+#listaEnderecoPasso3 a.cancelarAlterarEndereco:active
+{
+	background-color: #6D6C6C;
+}
+
+#cadastraEndereco a.cadastrarNovoEndereco
+{
+	font: 22px 'museo700';
+	padding: 10px 15px;
+	width: 210px;
+}
+
+/*Fancybox de alterar endereço de entrega - Passo 3*/
+
+
+/*Label com mensagem de erro (validação dos campos) - Passo 3*/
+
+label.error
+{
+	display: none;
+	position: absolute;
+}
+
+div.errorForm
+{
+	color: #FF2200;
+    display: none;
+    float: left;
+    font: bold 16px arial;
+    padding: 0 0 0 10px;
+    width: 98%;
+}
+
+/*Label com mensagem de erro (validação dos campos) - Passo 3*/

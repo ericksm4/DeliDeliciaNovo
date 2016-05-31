@@ -1,0 +1,263 @@
+h1
+{
+	color: #631c5b;
+	float: left;
+	font: 34px 'museo700';
+	margin: 40px 0 5px;
+	width: 100%;
+}
+
+h3
+{
+	color: #878787;
+	float: left;
+	font: 24px 'museo300';
+	margin: 0 0 40px;
+	width:100%;
+}
+
+
+#login
+{
+	float: left;
+	width: 100%;
+}
+
+/* login esquerda */
+
+#login #loginEsq
+{
+	float: left;
+	padding: 40px 10px;
+    width: 420px;
+}
+
+#login #loginEsq h3
+{
+	float: left;
+	font-family: 'museo700';
+	margin: 0 0 70px;
+	text-align: center;
+	width: 100%;
+}
+
+#login #loginEsq .btnConectarRedeSocial
+{
+	background-color: #44619d;
+	border-bottom: 4px solid #364d7d;
+	float: left;
+	margin: 0 0 15px 60px;
+	padding: 0;
+	width: 310px;
+}
+
+
+#login #loginEsq .btnConectarRedeSocial a
+{
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font: 20px 'museo700';
+	padding: 12px 25px;
+	text-align: center;
+    width: 195px;
+}
+
+#login #loginEsq .btnConectarRedeSocial img
+{
+	border-right: 1px solid #364D7D;
+    float: left;
+    margin: 8px 5px 0 20px;
+    padding: 0 15px 0 0;
+}
+
+#login #loginEsq .btnConectarRedeSocial.btnGmail img
+{
+	border-color: #ae2019;
+	margin: 8px 5px 0 15px;
+    padding: 0 5px 0 0;
+}
+
+#login #loginEsq .btnConectarRedeSocial.btnGmail
+{
+	background-color: #d5271e;
+	border-color: #ae2019;
+}
+
+#login #loginEsq .btnConectarRedeSocial.btnGmail a
+{
+	
+}
+
+#login #loginEsq .btnConectarRedeSocial.btnFacebook:hover
+{
+	background-color: #3c5487;
+}
+
+#login #loginEsq .btnConectarRedeSocial.btnGmail:hover
+{
+	background-color: #c42119;
+}
+
+#login #loginEsq .btnConectarRedeSocial.btnFacebook:active
+{
+	background-color: #364d7d;
+}
+
+#login #loginEsq .btnConectarRedeSocial.btnGmail:active
+{
+	background-color: #ae2019;
+}
+
+#login #loginEsq span
+{
+	color: #878787;
+	float: left;
+	font: 18px 'museo300';
+	margin: 0 0 40px;
+	text-align: center;
+	width: 100%;
+}
+
+/* login esquerda */
+
+
+/* login direita */
+
+#login #loginDir
+{
+	float: right;
+	padding: 40px 15px 40px 35px;
+	width: 410px;
+}
+
+#login #loginDir h3,
+#login #loginDir a.fazerLogin
+{
+	color: #878787;
+	float: left;
+	font: 24px 'museo700';
+	margin: 0 0 30px;
+	text-align: left;
+	width: 100%;
+}
+
+#login #loginDir a.fazerLogin
+{
+	margin: 30px 0;
+}
+
+#login #loginDir a.fazerLogin:hover
+{
+	text-decoration: underline;
+}
+
+#login #loginDir > div
+{
+	float: left;
+	width: 100%;
+}
+
+#login #loginDir > div.inputLogin input
+{
+	border: 1px solid #C8C8C8;
+	border-radius: 5px;
+	color: #666;
+	float: left;
+	font: 20px 'museo300';
+	margin: 0 5px 0 0;
+	padding: 13px 8px;
+	transition: border-radius 0.3s ease 0s, box-shadow 0.3s ease 0s;
+    width: 330px;
+}
+
+#login #loginDir > div.inputLogin input:hover
+{
+	border-color: #9f9f9f;
+}
+
+#login #loginDir > div.inputLogin input:focus
+{
+	border-radius: 10px;
+	border-color: #878787;
+	box-shadow: 0 0 3px #cfcfcf inset;
+}
+
+#login #loginDir > div span.validaLogin
+{
+	background: url(/images/website/bg_login_incorreto.png) no-repeat 0 0 #21d618;
+	border-bottom: 2px solid #1ab112;
+	display: none;
+	float: left;
+	height: 38px;
+	margin: 6px 0 0;
+	width: 38px;
+}
+
+#login #loginDir > div span.loginIncorreto
+{
+	background-color: #e10000;
+	background-position: 0 -38px;
+	border-color: #af0000;
+}
+
+#login #loginDir a.alteraLogin
+{
+	color: #6B2364;
+    float: right;
+    font: 14px 'museo500';
+    margin: 5px 65px 30px 0;
+    width: auto;
+}
+
+#login #loginDir input[type='submit']
+{
+	background-color: #641D5D;
+	border: none;
+	border-bottom: 5px solid #4A1544;
+	color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    font: 25px 'museo700';
+    margin: 10px 60px 20px 0;
+    padding: 15px 0;
+    text-align: center;
+    width: 220px;
+}
+
+#login #loginDir input[type='submit']:hover
+{
+	background-color: #591a53;
+}
+
+#login #loginDir input[type='submit']:active
+{
+	background-color: #4A1544;
+}
+
+/* login direita */
+/*
+#login span.divisaoOu
+{
+	background-color: #fff;
+	border: 2px solid #571850;
+	border-radius: 50%;
+	color: #6b2364;
+	float: left;
+	font: 18px 'museo300';
+	padding: 8px;
+	position: absolute;
+}*/
+
+#login img.divisaoLogin
+{
+	float: left;
+}
+
+span#flash_alert
+{
+	color: #FF2200;
+    float: left;
+    font: 16px arial;
+    margin: 30px 0 0 5px;
+}

@@ -1,0 +1,94 @@
+#banner{
+	background-image: url('/assets/website/banner_quem_somos.png');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 390px;
+	width: 100%;
+	margin-top: 75px;
+}
+
+h2{
+    font-family: "Roboto Bold";
+    color: #a21984;
+    margin: 0 0 20px;
+    padding: 0 25px;
+    display: inline-block;
+    font-size: 20px;
+    background: url('/assets/website/h2-bg.png') no-repeat center;
+    background-size: 100% 100%;
+}
+
+#quem_somos{
+	width: 100%;
+	padding: 10px 0;
+	overflow: hidden;
+}
+
+#quem_somos img{
+	float: left;
+	margin-right: 40px;
+}
+
+#quem_somos > div{
+	float: left;
+	text-align: left;
+}
+
+hr{
+	border: none;
+	border-bottom: solid 1px #faa635;
+	width: 100%;
+	margin-bottom: 30px;
+}
+
+p{
+	margin: 10px 0;
+}
+
+#missao_valores{
+	width: 100%;
+	overflow: hidden;
+}
+
+#missao_valores > div div{
+	margin-bottom: 70px;
+}
+
+#missao_valores > div{
+	width: 520px;
+	float: left;
+}
+
+#missao_valores > div h2{
+	margin-bottom: 0;
+}
+
+#missao_valores > div#video{
+	float: right;
+	height: 280px;
+	width: 470px;
+}
+
+@media screen and (max-width: 1050px){
+	#missao_valores > div{
+		width: auto;
+	}
+
+	#quem_somos img{
+		display: none;
+	}
+
+	#missao_valores > div#video {
+	    float: none;
+	    height: 230px;
+	    width: 300px;
+	    margin: 0 auto;
+	}
+}
+
+@media screen and (max-width: 800px){
+	#banner{
+		height: 200px;
+	}
+}

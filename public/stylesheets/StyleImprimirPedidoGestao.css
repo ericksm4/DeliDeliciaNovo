@@ -1,0 +1,50 @@
+#menuLateral,
+#conteudo #conteudoHeader,
+#conteudo #migalha,
+#conteudo #conteudoPrincipal .excluirLocal.cancelarPedido,
+#header #navUsuario .navNotificacao,
+#header #navUsuario .navUser,
+#header #navUsuario .navDropDown,
+#conteudo #conteudoPrincipal .formAddNovo .divTour,
+#conteudo .boxForm .divisaoBtnForm,
+#header #navUsuario .dropDown,
+#conteudo .boxForm .tituloForm
+{
+	display: none;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label.listaProdutosNomeProduto,
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos label.listaProdutosNomeProduto
+{
+	width: 310px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label,
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos label,
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido #listaProdutosPedidoTitulo label:first-child, 
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido #listaProdutosPedido .listaProdutos label:first-child
+{
+	width: 105px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #infoPedido .boxInfoPedido
+{
+	height: 180px;
+	padding:5px;
+	width: 140px; 
+}
+
+img.logoImpressao
+{
+	display: block;
+}
+
+#header a img
+{
+	display: none;
+} 
+
+#desenvolvidoPorImpressao
+{
+	display: block;
+}

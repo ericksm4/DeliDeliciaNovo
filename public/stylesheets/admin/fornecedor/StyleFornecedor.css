@@ -1,0 +1,222 @@
+
+body.pop-up-aberto
+{
+	position: relative;
+}
+
+.maskLoader
+{
+	background-color:#4A4A4A;
+    display: none;
+    filter: alpha(opacity=85);
+    -ms-filter: "alpha(opacity=85)";
+    height: 107%;
+    left: -220px;
+    opacity: 0.85;
+    position: absolute;
+    top: -45px;
+    width: 114%;
+    z-index: 5;
+}
+
+body.pop-up-aberto .maskLoader
+{
+	display: block;
+}
+
+/*Box notificacao*/
+
+
+#header #navUsuario .notificacao 
+{
+    display: none;
+    float: left;
+    position: absolute;
+    right: 215px;
+    top: 35px;
+    z-index: 2;
+}
+
+#header #navUsuario .notificacao img 
+{
+    float: left;
+    left: 310px;
+    margin: 0;
+    position: relative;
+    top: 0;
+    width: 11px;
+    z-index: 11;
+}
+
+#header #navUsuario .notificacao #divNotificacao
+{
+	background-color: #FFFFFF;
+    border-radius: 6px;
+    box-shadow: 0 0 10px #BABABA;
+    float: left;
+    max-height: 250px;
+    overflow-y: auto; 
+    padding: 7px 0;
+    position: relative;
+    width: 350px;
+    z-index: 10;
+}
+
+#header #navUsuario .notificacao #divNotificacao #listaNotificacao
+{
+    float: left;
+    width: 100%;
+}
+
+#header #navUsuario .notificacao #divNotificacao #listaNotificacao .msgNotificacao
+{
+	border-bottom: 1px solid #EEEEEE;
+    float: left;
+    font: 12px arial;
+    padding: 7px 3%;
+    width: 94%;
+}
+
+#header #navUsuario .notificacao #divNotificacao #listaNotificacao .msgNotificacao:hover
+{
+	background-color: #eee;
+}
+
+#header #navUsuario .notificacao #divNotificacao #listaNotificacao .msgNotificacao a
+{
+	color: #333;
+	float: left;
+	font-size: 12px;
+	text-transform: none;
+	transition: none 0s ease 0s;
+}
+
+#header #navUsuario .notificacao #divNotificacao #verTodas
+{
+	background-color: #fff;
+	float: left;
+	padding: 7px 0;
+	width: 100%;
+}
+
+#header #navUsuario .notificacao #divNotificacao #verTodas:hover
+{
+	background-color: #eee;
+}
+
+#header #navUsuario .notificacao #divNotificacao #verTodas a
+{
+	color: #2F6AA9;
+	font: 12px arial;
+	float: left;
+	padding: 0;
+	text-align: center;
+	text-transform:none;
+	transition: none 0s ease 0s;
+	width: 100%;
+}
+
+#header #navUsuario ul #divNotificacao a:hover
+{
+	background-color: #eee;
+}
+
+/*Box notificacao*/
+
+/*Pop-up*/
+
+#pop-up
+{
+	background-color: #fff;
+	border: 1px solid #ABABAB;
+    border-radius: 5px;
+    box-shadow: 0 0 3px #AEAEAE;
+	float: left;
+	left: 38%;
+	position: fixed;
+	top: 18%;
+	width: 600px;
+	z-index: 100001;
+}
+
+#pop-up #conteudoPopUp
+{
+	float: left;
+	width: 100%;
+}
+
+#pop-up #conteudoPopUp #msgAdm
+{
+	background-color: #F9F9F9;
+    border-bottom: 1px solid #E7E7E7;
+    border-radius: 5px 5px 0 0;
+    float: left;
+    font: bold 16px arial;
+    margin: 0 0 15px;
+    padding: 10px 2%;
+    width: 96%;
+}
+
+#pop-up #conteudoPopUp #msgAdm h4
+{
+    color: #333;
+    float: left;
+}
+
+#pop-up #conteudoPopUp #mensagemPopUp
+{
+	float: left;
+    margin: 0 auto 10px;
+    max-height: 500px;
+    padding: 12px;
+    overflow-y:auto; 
+    text-align: left;
+    width: 96%;
+}
+
+#pop-up #conteudoPopUp #mensagemPopUp h2
+{
+	color: #FF0000;
+    float: left;
+    line-height: 30px;
+    margin: 0 0 10px;
+    text-align: center;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+#pop-up #conteudoPopUp #divFecharPopUp
+{
+	background-color: #F4F4F4;
+    border-top: 1px solid #E7E7E7;
+    border-radius: 0 0 5px 5px;
+    float: left;
+    font: 12px arial;
+    padding: 0 3%;
+    width: 94%;
+}
+
+#pop-up #conteudoPopUp #divFecharPopUp .fecharPopUp
+{
+	background-color: #F5F5F5;
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border: 1px solid #D6D6D6;
+    border-radius: 5px;
+    color: #000000;
+    cursor: pointer;
+    display: block;
+    font: 12px/17px arial;
+    margin: 10px auto;
+    outline: medium none;
+    padding: 4px 7px;
+    text-align: center;
+    width: 60px;
+}
+
+#pop-up #conteudoPopUp #divFecharPopUp .fecharPopUp:hover
+{
+	background-color: #f2f2f2;
+}
+
+/*Pop-up*/

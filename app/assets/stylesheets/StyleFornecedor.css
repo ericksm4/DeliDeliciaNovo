@@ -1,0 +1,143 @@
+
+#conteudo #conteudoPrincipal .formAddNovo .tipoFornecedor
+{
+	float: left;
+	max-width: 200px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputCidade
+{
+	max-width: 145px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputEstado
+{
+	max-width: 25px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.estado
+{
+	width: 67px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputCNPJ
+{
+	max-width: 115px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputCPF
+{
+	max-width: 90px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.cpf
+{
+	width: 43px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.pais
+{
+	width: 60px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputPais
+{
+	max-width: 260px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.frete
+{
+	width: 63px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputFrete
+{
+	max-width: 165px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputCEP,
+#conteudo #conteudoPrincipal .formAddNovo input.inputNumero
+{
+	max-width: 65px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.bairro
+{
+	width: 65px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputBairro
+{
+	max-width: 165px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputComplemento
+{
+	max-width: 80px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.cidade,
+#conteudo #conteudoPrincipal .formAddNovo span.situacao
+{
+	width: 70px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputEmail
+{
+	max-width: 280px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputSenha
+{
+	max-width: 250px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.senha
+{
+	width: 70px;
+}
+
+div.error
+{
+	display: none;
+	float: left;
+	width:100%;
+}
+
+div.error p
+{
+	background: url("/assets/error.png") no-repeat scroll 200px center;
+    color: #FF2200;
+    float: left;
+    padding: 5px 0;
+    text-align: center;
+    width: 100%;
+}
+
+
+/*Checkbox - estilizado*/
+
+#conteudoPrincipal .gruposCheckBox
+{
+	max-width: 820px;
+}
+
+#conteudoPrincipal .gruposCheckBoxCompradores
+{
+	max-width: 400px;
+}
+
+.labelCheckbox 
+{
+    float: left;
+    left: 25px;
+    position: absolute;
+    top: 10px;
+}
+
+#conteudoPrincipal .botoesCustom .icheckbox_minimal
+{
+	left: 0;
+}
+
+/*Checkbox - estilizado*/

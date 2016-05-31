@@ -1,0 +1,261 @@
+
+<div class="formAddNovoConteudo novaAreaWidth">
+	
+	<%= form_for(@conteudo, :class=> 'form-horizontal') do |f| %>
+		
+	    <%= f.hidden_field :id, :id => 'idConteudo', :value => @conteudo.id %>
+
+
+		<!--
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Categoria</label>
+			<div class="col-lg-6 col-xs-11">
+				<%#= f.select(:categoria_id, Admin::Categoria.all.collect {|a| [ a.nome, a.id ] }, { :include_blank => false}, {:id=> 'categoriaSelect', :style=> 'width: 100%'}) %>
+			</div>
+		</div>
+	    <div class="clearAll">&nbsp;</div>-->
+			
+		<div class="form-group">
+			<label for="area[titulo]" class="col-lg-2 col-sm-2 control-label">Título</label>
+			<div class="col-lg-5 col-xs-11">
+			    <%= f.text_field :titulo, :placeholder => "Título do conteúdo", :class => 'form-control' %>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<!--<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Data início</label>
+		    <div class="col-lg-4 col-xs-11">
+			  	<div id="datetimepicker" class="input-group date form_datetime-component datePicker">
+			  		<%#if @conteudo.data_inicio.blank?%>
+			  			<%#= f.text_field :data_inicio, :value => Time.now.to_datetime.strftime("%d/%m/%Y"), :class=> 'form-control startdate', :size => '16' %>
+			  		<%#else%>
+			  			<%#= f.text_field :data_inicio, :value => @conteudo.data_inicio.to_datetime.strftime("%d/%m/%Y"), :class=> 'form-control startdate', :size => '16' %>
+			  		<%#end%>
+			        
+			        <span class="input-group-btn">
+			            <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+			        </span>
+			    </div>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>-->
+	  
+	  	<!--<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Data fim</label>
+		    <div class="col-lg-4 col-xs-11">
+			  	<div id="datetimepicker" class="input-group date form_datetime-component datePicker">
+			  		<%#if @conteudo.data_fim.blank?%>
+			  			<%#= f.text_field :data_fim, :class=> 'form-control enddate', :size => '16' %>
+			  		<%#else%>
+			  			<%#= f.text_field :data_fim, :value =>@conteudo.data_fim.to_datetime.strftime("%d/%m/%Y"), :class=> 'form-control enddate', :size => '16' %>
+			  		<%#end%>
+			        
+			        <span class="input-group-btn">
+			            <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+			        </span>
+			    </div>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>-->
+			
+		<!--
+		<div class="form-group">
+			<div class="botoesCustom">
+				<label class="col-lg-2 col-sm-2 control-label">Destaque</label>
+				<div class="col-lg-2 col-xs-11">
+					<#%= f.check_box :detaque, :class => 'form-control' %>
+				</div>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>-->
+		<div class="form-group">
+	    	<label class="col-lg-2 col-sm-2 control-label">Banner</label>
+	    	<div class="col-lg-8 col-xs-11">
+			    <% if @conteudo.imagem_banner.blank? %>
+				 	<%= f.file_field :imagem_banner, :class => 'form-control' %>
+				<% else %>
+				<div class="project-mask">
+			        <div class="thumbnail">
+						<%= image_tag("#{@conteudo.imagem_banner}", :class => 'imagemArea') %>
+			            <div class="descricao">
+							<%= link_to 'Excluir imagem', {:action => "excluiImagemConteudoBanner"}, :id => @conteudo.id, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluiImagemBanner btn btn-danger' %>	
+			            </div>
+			        </div>
+			    </div>
+
+				<% end %>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+	    	<label class="col-lg-2 col-sm-2 control-label">Imagem conteúdo</label>
+	    	<div class="col-lg-8 col-xs-11">
+			    <% if @conteudo.imagem_destaque.blank? %>
+				 	<%= f.file_field :imagem_destaque, :class => 'form-control' %>
+				<% else %>
+				<div class="project-mask">
+			        <div class="thumbnail">
+						<%= image_tag("#{@conteudo.imagem_destaque}", :class => 'imagemArea') %>
+			            <div class="descricao">
+							<%= link_to 'Excluir imagem', {:action => "excluiImagemConteudo"}, :id => @conteudo.id, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluiImagemBanner btn btn-danger' %>	
+			            </div>
+			        </div>
+			    </div>
+
+				<% end %>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Status</label>
+			<div class="col-lg-5 col-xs-11">
+				<%= f.select(:status, [['Não publicado', '0'],
+			                       ['Publicado', '1'],
+			                       ['Oculto', '2']], {}, { :class => 'form-control' } )%>
+           </div>
+       	</div>
+		<div class="clearAll">&nbsp;</div>
+			
+		<!--<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Resumo</label>
+			<div class="col-lg-9 col-xs-11">
+				<%#= f.text_area(:resumo, :cols => 20, :rows => 6, :class=> 'form-control', :style=> 'max-width: 100%') %>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>-->
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Conteúdo</label>
+			<div class="col-lg-12 col-xs-11">
+				<%= f.cktext_area :conteudo, :class=> 'form_datetime-componentrol' %>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+</div>
+
+<div class="divisaoBtnForm">
+	<div class="botoesForm botoesFormSaveCancel">
+		<%= link_to "Voltar", {:action => "index"}, :class => "btn btn-default" %>
+		
+		<%= f.submit 'Salvar', :class => 'btn btn-info' %>
+	</div>
+</div>
+<% end %>
+
+<script>
+	$('#categoriaSelect').select2();
+
+	$('.dropDownEstilizado').select2({
+		minimumResultsForSearch: -1,
+		dropdownCssClass: 'dropDownEstilizadoLaranja'
+	});
+
+	var urlCategoria = $( "#categoria_url" ).val();
+	var urlDestino = $( "#urlDestinoCategorias" ).val();
+	
+	$( "#categoria_nome" ).keyup(function( event ) {
+		if ($( "#categoria_url" ).val().indexOf(urlCategoria) >= 0)
+		{
+			var value = urlDestino + $( "#categoria_nome" ).val().replace(/\s/g, '+');
+			$( "#categoria_url" ).val( value );
+			
+			urlCategoria = $( "#categoria_url" ).val();
+		}
+	});
+	
+	$( "#categoria_url" ).focusout(function() {
+		if($( "#categoria_url" ).val() == "")
+		{
+			$( "#categoria_url" ).val( urlDestino + $( "#categoria_nome" ).val().replace(/\s/g, '+'));
+			urlCategoria = $( "#categoria_url" ).val();
+			
+		}
+	});
+	
+	$('.thumbnail').hover(function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: 0
+	    }, 200);
+	}, function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: '-100%'
+	    }, 200);
+	});
+
+	$('.botoesCustom input').iCheck({
+        checkboxClass: 'icheckbox_minimal',
+        increaseArea: '20%' // optional
+    });
+
+	$('#admin_conteudo_detaque').on('ifChecked', function(event){
+	  checked = 1
+	  $('input[name*="admin_conteudo[detaque]"]').val(checked);
+	});
+
+	$('#admin_conteudo_detaque').on('ifUnchecked', function(event){
+	  checked = 0
+	   $('input[name*="admin_conteudo[detaque]"]').val(checked);
+	});
+
+
+ 	$('#colorSelector div').css('backgroundColor', $('#admin_conteudo_cor_titulo').val());
+    $('input#admin_conteudo_titulo').css('color', $('#admin_conteudo_cor_titulo').val());
+	var corTitulo =  $('#admin_conteudo_cor_titulo').val(); //cor do título
+
+    
+	//Campo data e hora
+    $('.datePicker').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'pt-BR'
+    });
+
+</script>
+<script type="text/javascript">
+  $(document).ready(function () {
+		//Validação do formulário
+    	/*$("form.edit_admin_conteudo, form.new_admin_conteudo").validate({
+           rules: {
+            'admin_conteudo[titulo]': 
+            {
+              required: true
+            },
+            'admin_conteudo[data_fim]': { 
+            	greaterThan: "admin_conteudo[data_inicio]" 
+            }
+          },
+          messages: {
+            'admin_conteudo[titulo]': {
+             	required: "O nome do conteúdo é obrigatório."
+         	},
+         	'admin_conteudo[data_fim]': { 
+         		required: "Data início maior que data fim."
+         	}
+          }
+      	});
+
+      	$.validator.addMethod("greaterThan", 
+		function(value, element, params) {
+			data_inicial = value.split('/')
+	        data_inicial = new Date(data_inicial[1]+'-'+data_inicial[0]+'-'+data_inicial[2])
+
+	        data_final = $(params).val().split('/')
+	        data_final = new Date(data_final[1]+'-'+data_final[0]+'-'+data_final[2])
+
+		    if (!/Invalid|NaN/.test(data_inicial)) {
+		        return data_inicial > data_final;
+		    }
+
+		    return  data_inicial > data_final; 
+		},'Data início maior que data fim.');
+
+		$(".enddate").rules('add', { greaterThan: ".startdate" });*/
+
+
+  	});
+ 
+</script>
+  

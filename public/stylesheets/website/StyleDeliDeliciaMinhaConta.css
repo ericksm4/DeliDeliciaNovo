@@ -1,0 +1,118 @@
+
+a.btn
+{
+	background-color: #e3a426;
+	border: none;
+	border-bottom: 5px solid #bc881f;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font: 14px 'museo700';
+	margin: 0 0 20px;
+	padding: 7px 5px;
+	text-align: center;
+	width: 140px;
+}
+
+a.btn:hover
+{
+	background-color: #DA9C23;
+}
+
+a.btn:active
+{
+	background-color: #bc881f;
+}
+
+a.btnRoxo
+{
+	background-color: #641d5d;
+	border-color: #4a1544;
+}
+
+a.btnRoxo:hover
+{
+	background-color: #591A53;
+}
+
+a.btnRoxo:active
+{
+	background-color: #4a1544;
+}
+
+a.btnCadastrarEndereco
+{
+	width: 140px;
+}
+
+#minhaConta
+{
+	float: left;
+	width: 100%;
+}
+
+#minhaConta #conteudoDireita h1
+{
+	color: #631c5c;
+	float: left;
+	font: 34px 'museo700';
+	margin: 0 0 40px;
+	width: 100%;
+}
+
+
+/* Dados pessoais */
+
+
+#minhaConta #conteudoDireita #dadosPessoais
+{
+	float: left;
+	margin: 0 0 40px;
+	width: 100%;
+}
+
+#minhaConta #conteudoDireita #dadosPessoais div,
+#minhaConta #conteudoDireita #listaEnderecos .divEndereco div
+{
+	float: left;
+	margin: 0 0 20px;
+	width: 100%;
+}
+
+#minhaConta #conteudoDireita #dadosPessoais label, 
+#minhaConta #conteudoDireita #listaEnderecos .divEndereco label
+{
+	color: #5f5f5f;
+	float: left;
+	font: 18px 'museo300';
+	margin: 0 5px 0 0;
+}
+
+#minhaConta #conteudoDireita #dadosPessoais label.infoDados,
+#minhaConta #conteudoDireita #listaEnderecos .divEndereco label.infoDados
+{
+	float: left;
+	font-family: 'museo700';
+	margin: 0 5px 0 0;
+}
+
+
+/* Dados pessoais */
+
+/*Lista endereços*/
+
+#minhaConta #conteudoDireita #listaEnderecos
+{
+	float: left;
+	width: 100%;
+}
+
+#minhaConta #conteudoDireita #listaEnderecos .divEndereco
+{
+	float: left;
+	margin: 0 0 40px;
+	width: 370px;
+}
+
+
+/*Lista endereços*/

@@ -1,0 +1,146 @@
+﻿
+/*div Quem Somos - Inicio*/
+
+#master #quemSomos,
+#master #quemSomos #quemSomosConteudo
+{
+    float: left;
+    width: 100%;
+}
+
+#master #quemSomos
+{
+    background-color: #fff;
+    padding: 0 0 70px;
+}
+
+    #master #quemSomos #quemSomosConteudo
+    {
+    }
+
+        #master #quemSomos #quemSomosConteudo h1
+        {
+            color: #E3A427;
+            float: left;
+            margin: 25px 0 35px 0;
+            width: 95%;
+        }
+
+        #master #quemSomos #quemSomosConteudo #quemSomosEsq
+        {
+            float: left;
+            margin: 30px 30px 0 0;
+            width: 500px;
+        }
+
+            #master #quemSomos #quemSomosConteudo #quemSomosEsq > img
+            {
+                float: left;
+                margin: 0 0 30px;
+                width: 110px;
+            }
+
+        #master #quemSomos #quemSomosConteudo #quemSomosTxt
+        {
+            width: 100%;
+        }
+
+            #master #quemSomos #quemSomosConteudo #quemSomosTxt h3,
+            #master #quemSomos #quemSomosConteudo #quemSomosTxt p,
+            #master #quemSomos #quemSomosConteudo #quemSomosTxt span
+            {
+                color: #000;
+                font: 15px 'museo300';
+                float: left;
+                margin: 12px 0;
+                width: 100%;
+            }
+
+            #master #quemSomos #quemSomosConteudo #quemSomosTxt p
+            {
+                color: #5f5f5f;
+                font-family: 'museo100';
+            }
+
+            #master #quemSomos #quemSomosConteudo #quemSomosTxt span
+            {
+                color: #960073;
+                text-align: right;
+            }
+
+        #master #quemSomos #quemSomosConteudo #quemSomosDir
+        {
+            float: right;
+            width: 440px;
+        }
+
+            #master #quemSomos #quemSomosConteudo #quemSomosDir img
+            {
+                float: left;
+                max-width: 438px;
+            }
+
+/*div Quem Somos - Fim*/
+
+/*Divisao beija-flor*/
+
+#master .divisaoBeijaFlor
+{
+    background-color: #fff;
+    border-top: 1px solid #c8bfb2;
+    float: left;
+    padding: 10px 0;
+    position: relative;
+    width: 100%;
+}
+
+    #master .divisaoBeijaFlor div
+    {
+        background-color: #fff;
+        left: 48%;
+        padding: 0 23px 0 20px;
+        position: absolute;
+        top: -20px;
+    }
+
+/*Divisao beija-flor*/
+
+/*Slider*/
+
+.pagination2
+{
+    bottom: 15px;
+}
+
+.swiper-container2
+{
+    height: 250px;
+}
+
+#divSliderQuemSomos
+{
+    background-color: #fff;
+    float: left;
+    width: 100%;
+}
+
+    #divSliderQuemSomos .device
+    {
+        border: medium none;
+        border-radius: 0;
+        box-shadow: none;
+        height: 270px;
+        margin: 0 auto;
+        padding: 10px;
+        width: 98%;
+    }
+
+    #divSliderQuemSomos #sliderQuemSomos h1
+    {
+        color: #e3a427;
+        float: left;
+        margin: 35px 0 0 0;
+        width: 95%;
+    }
+
+/*Slider*/

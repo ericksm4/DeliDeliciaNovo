@@ -1,0 +1,110 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleFacaSeuEvento.css' %>
+
+<script src="javascripts/jquery.validate.js"></script> <!-- Validar campos -->
+<script src="javascripts/jquery.maskedinput.js"></script> <!-- Mascara -->
+<script src="javascripts/jquery.mask.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+ $(function(){
+  $('#navigation li').click(function(){
+    $('#navigation li').removeClass('active');
+    $(this).addClass('active');
+    $('.evento').hide()
+    $('.evento#'+$(this).attr('menu')).show()
+  })
+
+  $('#navigation .fa-bars').click(function(){
+    $(this).toggleClass('active');
+    $('#navigation ul').toggle()
+  })
+
+ })
+</script>
+
+<div id="banner" style="background-image: url('<%= retorna_banner("Faça seu evento") %>');"></div>
+
+<div id="navigation">
+  <i class="fa fa-bars"></i>
+  <ul>
+    <li class="active" menu="cafe">Cafés da manhã</li>
+    <li menu="brunch">Brunchs</li>
+    <li menu="reuniao">Reunião de amigos</li>
+    <li menu="mesa">Mesa para dois</li>
+  </ul>
+</div>
+
+<div id="corpoSite">
+
+  <div class="evento" id="cafe">
+    <h2>Café da Manhã</h2>
+    <div class="maskImg"></div>
+    <p>Surpreenda quem você mais gosta com um café da manhã especial e super saboroso. <br >
+    O cardápio da Deli inclui: sucos diversos, frutas da estação, salada de frutas. Pãezinhos, dos mais variados, minicroissants, bagels e mini pães franceses normais e integrais são os top da lista. Todos assados na pedra. </p>
+
+    <p><span>Frios e Laticínios:</span> ricota fresca, queijo branco, manteiga e geleia, peito de peru, presunto, entre outros. Chá, café e leite. Bolo de corte. Perfeito para acompanhar um cafezinho! </p>
+  </div>
+
+  <div class="evento" id="brunch">
+    <h2>Brunch</h2>
+    <div class="maskImg"></div>
+    <p>O brunch é uma das maneiras mais charmosas e informais de receber os amigos. </p>
+    <p><span>Cardápio Deli:</span> pães diversos, frios queijos, saladas, frutas frescas, quiches. Sucos naturais, chás e prosseco. Doces, tortas, éclairs, trufas, sorvetes. </p>
+  </div>
+
+  <div class="evento" id="reuniao">
+    <h2>Reunião entre amigos</h2>
+    <div class="maskImg"></div>
+    <p>Pratos informais, porções míni, tudo de fácil elaboração, substituindo os jantares.</p>
+
+    <p><span>Cardápio Deli:</span> minipratos ou cumbucas, com massas e molhos, tábua de frios e queijos, Minissanduíches, pastas e pães, linguicinhas, salgadinhos. Além de doces, trufas, mini tortas, e éclairs. </p>
+  </div>
+
+  <div class="evento" id="mesa">
+    <h2>Mesa para dois</h2>
+    <div class="maskImg"></div>
+    <p>Um jantar a dois deve ser prático e muito saboroso.<br />
+    A Linha Delicias Gourmet oferece um cardápio de pratos elaborados, e que você acaba de preparar em casa, rapidamente, com o seu toque final.</p>
+
+    <ul>
+      <li>
+        <label>Massas Artesanais</label>
+        <span>R$45,90 /Kg</span>
+      </li>
+      <li>
+        <label>Molhos artesanais</label>
+        <span>R$49,90 /Kg</span>
+      </li>
+      <li>
+        <label>Quiches</label>
+        <span>R$8,00 /Kg - PEQUENO , R$45,00 /Kg - GRANDE</span>
+      </li>
+      <li>
+        <label>Bacalhau com Natas 1,5kg</label>
+        <span>R$120,00</span>
+      </li>
+      <li>
+        <label>Lasanha família à Bolonhesa 1,6kg </label>
+        <span>R$55,00</span>
+      </li>
+      <li>
+        <label>Empadão de Frango família frango com catupiry 1,6kg</label>
+        <span>R$45,00</span>
+      </li>
+      <li>
+        <label>Carne assada 1kg </label>
+        <span>R$60,00 /Kg</span>
+      </li>
+      <li>
+        <label>Torta de Bacalhau com Grana Padano 1,5kg</label>
+        <span>R$120,00</span>
+      </li>
+      <li>
+        <label>Risotos </label>
+        <span>R$29,90</span>
+      </li>
+               
+    </ul>
+  </div>
+
+</div>

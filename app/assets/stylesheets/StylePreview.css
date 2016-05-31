@@ -1,0 +1,36 @@
+.clearAll
+{
+    font-size: 0.1em;
+    line-height: 0.1em;
+    clear: both;
+}
+
+.cabecalho
+{
+	float: left;
+	margin: 5px 0;
+	width: 100%;
+}
+
+.cabecalho span
+{
+	color: #8F8F8F;
+	float: left;
+	font: 12px arial;
+	margin: 0 4px 0 0; 
+	text-align: right;
+	width: 70px;
+}
+
+.cabecalho p
+{
+	float: left;
+	font: 12px arial;
+	margin: 0;
+}
+
+.cabecalhoFinal
+{
+	border-bottom: 1px dashed #DADADA;
+    padding: 0 0 10px;
+}

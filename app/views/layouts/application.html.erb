@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang='pt-BR'>
+<head>
+  <title>Gestão de Conteúdo - DeliDelícia</title>
+ 
+  <%= javascript_include_tag "jquery-1.9.min" %> <!-- Padrão -->
+  <%#= javascript_include_tag "jquery-migrate-1.1.1.min" %> <!-- Padrão -->
+  <%= javascript_include_tag "jquery-ui-1.10.3.custom.min" %> <!-- jQuery UI - Arrastar menu lateral -->
+  <%= javascript_include_tag "jquery.cookie" %> <!-- Cookie - armazenar ordem do menu lateral -->
+  <%= javascript_include_tag "intro" %> <!-- tour nas páginas -->
+  <%#= javascript_include_tag "application" %> <!-- tour nas páginas -->
+  <%= yield :script %>
+
+  <%= favicon_link_tag 'favicon.ico' %>
+   
+  <%= stylesheet_link_tag "Style" %>  
+  <%= stylesheet_link_tag "introjs" %> <!-- tour nas páginas --> 
+  <%= yield :style %>
+  <%= stylesheet_link_tag "Style1200", :media => "only screen and (max-width: 1260px), only screen and (max-device-width: 1260px)" %> <!-- Style responsivo -->
+  <%= stylesheet_link_tag "Style1100", :media => "only screen and (max-width: 1100px), only screen and (max-device-width: 1100px)" %> <!-- Style responsivo -->
+  <%= stylesheet_link_tag "StyleIpadLandscape", :media => "only screen and (max-width: 1024px), only screen and (max-device-width: 1024px)"%> <!-- Style responsivo -->
+  <%= stylesheet_link_tag "StyleIpadPortrait", :media => " screen and (max-width: 768px), only screen and (max-device-width: 768px)" %> <!-- Style responsivo -->
+  <!--gestao-->
+  <%= stylesheet_link_tag 'gestao/bootstrap.min' %>
+  <%= stylesheet_link_tag 'gestao/owl.carousel' %>
+  <%= stylesheet_link_tag 'font-awesome-4.6.2/css/font-awesome' %>
+  <%= stylesheet_link_tag 'gestao/style' %>
+  <%= stylesheet_link_tag 'gestao/style-responsive' %>
+  <%= stylesheet_link_tag 'gestao/style-gestao' %>
+   <!--[if lte IE 8]> 
+    <%= stylesheet_link_tag "StyleIE" %>  
+   <![endif]-->
+  
+  <script type="text/javascript">
+          $(document).ready(function () {
+
+              //Mudar o menu ativo de acordo com o lugar selecionado (pega a url da pagina e compara com o href da lista do menu lateral)
+        			  var pathUrl = $(location).attr('pathname').substring(1);
+                var sub = pathUrl;
+                var sub = sub.replace(sub, sub + '/');
+                var sub2 = sub.indexOf('/', 7);
+                var local = sub.substring(0,sub2);
+                var local = local.replace(local, '/'+local);
+                var href = $('#menuLateral li a');
+                $(href).each(function(index, value){
+                      var href2 = $(this).attr('href');
+                      if(href2 == local)
+                          $(this).parent().addClass('ativo');
+                });
+			 
+			         //Fechar o box de pesquisa e logout quando clicar fora deles
+              var closeAll = $('li.dropDown');
+              $('html').click(function () {
+                          closeAll.hide();
+              });                          
+
+              //DropDown logout
+              var drop = $('.dropDownLogout');
+              $('.navDropDownLogout span').click(function (e) {
+                  e.stopPropagation();
+                  if(drop.is(':visible'))
+                      $(drop).hide();
+                  else
+                      $(drop).show();
+              });
+              $(drop).click(function(e){
+                  e.stopPropagation();
+              });
+
+              //DropDown pesquisar            
+              var dropPesquisar = $('.dropDownPesquisar');
+                $('.navDropDownPesquisar span').click(function (e) {
+                  e.stopPropagation();
+                    if(dropPesquisar.is(':visible'))
+                        $(dropPesquisar).hide();
+                    else
+                        $(dropPesquisar).show();
+                });
+              $(dropPesquisar).click(function(e){
+                  e.stopPropagation();
+              });
+
+              
+
+              //Toggle Menu Lateral
+              $('#menuLateral li.bgToggle').click(function () {
+                  var clicked = $(this); //o cara que eu cliquei
+                  var tei = $(clicked).children().next().next();  //o cara que abre e fecha
+                  $(tei).stop().slideToggle(function () {
+                      if ($(this).is(':visible')) //this ==  tei
+                          $(clicked).addClass('bgToggleOpen');
+                      else
+                          $(clicked).removeClass('bgToggleOpen');
+                  });
+              });
+
+              //se for mobile, adicionar a classe para o menu lateral ficar fechado
+              if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                  $('body').addClass('collapsed');
+              }
+
+              //menu lateral fechado
+              $('a.toggleMenuLateral').click(function () {
+                  var body = $('body');
+                  if ($(body).hasClass('collapsed')) {
+                      $(body).removeClass('collapsed');
+                      $('li.bgToggle').off('mouseenter');
+                      $('li.bgToggle').off('mouseleave');
+                  }
+                  else {
+                      $(body).addClass('collapsed');
+                      if ($(body).hasClass('collapsed')) {
+                          if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+                          }
+                          else {
+                              $('li.bgToggle').mouseenter(function () {
+                                  var item = $(this);
+                                  var next = $(item).children('.subMenuLateral');
+                                  $(next).stop(true, true).slideToggle();
+                              });
+
+                              $('li.bgToggle').mouseleave(function () {
+                                  var item = $(this);
+                                  var next = $(item).children('.subMenuLateral');
+                                  $(next).stop(true, true).slideToggle();
+                              });
+                          }
+                      }
+                  }
+              });
+			  
+        //centralizar paginação
+			  //var a = $('.paginacao a').not('previous_page, next_page').length + 2;
+			  //var b = $('.paginacao a').not('previous_page, next_page').outerWidth(true);
+			  //var largura_total = (a * b) + 52;
+			  //$('.paginacao').width(largura_total);			
+        var fio = $('.paginacao').children();
+        var total = 0;
+        $(fio).each(function (){
+            total += $(this).outerWidth();
+        });
+        $('.paginacao').width(total + 5);   
+			  
+			  $('.table th a, .paginacao a').on('click', function (e) {
+          e.preventDefault();  
+			    $.get(this.href, $(this).serialize(), null, 'script');  
+			    return false;  
+			  });  
+
+			  // Search form.  
+			  $('#products_search').submit(function () {  
+			  	$.get(this.action, $(this).serialize(), null, 'script');  
+			    	return false;  
+			  });
+
+        $('a.showTour').hover(function (){
+            $(this).next().stop().animate({
+                right:'50px', opacity:1.0}, 300
+            ).show()
+        }, function(){
+            $(this).next().stop().animate({
+                right:'25px', opacity:0}, 300
+            ).fadeOut()
+        });
+        
+      });
+
+      </script>
+  
+  <%= csrf_meta_tag %>
+  
+</head>
+<style type="text/css">
+  .notify-row{
+    margin-left: 220px;
+  }
+</style>
+<body>
+<section id="container">
+    <!-- Header -->
+    <header class="header white-bg">
+        <div class="sidebar-toggle-box">
+              <div data-original-title="Toggle Navigation" data-placement="right" class="fa fa-bars tooltips"></div>
+          </div>
+
+        <a href="#"><%= image_tag("logoHandcom.png", :style=> 'width: 150px; margin-top: 13px; position: absolute') %></a>
+
+        <div class="nav notify-row" id="top_menu">
+            <!--  notification start -->
+            <ul class="nav top-menu">
+              <!-- settings start -->
+              <!--<li class="dropdown">
+                  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                      <i class="fa fa-tasks"></i>
+                      <span class="badge bg-success">6</span>
+                  </a>
+                  <ul class="dropdown-menu extended tasks-bar">
+                      <div class="notify-arrow notify-arrow-green"></div>
+                      <li>
+                          <p class="green">You have 6 pending tasks</p>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="task-info">
+                                  <div class="desc">Dashboard v1.3</div>
+                                  <div class="percent">40%</div>
+                              </div>
+                              <div class="progress progress-striped">
+                                  <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width: 40%">
+                                      <span class="sr-only">40% Complete (success)</span>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="task-info">
+                                  <div class="desc">Database Update</div>
+                                  <div class="percent">60%</div>
+                              </div>
+                              <div class="progress progress-striped">
+                                  <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%">
+                                      <span class="sr-only">60% Complete (warning)</span>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="task-info">
+                                  <div class="desc">Iphone Development</div>
+                                  <div class="percent">87%</div>
+                              </div>
+                              <div class="progress progress-striped">
+                                  <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="20" aria-valuemin="0" aria-valuemax="100" style="width: 87%">
+                                      <span class="sr-only">87% Complete</span>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="task-info">
+                                  <div class="desc">Mobile App</div>
+                                  <div class="percent">33%</div>
+                              </div>
+                              <div class="progress progress-striped">
+                                  <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width: 33%">
+                                      <span class="sr-only">33% Complete (danger)</span>
+                                  </div>
+                              </div>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <div class="task-info">
+                                  <div class="desc">Dashboard v1.3</div>
+                                  <div class="percent">45%</div>
+                              </div>
+                              <div class="progress progress-striped active">
+                                  <div class="progress-bar" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 45%">
+                                      <span class="sr-only">45% Complete</span>
+                                  </div>
+                              </div>
+
+                          </a>
+                      </li>
+                      <li class="external">
+                          <a href="#">See All Tasks</a>
+                      </li>
+                  </ul>
+              </li>
+              <!-- settings end -->
+              <!-- inbox dropdown start-->
+              <!--<li id="header_inbox_bar" class="dropdown">
+                  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                      <i class="fa fa-envelope-o"></i>
+                      <span class="badge bg-important">5</span>
+                  </a>
+                  <ul class="dropdown-menu extended inbox">
+                      <div class="notify-arrow notify-arrow-red"></div>
+                      <li>
+                          <p class="red">You have 5 new messages</p>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="photo"><img alt="avatar" ></span>
+                                    <span class="subject">
+                                    <span class="from">Jonathan Smith</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hello, this is an example msg.
+                                    </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="photo"><img alt="avatar"></span>
+                                    <span class="subject">
+                                    <span class="from">Jhon Doe</span>
+                                    <span class="time">10 mins</span>
+                                    </span>
+                                    <span class="message">
+                                     Hi, Jhon Doe Bhai how are you ?
+                                    </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="photo"><img alt="avatar" ></span>
+                                    <span class="subject">
+                                    <span class="from">Jason Stathum</span>
+                                    <span class="time">3 hrs</span>
+                                    </span>
+                                    <span class="message">
+                                        This is awesome dashboard.
+                                    </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="photo"><img alt="avatar"></span>
+                                    <span class="subject">
+                                    <span class="from">Jondi Rose</span>
+                                    <span class="time">Just now</span>
+                                    </span>
+                                    <span class="message">
+                                        Hello, this is metrolab
+                                    </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">See all messages</a>
+                      </li>
+                  </ul>
+              </li>
+              <!-- inbox dropdown end -->
+              <!-- notification dropdown start-->
+              <!--<li id="header_notification_bar" class="dropdown">
+                  <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+
+                      <i class="fa fa-bell-o"></i>
+                      <span class="badge bg-warning">7</span>
+                  </a>
+                  <ul class="dropdown-menu extended notification">
+                      <div class="notify-arrow notify-arrow-yellow"></div>
+                      <li>
+                          <p class="yellow">You have 7 new notifications</p>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                              Server #3 overloaded.
+                              <span class="small italic">34 mins</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="label label-warning"><i class="fa fa-bell"></i></span>
+                              Server #10 not respoding.
+                              <span class="small italic">1 Hours</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="label label-danger"><i class="fa fa-bolt"></i></span>
+                              Database overloaded 24%.
+                              <span class="small italic">4 hrs</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="label label-success"><i class="fa fa-plus"></i></span>
+                              New user registered.
+                              <span class="small italic">Just now</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="label label-info"><i class="fa fa-bullhorn"></i></span>
+                              Application error.
+                              <span class="small italic">10 mins</span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">See all notifications</a>
+                      </li>
+                  </ul>
+              </li>-->
+              <!-- notification dropdown end -->
+          </ul>
+          </div>
+
+        <div class="top-nav ">
+              <ul class="nav pull-right top-menu">
+                  <!--<li>
+                      <input type="text" class="form-control search" placeholder="Search">
+                  </li>-->
+                  <!-- user login dropdown start-->
+                  <li class="dropdown">
+                      <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                          <span class="username"><%if current_user%><%=current_user.nome%><%end%></span>
+                          <b class="caret"></b>
+                      </a>
+                      <ul class="dropdown-menu extended logout">
+                          <div class="log-arrow-up"></div>
+                          <li><a href="/register/edit"><i class=" fa fa-suitcase"></i>Conta</a></li>
+                          <!--<li><a href="#"><i class="fa fa-cog"></i> Configurações</a></li>-->
+                          <!--<li><a href="#"><i class="fa fa-bell-o"></i> Notificações</a></li>-->
+                          <li><%= link_to raw("<i class='fa fa-key'></i> Sair"), destroy_user_session_path, :method => :delete %></a></li>
+                      </ul>
+                  </li>
+                  <!-- user login dropdown end -->
+              </ul>
+          </div>
+
+        <!--<div id="navUsuario">
+            <ul>
+                <!--<li class="navNotificacao btn btnInverso">
+                    <a href="#">
+                        <span class="navIconeNotificacao"></span>
+                        <span class="navValorNotificacao">0</span>
+                    </a>
+                </li>-->
+                <!--<li class="navUser btn btnInverso">
+                    <a href="#">
+                        <span class="navPesquisaIcone"></span>
+                        <span class="navUserTxt">Buscar</span>
+                    </a>
+                </li>
+                <li class="navDropDown btn btnInverso navDropDownPesquisar">
+                    <span></span>
+                </li>
+                <li class="dropDown dropDownPesquisar">
+                    <img src="/images/setaDropDown.png"/>
+                    <div id="pesquisarGestao">
+                        <input type="text" class="searchGestao"/>
+                        <input class="pesquisarGestaoInput" type="button" value="Ir">
+                    </div>
+                </li> -->
+                <!--<li class="navUser btn btnInverso">
+                    <a href="#">
+                        <span class="navUserIcone"></span>
+                        <span class="navUserTxt">
+                            usuário
+                        </span>
+                    </a>
+                </li>-->
+                <!--<li class="navDropDown btn btnInverso navDropDownLogout">
+                    <span></span>
+                </li>
+                <li class="dropDown dropDownLogout">
+                    <img src="/images/setaDropDown.png"/>
+                    <div id="divDropDown">						
+                        <%#= link_to "Configurações do Perfil", edit_user_registration_path %>   
+                        <span class="divisaoDropDown"></span>
+                        <%#= link_to "Sair", destroy_user_session_url, :method => :delete %>
+                    </div>
+                </li>
+            </ul>
+        </div>-->
+    </header>
+
+    <!--<div id="master">-->
+
+    <!-- Menu Lateral-->
+    <aside>
+    <div id="sidebar" class="nav-collapse">
+            <ul class="sidebar-menu" id="nav-accordion">
+                <li id="item-1">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/home" <%if params[:controller] == 'admin/home' %> class="active" <%end%>>
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <% if can? :manage, :all%>
+                  <li id="item-2">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/usuarios" <%if params[:controller] == 'admin/usuarios' %> class="active" <%end%>>
+                        <i class="fa fa-user"></i>
+                        <span>Usuários</span>
+                    </a>
+                  </li>
+                <%end%>
+                <li id="item-3">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/areas" <%if params[:controller] == 'admin/areas' %> class="active" <%end%>>
+                        <i class="fa fa-file-text-o"></i>
+                        <span>Áreas</span>
+                    </a>
+                </li>
+                <li id="item-4">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/banners" <%if params[:controller] == 'admin/banners' %> class="active" <%end%>>
+                        <i class="fa fa-film"></i>
+                        <span>Banners</span>
+                    </a>
+                </li>
+                <!--<li id="item-5">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/categorias" <%#if params[:controller] == 'admin/categorias' %> class="active" <%#end%>>
+                        <i class="fa fa-list-alt"></i>
+                        <span>Categorias</span>
+                    </a>
+                </li>-->
+                <li id="item-6">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/conteudos" <%if params[:controller] == 'admin/conteudos' %> class="active" <%end%>>
+                        <i class="fa fa-table"></i>
+                        <span>Conteúdos</span>
+                    </a>
+                </li>
+                <li id="item-7">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/encartes" <%if params[:controller] == 'admin/encartes' %> class="active" <%end%>>
+                        <i class="fa fa-file-image-o"></i>
+                        <span>Encartes</span>
+                    </a>
+                </li>
+                <li id="item-8">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/laminas" <%if params[:controller] == 'admin/laminas' %> class="active" <%end%>>
+                        <i class="fa fa-file-image-o"></i>
+                        <span>Lâminas</span>
+                    </a>
+                </li>
+                <li id="item-9">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/lojas" <%if params[:controller] == 'admin/lojas' %> class="active" <%end%>>
+                        <i class="fa fa-building-o"></i>
+                        <span>Lojas</span>
+                    </a>
+                </li>
+                <li id="item-10">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/deli_sazonals" <%if params[:controller] == 'admin/deli_sazonal' %> class="active" <%end%>>
+                        <i class="fa fa-sun-o"></i>
+                        <span>Deli Sazonal</span>
+                    </a>
+                </li>
+                <li id="item-11">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/deli_na_midias" <%if params[:controller] == 'admin/deli_na_midias' %> class="active" <%end%>>
+                        <i class="fa fa-television"></i>
+                        <span>Deli na Mídia</span>
+                    </a>
+                </li>
+                <li id="item-12">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/novidades" <%if params[:controller] == 'admin/novidades' %> class="active" <%end%>>
+                        <i class="fa fa-star"></i>
+                        <span>Novidades</span>
+                    </a>
+                </li>
+                <li id="item-13">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/aconteces" <%if params[:controller] == 'admin/aconteces' %> class="active" <%end%>>
+                        <i class="fa fa-glass"></i>
+                        <span>Acontece</span>
+                    </a>
+                </li>
+                <li id="item-14">
+                    <span class="drag">&nbsp;</span>
+                    <a href="/admin/listagem_aconteces" <%if params[:controller] == 'admin/listagem_aconteces' %> class="active" <%end%>>
+                        <i class="fa fa-glass"></i>
+                        <span>Acontece Registros</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+	</aside>
+		
+	
+	<section id="main-content" >
+    <section class="wrapper">
+        <%= yield %>
+    </section>
+	</section>
+
+</section>
+  <%#= javascript_include_tag "gestao/jquery" %>
+  <%= javascript_include_tag "gestao/bootstrap.min" %>
+  <%= javascript_include_tag "gestao/jquery.dcjqaccordion.2.7" %>
+  <%= javascript_include_tag "gestao/jquery.scrollTo.min" %>
+  <%#= javascript_include_tag "gestao/jquery.nicescroll" %>
+  <%= javascript_include_tag "gestao/jquery.sparkline" %>
+  <%= javascript_include_tag "gestao/owl.carousel" %>
+  <%= javascript_include_tag "gestao/respond.min" %>
+  <%= javascript_include_tag "gestao/common-scripts" %>
+</body>
+</html>

@@ -1,0 +1,160 @@
+﻿/*Estilo padrão de conteudo*/
+
+h1, h2, h3, p, span, a
+{
+    font-weight:normal;
+}
+
+h1
+{
+    color:#E3A427;
+    font:36px 'museo500';
+    margin:10px 0;
+}
+
+h2
+{
+    color:#E3A427;
+    font:28px 'museo700';
+    margin:8px 0;
+}
+
+h3
+{
+    color:#E3A427;
+    font:22px 'museo500';
+    margin:5px 0;
+}
+
+p
+{
+    color:#333;
+    font:16px 'museo300';
+    margin:20px 0;
+}
+
+p img
+{
+    margin: 15px;
+}
+
+span
+{
+    color:#333;
+    font:14px 'museo100';
+    margin:5px 0;
+}
+
+#master a
+{
+    color:#970573;
+    cursor:pointer;
+    font-family:'museo300';
+    margin:5px 0;
+}
+
+    #master a:hover
+    {
+        text-decoration:underline;
+    }
+
+
+ul li
+{
+    color:#333;
+    font:16px 'museo300';
+    margin:7px 0;
+}
+/*Estilo padrão de conteudo*/
+
+#master .listaConteudo
+{
+    border-bottom: 1px dashed #E1E1E1;
+    float: right;
+    margin: 0 0 15px;
+    padding: 0 0 10px 10px;
+    width: 735px;
+}
+
+#master .listaConteudo:hover
+{
+    background-color: #fbfbfb;
+}
+
+#master .listaConteudo .listaConteudoTitulo
+{
+    float: left;
+    width: 100%;
+}
+
+
+#master .listaConteudo .listaConteudoTitulo p,
+#master .listaConteudo .listaConteudoTitulo span
+{
+    color: #7D2067;
+    float: left;
+    font-size: 24px;
+    font-weight: 600;
+    margin:5px 5px 0 0;
+    width: auto;
+}
+
+#master .listaConteudo .listaConteudoTitulo span
+{
+    color: #333;
+    font-size: 11px;
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+#master .listaConteudo .listaConteudoResumo
+{
+    float: left;
+    margin: 10px 0 5px;
+    width: 100%;
+}
+
+#master .listaConteudo .listaConteudoResumo p
+{
+    float: left;
+    margin: 0;
+}
+
+#master .listaConteudo .listaConteudoResumo p a
+{
+    color: #333;
+    float: left;
+    font: 16px 'museo300';
+    margin: 10px 0;
+}
+
+#master .listaConteudo .listaConteudoResumo p a:hover
+{
+    color: #7D2067;
+    text-decoration: none;
+}
+
+#master .listaConteudo a.vejaMais
+{
+    color: #7D2067;
+    float: left;
+    font-size: 14px;
+    margin: 0;
+}
+
+/*Estilo para listagem com imagem*/
+
+#master .listaConteudo > img
+{
+    float: left;
+    margin: 10px 10px 0 0;
+    width: 130px;
+}
+
+#master .listaConteudo.listaConteudoComImg > div
+{
+    float: left;
+    width: 605px;
+}
+
+/*Estilo para listagem com imagem*/

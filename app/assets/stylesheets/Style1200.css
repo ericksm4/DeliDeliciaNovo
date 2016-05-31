@@ -1,0 +1,28 @@
+﻿/*Ajuste do form para tabelas responsivas com 950px de largura*/
+
+#conteudo #conteudoPrincipal .formAddNovo
+{
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal .gridNewsletterGrupos
+{
+	width: 730px;
+}
+
+#conteudo #conteudoPrincipal .novaAreaWidth
+{
+	width: 550px;
+}
+
+#conteudo #conteudoPrincipal .divisaoGrid
+{
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal #centralizarGridTabela
+{
+	width: 98%;
+}
+
+/*Ajuste do form para tabelas responsivas com 950px de largura*/

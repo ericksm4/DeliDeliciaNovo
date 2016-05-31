@@ -1,0 +1,302 @@
+/*Página de pedido realizado com sucesso*/
+
+#boxPedidoRealizado
+{
+	float: left;
+    padding: 40px 0 20px;
+    width: 100%;
+}
+
+#boxPedidoRealizado #boxPedidoRealizadoTopo
+{
+	float: left;
+	width: 100%;
+}
+
+#boxPedidoRealizado #boxPedidoRealizadoTopo img
+{
+	float: left;
+	width: 40px;
+}
+
+#boxPedidoRealizado #boxPedidoRealizadoTopo h1
+{
+	color: #438C3A;
+    float: left;
+    font: 32px 'museo700';
+    margin: 3px 0 0 15px;
+}
+
+#boxPedidoRealizado #boxPedidoRealizadoTopo h2
+{
+	color: #970573;
+	float: left;
+    font: 24px 'museo500';
+    margin: 20px 0;
+	width: 100%;
+}
+
+#boxPedidoRealizado #boxPedidoRealizadoTopo p
+{
+	color: #555;
+	float: left;
+    font: 20px 'museo300';
+    margin: 10px 0;
+	width: 100%;
+}
+
+#boxPedidoRealizado #numeroPedido
+{
+	background-color: #F4F4F4;
+    border-radius: 5px;
+    float: left;
+    margin: 10px 0;
+    padding: 15px 2%;
+    width: 96%;
+}
+
+#boxPedidoRealizado #numeroPedido span
+{
+	color: #555555;
+    float: left;
+    font: 20px 'museo300';
+    text-align: center;
+    width: 100%;
+}
+
+#boxPedidoRealizado #numeroPedido label
+{
+	color: #970573;
+    font: 28px 'museo500';
+}
+
+#boxPedidoRealizado #statusPedido
+{
+	float: none;
+    margin: 0 auto;
+    width: 635px;
+}
+
+#boxPedidoRealizado #statusPedido .tituloStatusPedido,
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido
+{
+	float: left;
+	margin: 15px 0 7px;
+	width: 660px;
+}
+
+#boxPedidoRealizado #statusPedido .tituloStatusPedido .status,
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido .status
+{
+	float: left;
+	font: 16px 'museo300';
+}
+
+#boxPedidoRealizado #statusPedido .tituloStatusPedido .status1
+{
+	color: #557f47;
+	margin: 0 0 0 -25px;
+}
+
+#boxPedidoRealizado #statusPedido .tituloStatusPedido .status2
+{
+	margin: 0 0 0 80px;
+}
+
+#boxPedidoRealizado #statusPedido .tituloStatusPedido .status3
+{
+	margin: 0 0 0 100px;
+}
+
+#boxPedidoRealizado #statusPedido .tituloStatusPedido .status4
+{
+	margin: 0 0 0 105px;
+}
+
+#boxPedidoRealizado #statusPedido .imgStatusPedido
+{
+	background: url(/images/website/status_pedido.png) no-repeat left -7px;
+	float: left;
+	height: 35px;
+	width: 635px;
+}
+
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido
+{
+	margin: 7px 0 0;
+	width: 670px
+}
+
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido .statusHora
+{
+	text-align: center;
+    width: 100px;
+}
+
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido .statusHora1
+{
+	color: #557f47;
+	margin: 0 0 0 -30px;
+}
+
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido .statusHora2
+{
+	color: #557f47;
+	margin: 0 0 0 85px;
+}
+
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido .statusHora3
+{
+	color: #557f47;
+	margin: 0 0 0 105px;
+}
+
+#boxPedidoRealizado #statusPedido .dataHoraStatusPedido .statusHora4
+{
+	color: #557f47;
+	margin: 0 0 0 110px;
+}
+
+#boxPedidoRealizado #produtosPedido
+{
+	background-color: #F4F4F4;
+    border-radius: 5px;
+    float: left;
+    margin: 50px 0 25px;
+    padding: 15px 2%;
+    width: 96%;
+}
+
+#boxPedidoRealizado #produtosPedido h2
+{
+	color: #970573;
+    float: left;
+    font: 24px 'museo500';
+    margin: 0 0 25px;
+    width: 100%;
+}
+
+#boxPedidoRealizado #produtosPedido > div
+{
+	border-bottom: 1px solid #CFCFCF;
+	float: left;
+	margin: 0 0 25px;
+}
+
+#boxPedidoRealizado #produtosPedido .cabecalhoPedido,
+#boxPedidoRealizado #produtosPedido .listaProdutoPedido
+{
+	float: left;
+    margin: 0 0 15px;
+    text-align: center;
+    width: 100%;
+}
+
+#boxPedidoRealizado #produtosPedido .cabecalhoPedido span,
+#boxPedidoRealizado #produtosPedido .listaProdutoPedido span
+{	
+	color: #555;
+	float: left;
+	font: 16px 'museo700';
+	width: 170px;
+}
+
+#boxPedidoRealizado #produtosPedido .cabecalhoPedido span.cabecalhoPedidoItemProduto,
+#boxPedidoRealizado #produtosPedido .listaProdutoPedido span.listaProdutoPedidoItemProduto
+{
+	text-align: left;
+	width: 420px;
+}
+
+
+#boxPedidoRealizado #produtosPedido .listaProdutoPedido span
+{
+	font-family: 'museo300';
+}
+
+#boxPedidoRealizado #produtosPedido .cabecalhoPedido span.spanFormaPagamento,
+#boxPedidoRealizado #produtosPedido .listaProdutoPedido span.spanFormaPagamento
+{
+	width: 590px;
+}
+
+#boxPedidoRealizado #produtosPedido .listaProdutoPedido span.spanValorTotalPedido
+{
+	font: 22px 'museo700';
+}
+
+#boxPedidoRealizado #produtosPedido #enderecoEntregaPedido
+{
+	float: left;
+	margin: 0;
+	width: 100%;
+}
+
+#boxPedidoRealizado #produtosPedido #enderecoEntregaPedido h2
+{
+	color: #555;
+    float: left;
+    font: 16px 'museo700';
+    margin: 0 0 15px;
+    width: 100%;
+}
+
+#boxPedidoRealizado #produtosPedido #enderecoEntregaPedido span
+{
+	color: #555;
+    float: left;
+    font: 16px 'museo300';
+    margin: 4px 0;
+    width: 100%;
+}
+
+#boxPedidoRealizado #btnPedido
+{
+	float: none;
+    margin: 0 auto;
+    width: 350px;
+}
+
+#boxPedidoRealizado #btnPedido .btn
+{
+	background-color: #e3a426;
+	border: none;
+	border-bottom: 5px solid #bc881f;
+	color: #fff;
+	cursor: pointer;
+	float: left;
+	font: 14px 'museo700';
+	margin: 0 15px 0 0;
+	padding: 7px 10px;
+	text-align: center;
+	width: 110px;
+}
+
+#boxPedidoRealizado #btnPedido .btn:hover
+{
+	background-color: #DA9C23;
+}
+
+#boxPedidoRealizado #btnPedido .btn:active
+{
+	background-color: #bc881f;
+}
+
+#boxPedidoRealizado #btnPedido .btnAcompanhe
+{
+	background-color: #641D5D;
+	border-color: #4a1544;
+	width: 170px;
+}
+
+#boxPedidoRealizado #btnPedido .btnAcompanhe:hover
+{
+	background-color: #591a53;
+}
+
+#boxPedidoRealizado #btnPedido .btnAcompanhe:active
+{
+	background-color: #4a1544;
+}
+
+/*Página de pedido realizado com sucesso*/

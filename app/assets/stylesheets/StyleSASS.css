@@ -1,0 +1,122 @@
+/*Box Informações Home*/
+
+        #conteudo #conteudoPrincipal .boxInfoHome
+        {
+            background-color: #27a9e3;
+            float: left;
+            margin: 0 1% 1% 0;
+            /*max-width: 380px;*/
+            width: 23%;
+        }
+
+            #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeSup
+            {
+                float: left;
+                padding: 4%;
+                width: 92%;
+            }
+
+                #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeSup img
+                {
+                    float: left;
+                    max-width: 20.5%;
+                    width: 20.5%;
+                    /*width: 70px;*/
+                }
+
+                #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeSup span
+                {
+                    color: #fff;
+                    float: right;
+                    font-size: 36px;
+                    font-weight: lighter;
+                    margin: 5px 0;
+                    line-height: 28px;
+                    text-align: right;
+                    width: 54%;
+                }
+
+                #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeSup .descricaoInfo
+                {
+                    font-size: 16px;
+                }
+
+            #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInf
+            {
+                cursor: pointer;
+                float: left;
+                width: 100%;
+            }
+
+                #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInf a
+                {
+                    background-color: #1D84B4;
+                    color: #fff;
+                    float: left;
+                    padding: 7px 1.5%;
+                    text-decoration: none;
+                    text-transform: lowercase;
+                    width: 97%;
+                }
+
+                    #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInf a:hover
+                    {
+                        background-color: #1C7198;
+                    }
+
+                #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInf img
+                {
+                    float: right;
+                    margin: 2px 5px 0 0;
+                }
+
+                #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInf:hover
+                {
+                    background-color: #1c85b4;
+                }
+
+
+        #conteudo #conteudoPrincipal .boxInfoHomeVerde
+        {
+            background-color: #28b779;
+        }
+
+        #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInfVerde a
+        {
+            background-color: #17a769;
+        }
+
+            #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInfVerde a:hover
+            {
+                background-color: #16945e;
+            }
+
+        #conteudo #conteudoPrincipal .boxInfoHomeRoxo
+        {
+            background-color: #852b99;
+        }
+
+        #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInfRoxo a
+        {
+            background-color: #751e88;
+        }
+
+            #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInfRoxo a:hover
+            {
+                background-color: #641974;
+            }
+
+        #conteudo #conteudoPrincipal .boxInfoHomeLaranja
+        {
+            background-color: #ffb848;
+        }
+
+        #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInfLaranja a
+        {
+            background-color: #da9628;
+        }
+
+            #conteudo #conteudoPrincipal .boxInfoHome .boxInfoHomeInfLaranja a:hover
+            {
+                background-color: #c48724;
+            }

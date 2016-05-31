@@ -1,0 +1,248 @@
+ul.sidebar-menu li{
+    line-height: 10px;
+}
+
+.search1.form-control{
+    display: inline-block;
+    width: 210px;
+}
+
+.divTourNovoItem{
+    float: right;
+    margin-right: 15px;
+}
+
+.formAddNovo .btn.btn-info{
+    margin-top: -3px;
+    margin-left: 10px;
+}
+
+.panel-primary>.panel-heading{
+    font-size: 1.7em;
+}
+
+#products_search{
+    padding: 10px 0 5px 20px;
+}
+
+.boxForm .fa-times, .boxForm .fa-edit,
+.boxForm .fa-times, .boxForm .fa-eye{
+    color: #797979;
+    font-size: 18px;
+}
+
+.boxForm input.excluir, .boxForm a.excluir{
+      position: absolute;
+  opacity: 0;
+  width: 40px;
+  margin-left: -10px;
+  height: 18px;
+}
+
+.boxForm .table th, .boxForm .table td{
+    text-align: center;
+}
+
+.alert.alert-success{
+    margin: 15px auto;
+    width: 300px;
+} 
+
+.top-nav ul.top-menu > li > a{
+    padding: 6px 10px;
+}
+
+.paginacao{
+    margin: 0 auto;
+    float: none;
+    display: none;
+}
+
+.panel-heading .tour{
+    font-size: 0.7em;
+    float: right;
+    position: relative;
+    top: 5px;
+    width: 410px;
+    display: inline-block;
+}
+
+.panel-heading .tour a{
+    float: left;
+    margin: 0 5px;
+}
+
+.panel-heading .tour span{
+    margin-left: 5px;
+}
+
+#new_admin_area .form-control{
+   /* max-width: 383px;*/
+}
+
+.sp-replacer.sp-light{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 34px;
+}
+
+#new_admin_area select.form-control{
+    width: 200px;
+}
+
+#ordem{
+    width: 75px;
+    float: left;
+}
+
+.form-group{
+    overflow: hidden;
+}
+
+.divisaoBtnForm{
+    margin-top: 35px;
+}
+
+.divisaoBtnForm *{
+    margin-right: 5px;
+}
+
+.excluirLocal{
+    position: fixed;
+    right: 40px;
+    margin-top: -20px;
+}
+
+div.datePicker input{
+    max-width: 100% !important;
+}
+
+div.datePicker .input-group-btn{
+    display: block;
+}
+
+.bootstrap-datetimepicker-widget.dropdown-menu{
+    width: 260px !important;
+}
+
+.revenue-head.gestao{
+    background: #428bca;
+    margin-top: 50px;
+}
+
+.revenue-head.gestao span{
+    background: #6DA7DA;
+}
+
+label.error{
+    left: 0;
+}
+
+.descricao .btn.btn-danger{
+    margin: 20% auto;
+    display: table;;
+}
+
+.dropdown-menu.extended.logout > li{
+    width: 100%;
+}
+
+.panel-heading .btn.btn-default{
+    float: right;
+}
+
+.botoesForm.botoesFormSaveCancel .btn.btn-info{
+    float: right;
+}
+
+
+.botoesForm.botoesFormSaveCancel .btn.btn-info{
+    float: right;
+}
+
+.divisaoBtnForm.col-lg-12 .botoesForm .btn.btn-info, .divisaoBtnForm.col-lg-12 .botoesForm .btn.btn-primary{
+    float: right;
+}
+
+.picker-switch.accordion-toggle .icon-time{
+    display: none;
+}
+
+.paginacao a{
+    border: 1px solid #B8B8B8;
+    border-right: none;
+    color: #0D63A2;
+    float: left;
+    text-align: center;
+    text-decoration: none;
+}
+
+.paginacao .current {
+  background-color: #E3E1E1;
+  border: 1px solid #B8B8B8;
+  border-right: none;
+  color: #000;
+  float: left;
+  font-style: normal;
+  text-align: center;
+}
+
+.paginacao span{
+  border: 1px solid #B8B8B8;
+  border-right: none;
+  float: left;
+  margin: 0;
+  text-align: center;
+  width: auto;
+}
+
+.paginacao a:last-child, .next_page.disabled{
+    border-right: 1px solid #B8B8B8;
+}
+
+.paginacao a, .paginacao .current, .paginacao span{
+    width: 32px;
+    padding: 5px 0;
+}
+
+.paginacao a:hover{
+    background: #E3E1E1
+}
+
+form span.error{
+    color: red;
+    margin: 1px 5px 2px;
+    display: block;
+}
+
+.select2-container .select2-choice{
+    height: 33px;
+}
+
+@media screen and (max-width: 570px){
+    .table.table-hover .url, .table.table-hover .data_fim, .table.table-hover .data_inicio{
+        display: none;
+    }
+
+    .excluirLocal{
+        position: absolute;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 410px){
+    .table.table-hover .ordem{
+        display: none;
+    }
+
+    .search1.form-control{
+        width: 140px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .table.table-hover .status, .table.table-hover .cat_pai, .table.table-hover .area{
+        display: none;
+    }
+}

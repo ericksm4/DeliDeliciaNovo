@@ -1,0 +1,57 @@
+<% content_for :style do -%>
+  <%= stylesheet_link_tag 'StyleAreas' %>
+  <%= stylesheet_link_tag 'StyleForm' %> 
+  <%= stylesheet_link_tag "minimal" %> <!-- Checkbox Estilizado -->
+  <%= stylesheet_link_tag "select2" %> <!-- DropDown Estilizado -->
+  <%= stylesheet_link_tag "StyleCores" %>
+  <%= stylesheet_link_tag "spectrum" %> <!-- ColorPicker -->
+  <%= stylesheet_link_tag 'bootstrap-datetimepicker.min' %>
+<% end -%>
+
+<% content_for :script do -%>
+  <%= javascript_include_tag "jquery.icheck.min" %> <!-- Checkbox Estilizado -->
+  <%= javascript_include_tag "select2.min" %> <!-- DropDown Estilizado -->
+  <%= javascript_include_tag "select2_locale_pt-BR" %> <!-- DropDown Estilizado -->
+  <%= javascript_include_tag "jquery.validate" %> <!-- Validação dos campos -->
+  <%= javascript_include_tag "spectrum" %> <!-- ColorPicker -->
+  <%= javascript_include_tag "fuelux/js/spinner.min" %>
+  <%#= javascript_include_tag "gestao/advanced-form-components.js" %>
+  <%= javascript_include_tag "bootstrap-datetimepicker.min" %>
+<% end -%>
+
+
+
+
+<div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-12">
+              <!--breadcrumbs start -->
+              <ul class="breadcrumb" style="background: #fff">
+                  <li><a href="/admin/home"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="/admin/laminas">Lâminas</a></li>
+                  <li class="active"><a href="#">Nova lâminas</a></li>
+              </ul>
+              <!--breadcrumbs end -->
+          </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+        <div class="col-lg-12">
+            <div class="panel">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      Nova lâmina
+                    </div>
+                </div>
+                <div class="panel-body">
+                  <div class="col-lg-7">
+                    <div class="boxForm"><%= render 'form' %></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+</div>
+    
+<div class="clearAll">&nbsp;</div>

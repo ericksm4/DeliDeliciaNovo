@@ -1,0 +1,67 @@
+﻿/*Home*/
+
+/*#conteudo #conteudoPrincipal .boxInfoHome
+{
+    margin: 10px 0 0 10%;
+    width:80%;
+}*/
+
+/*Home*/
+
+/*Galeria de Imagens*/
+
+#conteudo #conteudoPrincipal #centralizarListagemGaleria
+{
+    width:96%;
+}
+
+#conteudo #conteudoPrincipal .boxGaleriaImagens
+{
+    padding: 1.5%;
+    width: 97%;
+}
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria img
+    {
+        width:22.5%;
+    }
+
+/*Galeria de Imagens*/
+
+/*Form novo de criar novo usuario*/
+
+#conteudo #conteudoPrincipal .novaAreaWidth
+{
+    margin:100px auto 30px;
+    padding: 0 5%;
+    width: 65%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span
+{
+    text-align:left;
+    width:100%;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input, #conteudo #conteudoPrincipal .formAddNovo input.inputImportar
+{
+    margin-right:0;    
+    width: 90%;
+}
+
+#conteudo .boxForm .divisaoBtnForm .botoesFormSaveCancel
+{
+    width:320px;
+}
+
+.btnImportar
+{
+    margin-left:0;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .search
+{
+    max-width: 85%; 
+}
+
+/*Form novo de criar novo usuario*/

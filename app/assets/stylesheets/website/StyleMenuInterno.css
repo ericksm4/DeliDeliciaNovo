@@ -1,0 +1,16 @@
+header{
+	height: 75px;
+    background: rgb(170, 14, 121);
+}
+
+header .fa.fa-bars{
+	margin-top: 17.5px;
+}
+
+header #logo{
+	height: 65px;
+}
+
+header #rightMenu{
+	margin-top: 25px;
+}

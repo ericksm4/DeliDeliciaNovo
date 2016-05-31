@@ -1,0 +1,127 @@
+#banner{
+	background-image: url('/assets/website/banner_lojas.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 390px;
+	width: 100%;
+	margin-top: 75px;
+}
+
+#lojas{
+	width: 100%;
+	margin-top: 50px;
+}
+
+#lojas > div{
+	overflow: hidden;
+    margin-bottom: 40px;
+    border-bottom: solid 2px #aa0e79;
+    padding-bottom: 40px;
+}
+
+#lojas > div > div
+{
+	width: auto;
+	float: left;
+	height: 230px;
+}
+
+#lojas > div div h2{
+	margin: 0 0 40px;
+    background: url('/assets/website/setah2lojas.png') no-repeat 3px 7px;
+    font-size: 18px;
+    margin-left: -30px;
+    font-weight: normal;
+}
+
+#lojas h2 label{
+	color: #FFF;
+	background: #aa0e79;
+    margin-left: 10px;
+    padding: 5px 25px;
+    display: inline-block;
+}
+
+#lojas > div div span{
+	float: left;
+	clear: both;
+	font-size: 15px;
+}
+
+#lojas > div img{
+	height: 230px;
+	float: left;
+}
+
+#lojas > div div{
+	margin-left: 20px;
+}
+
+#lojas > div a{
+    display: inline-block;
+    color: #fff;
+    background: #fe9200;
+    margin-top: 36px;
+    padding: 7px 30px;
+    font-size: 17px;
+    border: solid 1px #fe9200;
+    cursor: pointer;
+    transition: 0.4s;
+    margin-right: 40px;
+}
+
+#lojas > div a:hover,
+#lojas > div a.active{
+	text-decoration: none;
+	background: #fff;
+	color: #fe9200;
+}
+
+#lojas .tourmap,
+#lojas .map{
+	display: none;
+	margin-top: 20px;
+}
+
+@media screen and (max-width: 850px){
+	#lojas > div img,
+	#lojas > div > div{
+		margin: 0 auto;
+		display: block;
+		float: none;
+		text-align: center;
+	}
+
+	#lojas > div div h2{
+		background: none;
+		margin: 0 auto 20px;
+		text-align: center;
+	}
+
+	#lojas h2 label{
+		background: #fff;
+		color: #aa0e79;
+		margin: 0 auto;
+	}
+
+	#lojas > div div span{
+		float: none;
+	    font-size: 15px;
+	    display: block;
+	}
+
+	#lojas a{
+		margin: 0 15px;
+	}
+
+	#lojas .tourmap, #lojas .map{
+		margin-top: 0;
+	}
+}
+
+@media screen and (max-width: 800px){
+	#banner{
+		height: 200px;
+	}
+}

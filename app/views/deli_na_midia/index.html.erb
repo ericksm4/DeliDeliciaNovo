@@ -1,0 +1,107 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleDeliMidia.css' %>
+
+<script type="text/javascript">
+ 	$(function(){
+ 		$('.midia').click(function(){
+ 			$.ajax({
+		        "crossDomain": true,
+		        "type":"POST",
+		        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+		        "url":"deli_na_midia/carregaImagens",
+		        "data": {
+		          id: $(this).attr('midia-id')
+		        },
+		        "dataType":"json",
+		        "success":function(resp){
+
+		          for(i=0; i < resp.length; i++){
+		          	$('#corpoImagens').append("<img src='"+resp[i].imagem.url+"'>")
+
+		          	if(i==resp.length-1){
+		          		setTimeout(function(){
+		          			$('#corpoImagens').toggle()
+
+		          			if($('#corpoImagens').hasClass('slick-initialized')){
+		          				$('#corpoImagens').html('')
+		          				$('#corpoImagens').slick('unslick');
+
+	          				} 
+		          			$('#corpoImagens').slick({
+					          	slidesToShow: 1,
+					            slidesToScroll: 1,
+					            dots: false,
+					            arrows: true, 
+					            infinite: false
+				            }) 
+
+				            $('#loader').hide();
+		          		}, 1000);
+		          	}
+		          }
+		          
+		          $('#bgMidia').toggle();
+		          $('#loader').show();
+ 					
+		        }
+
+		    })
+ 		})
+
+ 		$('#bgMidia').click(function(){
+ 			$(this).toggle();
+ 			$('#corpoImagens').toggle();
+ 			$('#loader').hide();
+ 		})
+ 	})
+</script>
+
+<div id="banner" style="background-image: url('<%= retorna_banner("Deli na Midia") %>');"></div>
+
+<div id="corpoSite">
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit mi at convallis finibus. In consequat ultrices eros ut tincidunt. In ullamcorper nisi vel dignissim molestie. Morbi luctus, tortor vitae pulvinar dictum, ligula lectus auctor nulla, ac posuere nunc quam eu enim. Curabitur sit amet libero augue. Vivamus pretium scelerisque magna sit amet elementum. Sed a neque mauris. Proin vel maximus augue, at sagittis sapien. </p>
+
+    <div class="clearAll"></div>
+
+    <div id="listagemMidias">
+    	<%@midias.each do |midia|%>
+	    	<div class="midia" midia-id="<%=midia.id.to_s%>">
+	    		<h2><%=midia.titulo%></h2>
+
+	    		<div class="maskImg" style="background: url('<%=midia.imagens[0].imagem%>') no-repeat center"></div>
+
+	    	</div>
+	    <%end%>
+
+	    <%@midias.each do |midia|%>
+	    	<div class="midia" midia-id="<%=midia.id.to_s%>">
+	    		<h2><%=midia.titulo%></h2>
+
+	    		<div class="maskImg" style="background: url('<%=midia.imagens[0].imagem%>') no-repeat center"></div>
+
+	    	</div>
+	    <%end%>
+
+	    <%@midias.each do |midia|%>
+	    	<div class="midia" midia-id="<%=midia.id.to_s%>">
+	    		<h2><%=midia.titulo%></h2>
+
+	    		<div class="maskImg" style="background: url('<%=midia.imagens[0].imagem%>') no-repeat center"></div>
+
+	    	</div>
+	    <%end%>
+
+	    <%@midias.each do |midia|%>
+	    	<div class="midia" midia-id="<%=midia.id.to_s%>">
+	    		<h2><%=midia.titulo%></h2>
+
+	    		<div class="maskImg" style="background: url('<%=midia.imagens[0].imagem%>') no-repeat center"></div>
+
+	    	</div>
+	    <%end%>
+    </div>
+</div>
+
+<div id="bgMidia"></div>
+<img src="/assets/website/loader3.gif" id="loader">
+<div id="corpoImagens"></div>

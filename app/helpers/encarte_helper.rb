@@ -1,0 +1,2 @@
+module EncarteHelper
+end

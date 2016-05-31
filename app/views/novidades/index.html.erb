@@ -1,0 +1,84 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleNovidades.css' %>
+
+<script type="text/javascript">
+ $(function(){
+    $('#navigation li').click(function(){
+        $('#listagemNovidades > div').hide();
+        $('#'+$(this).attr('menu')).show();
+        $('#navigation li').removeClass('active');
+        $(this).addClass('active')
+    })
+
+    $('#navigation .fa-bars').click(function(){
+        $(this).toggleClass('active');
+        $('#navigation ul').toggle()
+    })
+ })
+</script>
+
+<div id="banner" style="background-image: url('<%= retorna_banner("Novidades") %>');"></div>
+
+<% if params[:id].blank? %>
+
+<div id="navigation">
+  <i class="fa fa-bars"></i>
+  <ul>
+    <li class="active" menu="novos">Novos produtos</li>
+    <li menu="lancamentos">Lançamentos</li>
+    <li menu="conceitos">Conceitos</li>
+  </ul>
+</div>
+
+<%end%>
+
+<div id="corpoSite">
+
+    <% if params[:id].blank? %>
+
+    <div id="listagemNovidades">
+    	<div id="novos">
+            <% @novos.each do |novidade| %>
+                <div class="novidade">
+                    <h2><a href="/novidades/<%= novidade.id.to_s %>"><%= novidade.titulo %></a></h2>
+                    <a href="/novidades/<%= novidade.id.to_s %>"><div class="maskImgListagem" style="background: url('<%= novidade.imagem_listagem %>') no-repeat center; background-size: cover"></div></a>
+                    <p><a href="/novidades/<%= novidade.id.to_s %>"><%= novidade.sumario %></a></p>
+                </div>
+            <%end%>
+        </div>
+
+        <div id="lancamentos">
+            <% @lancamentos.each do |novidade| %>
+                <div class="novidade">
+                    <h2><a href="/novidades/<%= novidade.id.to_s %>"><%= novidade.titulo %></a></h2>
+                    <a href="/novidades/<%= novidade.id.to_s %>"><div class="maskImgListagem" style="background: url('<%= novidade.imagem_listagem %>') no-repeat center; background-size: cover"></div></a>
+                    <p><a href="/novidades/<%= novidade.id.to_s %>"><%= novidade.sumario %></a></p>
+                </div>
+            <%end%>
+        </div>
+
+        <div id="conceitos">
+            <% @conceitos.each do |novidade| %>
+                <div class="novidade">
+                    <h2><a href="/novidades/<%= novidade.id.to_s %>"><%= novidade.titulo %></a></h2>
+                    <a href="/novidades/<%= novidade.id.to_s %>"><div class="maskImgListagem" style="background: url('<%= novidade.imagem_listagem %>') no-repeat center; background-size: cover"></div></a>
+                    <p><a href="/novidades/<%= novidade.id.to_s %>"><%= novidade.sumario %></a></p>
+                </div>
+            <%end%>
+        </div>
+    </div>
+
+    <%else%>
+        <div id="novidadeInterna">
+            <% unless @novidade.blank? %>
+                <div class="maskImgInterna" style="background: url('<%= @novidade.imagem %>') no-repeat center; background-size: cover;">
+                    <span>R$ <label><%= @novidade.preco %></label> / <%= @novidade.unidade %> </span>
+                </div>
+                <div id="conteudo">
+                    <h2><%= @novidade.titulo %></h2>
+                    <%=raw(@novidade.conteudo)%>
+                </div>
+            <%end%>
+        </div>
+    <%end%>
+</div>

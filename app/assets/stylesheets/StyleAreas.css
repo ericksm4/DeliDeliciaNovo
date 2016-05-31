@@ -1,0 +1,1471 @@
+﻿
+/*Abas*/
+
+/*#conteudo #abas
+{
+    border-bottom: 1px solid #BABABA;
+    float: left;
+    margin: 20px 0 10px 20px;
+    width: 98%;
+}
+
+#conteudo #abas ul
+{
+    float:left;
+}
+
+#conteudo #abas ul li
+{
+    float: left;
+    width: 130px;
+}
+
+#conteudo #abas ul li span
+{
+    cursor:pointer;
+    float:left;
+    padding: 10px 0;
+    text-align: center;
+    width: 100%;
+}
+
+#conteudo #abas ul li.abaAtiva
+{
+    border: 1px solid #BABABA;
+    border-top: 4px solid;
+    background-color:#fff;
+    border-bottom: none;
+    float:left;
+}
+
+#conteudo .divisaoAba
+{
+    float:left;
+}*/
+/*Abas*/
+
+/*Busca*/
+
+#conteudo #busca
+{
+    float: left;
+    width: 100%;
+}
+
+    #conteudo #busca input[type=text]
+    {
+        border: 1px solid #AEAEAE;
+        float: left;
+        font-size: 12px;
+        margin: 15px 15px 0 0;
+        max-width: 100px;
+        padding: 10px;
+        transition: all 0.4s;
+        width: 100%;
+    }
+
+        #conteudo #busca input[type=text]:focus
+        {
+            border-color: #7a7a7a;
+            border-radius: 5px;
+            box-shadow: 0 0 2px #C8C8C8 inset;
+            max-width: 220px;
+            width: 100%;
+        }
+
+    #conteudo #busca a, #conteudo #busca input[type=submit], .inputBusca
+    {
+        background-color: #4B8DF8;
+        border-radius: 3px;
+        border: none;
+        color: #fff;
+        float: left;
+        font-size: 12px;
+        margin: 15px 0 0;
+        padding: 8px 20px;
+        text-align: center;
+        text-decoration: none;
+        width: 100px !important;
+    }
+
+#conteudo .inputBusca
+{
+    border: none !important;
+    cursor: pointer;
+    font: 12px arial;
+    -moz-appearance: none;
+    -webkit-appearance: none; 
+}
+
+#conteudo .inputBusca:hover
+{
+    background-color: #2A7BFB;
+}
+
+.search
+{
+    width: 275px !important;
+}
+
+
+#conteudo #busca a:hover
+{
+    background-color: #0458e0;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo #busca input
+{
+    max-width: 200px;
+    width: 100%;
+}
+
+    #conteudo #conteudoPrincipal .formAddNovo #busca input:focus
+    {
+        max-width: 330px;
+    }
+
+    #conteudo #conteudoPrincipal .formAddNovo #busca input.inputBusca
+    {
+        border: medium none;
+        border-radius: 3px 3px 3px 3px;
+        cursor: pointer;
+        font: 12px verdana;
+        max-width: initial;
+        width: 100px;
+    }
+
+        #conteudo #conteudoPrincipal .formAddNovo #busca input.inputBusca:hover
+        {
+            background-color: #3280FB;
+        }
+
+/*Busca*/
+
+/*Criar novo*/
+
+#conteudo .criarNovo
+{
+    float: left;
+    margin: 25px 0 10px 0;
+}
+
+    #conteudo .criarNovo a:hover
+    {
+        background-color: #DA502E;
+    }
+
+#conteudo #novoGrupo
+{
+    cursor: pointer;
+    margin: 0 15px !important;
+}
+
+#conteudo .btnNovoGrupo
+{
+    background-color: #999;
+    border-radius: 3px;
+    margin: 0 15px;
+    padding: 8px 20px;
+}
+
+    #conteudo .btnNovoGrupo:hover
+    {
+        background-color: #abaaaa;
+    }
+
+#conteudo .btnConfirmarNovo
+{
+    background-color: #468847;
+    border-radius: 3px 3px 3px 3px;
+    border: none;
+    color: #FFFFFF;
+    float: left;
+    padding: 8px 18px;
+    text-decoration: none;
+}
+
+    #conteudo .criarNovo .btnConfirmarNovo:hover, #conteudo .btnConfirmarNovo:hover
+    {
+        background-color: #569a57;
+    }
+
+#conteudo .btnCancelarNovo
+{
+    background-color: #D61212;
+}
+
+    #conteudo .btnCancelarNovo:hover
+    {
+        background-color: #E83E3E;
+    }
+
+    #conteudo .btnVoltar
+{
+    background-color: #626262;
+}
+
+    #conteudo .btnVoltar:hover
+    {
+        background-color: #818181;
+    }
+
+#conteudo .btnTituloForm
+{
+    background-color: #2A4F88;
+    background-color: #2E74E5;
+    border-radius: 3px 3px 3px 3px;
+    float: right;
+    margin: 5px 15px 3px 0;
+    padding: 5px 15px;
+    border: 1px solid #6A9FCF;
+    /* box-shadow: 0px 0px 3px #000; */
+}
+
+    #conteudo .btnTituloForm:hover
+    {
+        background-color: #3866B0;
+    }
+
+#conteudo #conteudoPrincipal .btnWidthFixo
+{
+    border: medium none;
+    border-radius: 3px;
+    cursor: pointer;
+    float: left;
+    font: 12px/17px arial;
+    margin: 0 0 0 35px !important;
+    padding: 8px 10px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+    width: 70px;
+}
+
+#conteudo #conteudoPrincipal .excluirImagemArea
+{
+    /*border: none !important;
+    margin: 35px 140px !important;
+	width: 120px !important;*/
+    border: medium none !important;
+    display: block;
+    float: none;
+    margin: 0 auto !important;
+    position: relative;
+    top: 40%;
+    width: 120px !important;
+}
+
+
+#conteudo #conteudoPrincipal .inputWidthFixo
+{
+    width: 90px;
+    -webkit-appearance: none; /*Retirar o estilo 'input' no ipad*/
+    -moz-appearance: none;
+}
+
+#conteudo #conteudoPrincipal .inputWidthFixoPassoNews
+{
+    width: 120px;
+    -webkit-appearance: none; /*Retirar o estilo 'input' no ipad*/
+    -moz-appearance: none;
+}
+
+#conteudo #conteudoPrincipal .inputWidthFixoProxPasso
+{
+    width: 112px;
+    -webkit-appearance: none; /*Retirar o estilo 'input' no ipad*/
+    -moz-appearance: none;
+}
+
+#conteudo #conteudoPrincipal .btnContinuarEdit
+{
+    width: 170px;
+}
+
+/*Criar novo*/
+
+/*Botões pre-visualizar newsletter e enviar newsletter de teste*/
+
+#conteudo #conteudoPrincipal #btnPreviewEnviar
+{
+    margin: 0 auto;
+    width: 480px;
+}
+
+#conteudo #conteudoPrincipal .preVisualizarNews, #conteudo #conteudoPrincipal .enviarTesteNews
+{
+    background: url("/images/previewNews.png") no-repeat scroll 10px 12px #fbfbfb;
+    border: 1px solid #DADADA;
+    border-radius: 3px;
+    box-shadow: 0 0 2px #C8C7C7;
+    color: #333;
+    cursor: pointer;
+    float: left;
+    margin: 30px 20px 35px 0;
+    padding: 10px 5px 10px 10px;
+    text-align: center;
+    text-decoration: none;
+    -webkit-transition: all 0.4s ease 0s;
+    -moz-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+    width: 213px;
+}
+
+#conteudo #conteudoPrincipal .enviarTesteNews
+{
+    background: url("/images/enviarNews.png") no-repeat scroll 9px 14px #fbfbfb;
+    margin-right: 0;
+}
+
+#conteudo #conteudoPrincipal .preVisualizarNews:hover
+{
+    background-color: #f5f5f5;
+    box-shadow: 0 0 2px #9D9D9D inset;
+}
+
+/*Botões pre-visualizar newsletter e enviar newsletter de teste*/
+
+/*Tabela*/
+
+.tabelaResponsiva
+{
+    float: left;
+    margin: 0 0 15px;
+    overflow-x: auto;
+    width: 100%;
+}
+
+.tabela
+{
+    float: left;
+    margin: 0 0 0;
+    overflow-x:auto; 
+    width: 950px;
+}
+
+.tabelaListaGrupos
+{
+    width: 730px;
+}
+
+    .tabela tbody tr
+    {
+        border-left: 1px solid #C9C9C9;
+        border-right: 1px solid #C9C9C9;
+        float: left;
+        padding: 0;
+        border-bottom: 1px solid #e9e9e9;
+    }
+
+        .tabela tbody tr.alternate
+        {
+            background-color: #f7f7f7;
+        }
+
+        .tabela tbody tr:last-child
+        {
+            border-bottom: 1px solid #C9C9C9;
+            /*border-radius:0 0 10px 10px;*/
+        }
+
+        .tabela tbody tr.tabelaHeader
+        {
+            /* background-color: #166381; */
+            /*border-radius: 10px 10px 0 0;*/
+            padding: 2px 0;
+            border-top: 1px solid #C9C9C9;
+            border-bottom-color: #C9C9C9;
+            border-left-color: #C9C9C9;
+            border-right-color: #C9C9C9;
+        }
+
+
+        .tabela tbody tr td
+        {
+            float: left;
+            text-align: center;
+            width: 156px;
+            /* border-left: 1px solid #e9e9e9; */
+            padding: 10px 0;
+        }
+
+    .tabela tbody .tabelaHeader td
+    {
+        color: #000000;
+        border-color: #166381;
+        font-weight: bold;
+    }
+
+    .tabela tbody tr td a
+    {
+        color: #333;
+        text-decoration: none;
+    }
+
+        .tabela tbody tr td a:hover
+        {
+            text-decoration: underline;
+        }
+
+        .tabela tbody tr td .excluir, .tabela tbody tr td .excluir_disabled
+        {
+            background: url(/assets/excluir2.png) no-repeat 0 0;
+            border:none !important;
+            float: left;
+            height: 18px !important;
+            margin: 0 0 0 27px !important;
+            width: 18px !important;
+			cursor: pointer;
+        }
+
+        .tabela tbody tr td a .editar, .tabela tbody tr td .editar_disabled,
+        .tabela tbody tr td .visualizarYoutube, .tabela tbody tr td a .verMais
+        {
+            background: url(/assets/editar2.png) no-repeat 0 0;
+            float: left;
+            height: 18px;
+            margin: 0 0 0 27px !important;
+            width: 18px !important;
+        }
+
+        .tabela tbody tr td .duplicar
+        {
+            background: url(/assets/duplicar.png) no-repeat 0 0;
+            border:none !important;
+            float: left;
+            height: 18px !important;
+            margin: 0 0 0 27px !important;
+            width: 18px !important;
+            cursor: pointer;
+        }
+
+        .tabela tbody tr td .visualizarFrame
+        {
+            background: url(/assets/visualizar.png) no-repeat 0 0;
+            border:none !important;
+            float: left;
+            height: 18px !important;
+            margin: 0 0 0 27px !important;
+            width: 18px !important;
+            cursor: pointer;
+        }
+
+        .tabela tbody tr td .visualizarYoutube
+        {
+            background: url(/images/visualizar_youtube.png) no-repeat 0 0;
+        }
+
+        .tabela tbody tr td a .verMais
+        {
+            background: url(/images/ver_mais.png) no-repeat 0 0;
+        }
+
+        .tabela tbody tr td .excluir_disabled
+        {
+            background: url(/assets/excluir2_disabled.png) no-repeat 0 0;
+            cursor: not-allowed;
+        }
+
+        .tabela tbody tr td .editar_disabled,
+        .tabela tbody tr td a .editar_disabled
+        {
+            background: url(/assets/editar2_disabled.png) no-repeat 0 0;
+            cursor: not-allowed;
+        }
+
+    .tabela tbody tr td.tabelaEmail
+    {
+        width: 250px;
+    }
+
+/*Tabela*/
+
+/*Tabela de vídeos*/
+
+.tabela.gridVideos
+{
+
+}
+
+.tabela.gridVideos tbody td:first-child > img
+{
+    width: 120px;
+}
+
+.tabela.gridVideos tbody tr td
+{
+    margin: 37px 0 0;
+}
+
+.tabela.gridVideos tbody tr.tabelaHeader td,
+.tabela.gridVideos tbody tr td.gridVideoIcone
+{
+    margin: 0;
+}
+
+.tabela.gridVideos tbody td.alertYoutube > img
+{
+    width: 12px;
+}
+
+/*Tabela de vídeos*/
+
+/*Botoes Customizados*/
+
+#conteudoPrincipal .gruposCheckBox
+{
+    float: left;
+    max-width: 350px;
+    width: 100%;
+}
+
+#conteudoPrincipal .botoesCustom
+{
+    float: left;
+    position: relative;
+    width: 200px;
+}
+
+    #conteudoPrincipal .botoesCustom span
+    {
+        float: left;
+    }
+
+    #conteudoPrincipal .botoesCustom .icheckbox_minimal, #conteudoPrincipal .botoesCustom .iradio_minimal
+    {
+        left: 110px;
+        margin: 10px 0 5px;
+    }
+
+    #conteudoPrincipal .botoesCustom .iradio_minimal
+    {
+        left: 10px;
+    }
+
+    #conteudoPrincipal .radioBtnCustom
+    {
+        width: 40px;
+    }
+
+    #conteudo .txtRadioBtn
+    {
+        float: left;
+        margin: 0 0 10px;
+        max-width: 500px;
+        width: 100%;
+    }
+
+    #conteudo .txtRadioBtn p
+    {
+        float: left;
+    }
+
+#conteudoPrincipal .txtDropDown
+{
+    float: left;
+    left: 0;
+    margin: 5px 10px 3px 0;
+    position: inherit !important;
+    top: 0;
+}
+
+#conteudoPrincipal .btnDropDown
+{
+    border: 1px solid #E3E3E3;
+    float: left;
+    padding: 8px 7px;
+    margin: 0 0 10px;
+}
+
+#conteudoPrincipal .btnDropDown:hover
+{
+    border-color: #bfbfbf;
+}
+
+    #conteudoPrincipal .btnDropDown option
+    {
+        color: #333;
+        float: left;
+        margin: 5px 0;
+        padding: 0 10px;
+    }
+
+/*Botoes Customizados*/
+
+
+/*Inserir novo (usuario, grupo,...)*/
+
+#conteudo #conteudoPrincipal .formAddNovo, #conteudo #conteudoPrincipal .formAddNovoConteudo
+{
+    margin: 35px auto 30px;
+    /*width: 98%;*/
+    width: 950px;
+}
+
+#conteudo #conteudoPrincipal .novaAreaWidth
+{
+    width: 550px; /*575*/
+}
+
+#conteudo #conteudoPrincipal .gridNewsletterGrupos
+{
+    width: 730px;
+}
+
+#conteudo #conteudoPrincipal .centralizarEditor
+{
+    margin: 10px auto 25px;
+    width: 850px;
+}
+
+#conteudo #conteudoPrincipal .imagemArea
+{
+    margin: 10px 0 0 0;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span, #conteudo #conteudoPrincipal .formAddNovoConteudo span.spanConteudo,
+#conteudo #conteudoPrincipal .centralizarEditor span.tituloEditor
+{
+    float: left;
+    margin: 10px 10px 5px 0;
+    text-align: right;
+    width: 103px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.cepInvalido
+{
+    clear: both;
+    color: #FF0000;
+    display: none;
+    float: left;
+    font-weight: bold;
+    left: 115px;
+    position: absolute;
+    top: 31px;
+    width: auto;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo span.dropDuasLinhas, #conteudo #conteudoPrincipal .formAddNovoConteudo span.dropDuasLinhas
+{
+    margin-bottom: 0;
+    margin-top: -1px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input, #conteudo #conteudoPrincipal #mensagemConteudo input,
+textArea, #conteudo #conteudoPrincipal .formAddNovoConteudo input
+{
+    border: 1px solid #E3E3E3;
+    float: left;
+    font-family: arial;
+    font-size: 12px;
+    margin: 0 15px 15px 0;
+    max-width: 328px; /*425*/
+    outline: none;
+    padding: 10px;
+    transition: box-shadow 0.4s ease 0s, border-radius 0.4s ease 0s, border-color 0.4s ease 0s;
+    width: 100%;
+}
+
+    #conteudo #conteudoPrincipal .formAddNovo input:hover, #conteudo #conteudoPrincipal #mensagemConteudo input:hover, textArea:hover,
+    #conteudo #conteudoPrincipal .formAddNovoConteudo input:hover
+    {
+        border-color: #BFBFBF;
+    }
+
+    #conteudo #conteudoPrincipal .formAddNovo input:focus, #conteudo #conteudoPrincipal #mensagemConteudo input:focus, textArea:focus,
+    #conteudo #conteudoPrincipal .formAddNovoConteudo input:focus
+    {
+        border-color: #BEBEBE;
+        border-radius: 5px;
+        box-shadow: 0 0 3px #D7D7D7 inset;
+        outline: none;
+    }
+
+textArea
+{
+    transition-property: box-shadow, border-radius, border-color;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo input.inputImportar, #conteudo #conteudoPrincipal .formAddNovoConteudo input.inputImportar
+{
+    font: 11px arial;
+    height: 23px;
+    margin: 0 0 15px 0;
+    width:300px;
+}
+
+#conteudo #conteudoPrincipal .imagemArea
+{
+    margin: 0;
+	width: 370px;
+	height: auto;
+}
+
+#conteudo #conteudoPrincipal input.inputColorPicker
+{
+    max-width: 277px;
+}
+
+#conteudo #conteudoPrincipal input.inputColorPicker:focus
+{
+    border-radius: 5px 0 0 5px;
+}
+
+/*Inserir novo (usuario, grupo,...)*/
+
+/*Box Formulário*/
+
+#conteudo .boxForm
+{
+    background-color: #FFF;
+    border: 1px solid #4b8df8;
+    float: left;
+    width: 100%;
+}
+
+    #conteudo .boxForm .tituloForm
+    {
+        background-color: #4b8df8;
+        float: left;
+        margin: 0 0 30px;
+        width: 100%;
+    }
+
+        #conteudo .boxForm .tituloForm h2 span
+        {
+            color: #F4F4F4;
+            float: left;
+            font: lighter 20px "Titillium999","Trebuchet MS",Arial,sans-serif;
+            padding: 10px;
+        }
+
+    #conteudo .boxForm .divisaoBtnForm
+    {
+        background-color: #F4F4F4;
+        border-top: 1px solid #E9E9E9;
+        float: left;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+        #conteudo .boxForm .divisaoBtnForm .botoesForm
+        {
+            margin: 0 auto;
+            width: 400px;
+        }
+
+            #conteudo .boxForm .divisaoBtnForm .botoesForm a
+            {
+                float: left;
+                margin: 0 35px 0;
+            }
+
+        #conteudo .boxForm .divisaoBtnForm .botoesFormSaveCancel
+        {
+            width: 220px;
+        }
+
+        #conteudo .boxForm .divisaoBtnForm .botoesFormPassoNews
+        {
+            width: 255px;
+        }
+
+#conteudo #conteudoPrincipal .excluirLocal
+{
+    background: url(/assets/excluir2.png) no-repeat scroll 8px center rgba(0, 0, 0, 0);
+    border: 1px solid #C4C4C4;
+    border-radius: 3px 3px 3px 3px;
+    box-shadow: 0 0 2px #D6D6D6 inset;
+    color: #555555;
+    cursor: pointer;
+    float: right;
+    font-weight: bold;
+    margin: 10px 30px 0 0;
+    padding: 8px 15px 8px 30px;
+    text-align: right;
+    text-decoration: none;
+    transition: all 0.4s ease 0s;
+}
+
+    #conteudo #conteudoPrincipal .excluirLocal:hover
+    {
+        box-shadow: 0 0 15px #D6D6D6 inset;
+    }
+
+/*Box Formulário*/
+
+
+/*Divisão Grid Tabelas (exemplo: dentro de editar banners)*/
+
+#conteudo #conteudoPrincipal #centralizarGridTabela
+{
+    margin: 0 auto;
+    width: 940px;
+}
+
+#conteudo #conteudoPrincipal #gridTabela
+{
+    border:1px solid #B5B4B4;
+    float: left;
+    margin: 10px 0 25px;
+    padding: 0 0 20px;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .tituloForm
+{
+    margin-bottom: 20px;
+}
+
+#conteudo #conteudoPrincipal .divisaoGrid
+{
+    margin:0 auto;
+    padding-left: 7px;
+    width: 950px;
+}
+
+#conteudo #conteudoPrincipal #gridTabela h2 span
+{
+    color: #545454;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+#conteudo #conteudoPrincipal #gridTabela .tituloForm
+{
+    background-color: #EAEAEA;
+    border-bottom: 1px solid #B5B4B4;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .btnAddItem, #conteudo #conteudoPrincipal #gridTabela .btnImportUsuario
+{
+    background: url("/assets/add2.png") no-repeat scroll 5px center #F4F4F4;
+    border-color: #9A9A9A;
+    color: #333333;
+    padding: 5px 7px 5px 30px;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .btnImportUsuario
+{
+    background-image: url(/assets/import.png);
+}
+
+#conteudo #conteudoPrincipal #gridTabela .btnAddItem:hover, #conteudo #conteudoPrincipal #gridTabela .btnImportUsuario:hover
+{
+    background-color: #fff;
+}
+
+#conteudo #conteudoPrincipal #gridTabela .btnAddItem:active, #conteudo #conteudoPrincipal #gridTabela .btnImportUsuario:active
+{
+    box-shadow: 0 0 3px #aaa inset;
+}
+
+/*Divisão Grid Tabelas (exemplo: dentro de editar banners)*/
+
+
+/* Modal */
+#mask, .mask
+{
+    background-color: #000;
+    display: none;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100% !important;
+    z-index: 9000;
+}
+
+.closeModal
+{
+    color: #333;
+    display: block;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0 10px;
+    text-align: right;
+    text-decoration: none;
+}
+
+    .closeModal img
+    {
+        width: 17px;
+    }
+
+#boxes .window, #template1BoxEdicao
+{
+    display: none;
+    height: 200px;
+    position: absolute;
+    padding: 0;
+    width: 440px;
+    z-index: 9999;
+}
+
+#boxes #dialog
+{
+    background-color: #f2f2f2;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #363636;
+    height: 210px;
+    width: 375px;
+}
+
+    #boxes #dialog .superiorModal, .superiorModal
+    {
+        background-color: #e1e1e1;
+        border-bottom: 1px solid #FFFFFF;
+        float: left;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    #boxes #dialog .conteudoModal
+    {
+        float: left;
+    }
+
+    #boxes #dialog .tituloModal
+    {
+        color: #555;
+        float: left;
+        font-size: 16px;
+        font-weight: bold;
+        margin: 0 10px;
+    }
+
+    #boxes #dialog .conteudoModal span
+    {
+        float: left;
+        margin: 15px 10px 5px;
+        width: 95%;
+    }
+
+    #boxes #dialog .conteudoModal input
+    {
+        border: 1px solid #AEAEAE;
+        float: left;
+        font-size: 12px;
+        margin: 5px 15px 0 10px;
+        max-width: 290px;
+        outline: none;
+        padding: 10px;
+        transition: all 0.4s;
+        width: 100%;
+    }
+
+        #boxes #dialog .conteudoModal input:focus
+        {
+            border-radius: 5px;
+            box-shadow: 0 0 2px #C8C8C8 inset;
+            outline: none;
+        }
+
+    #boxes #dialog .conteudoModal .divisaoBtnForm
+    {
+        float: left;
+        margin: 10px 0 0;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+        #boxes #dialog .conteudoModal .divisaoBtnForm .botoesForm
+        {
+            margin: 0 auto;
+            width: 260px;
+        }
+
+            #boxes #dialog .conteudoModal .divisaoBtnForm .botoesForm a
+            {
+                float: left;
+                margin: 0 10px;
+            }
+
+#conteudo #conteudoPrincipal .modalEdicaoTemplate
+{
+    float: left;
+    width: 520px !important;
+}
+
+    #conteudo #conteudoPrincipal .modalEdicaoTemplate .modalEdicaoTemplateBox
+    {
+        background-color: #F4F4F4;
+        border: 2px solid #FFF;
+        border-radius: 3px;
+        box-shadow: 0 0 3px #8E8E8E;
+        float: left;
+        padding: 0;
+        width: 500px;
+    }
+
+        #conteudo #conteudoPrincipal .modalEdicaoTemplate .modalEdicaoTemplateBox img
+        {
+            background-color: #FFF;
+            border: 1px solid #E3E3E3;
+            float: left;
+            margin: 0 0 15px 10px;
+            width: 115px;
+        }
+
+        #conteudo #conteudoPrincipal .modalEdicaoTemplate .modalEdicaoTemplateBox span
+        {
+            float: left;
+            margin: 0 0 5px 10px !important;
+        }
+
+        #conteudo #conteudoPrincipal .modalEdicaoTemplate .modalEdicaoTemplateBox a
+        {
+            margin: 10px 10px 10px 80px;
+        }
+
+
+
+            #conteudo #conteudoPrincipal .modalEdicaoTemplate .modalEdicaoTemplateBox a.btnAlterarImagem
+            {
+                background-color: #6D6D6D;
+                margin: 0 0 0 10px !important;
+            }
+
+                #conteudo #conteudoPrincipal .modalEdicaoTemplate .modalEdicaoTemplateBox a.btnAlterarImagem:hover
+                {
+                    background-color: #8F8F8F;
+                }
+
+#conteudo #conteudoPrincipal #template1BoxEdicao .modalEdicaoTemplateBox .superiorModal
+{
+    padding: 0;
+    margin: 0 0 10px;
+}
+
+    #conteudo #conteudoPrincipal #template1BoxEdicao .modalEdicaoTemplateBox .superiorModal a img
+    {
+        background-color: transparent;
+        margin: 0;
+        width: 17px;
+    }
+
+    #conteudo #conteudoPrincipal #template1BoxEdicao .modalEdicaoTemplateBox .superiorModal span
+    {
+        font-size: 18px !important;
+        margin: 10px !important;
+        width: auto !important;
+    }
+
+#conteudo #conteudoPrincipal #template1BoxEdicao .modalEdicaoTemplateBox input,
+#conteudo #conteudoPrincipal #template1BoxEdicao .modalEdicaoTemplateBox textArea
+{
+    margin: 0 15px 15px 10px;
+}
+
+/* Modal */
+
+
+/*Modal de confirmação de excluir*/
+
+    .confirmacaoExcluir .confirmacaoExcluirDescricao
+    {
+        background-color: #F9F9F9;
+        border-bottom: 1px solid #E7E7E7;
+        float: left;
+        font: 12px arial;
+        padding: 20px 3%;
+        width: 94%;
+    }
+
+        .confirmacaoExcluir .confirmacaoExcluirDescricao span
+        {
+            float: left;
+        }
+/*
+    .confirmacaoExcluir .confirmacaoExcluirBtn
+    {
+        background-color: #f4f4f4;
+        border-radius: 0 0 3px 3px;
+        float: left;
+        font: 12px arial;
+        padding: 3%;
+        width: 94%;
+    }
+
+        .confirmacaoExcluir .confirmacaoExcluirBtn a
+        {
+            margin: 0 0 0 50px !important;
+        }
+*/
+
+.ui-widget-overlay
+{
+    background-color: #000;
+    height: 100%;
+    opacity: 0.7;
+    position: fixed;
+    width: 100%;
+    z-index: 100;
+}
+
+.ui-dialog
+{
+    border-radius: 3px;
+    box-shadow: 0 0 5px #222;
+    float: left;
+    width: 400px !important;
+    z-index: 101;
+}
+
+#dialog-confirm
+{
+    float: left;
+    min-height: inherit !important;
+    width: 100% !important;
+}
+
+.ui-dialog-titlebar
+{
+    background-color: #f9f9f9;
+    border-bottom: 1px solid #E7E7E7;
+    border-radius: 5px 5px 0 0;
+    float: left;
+    font: bold 14px arial;
+    padding: 3%;
+    width: 94%;
+}
+
+.ui-dialog-titlebar .ui-dialog-titlebar-close
+{
+    background: url("/assets/fecharModal2.png") no-repeat scroll left top;
+    border: medium none;
+    cursor: pointer;
+    float: right;
+    height: 9px;
+    margin: 3px 3px 0 0;
+    opacity: 0.6;
+    width: 9px;
+}
+
+.ui-dialog-titlebar .ui-dialog-titlebar-close:hover
+{
+    opacity: 0.9;
+}
+
+.ui-dialog-buttonset .ui-button
+{
+    background-color: #F5F5F5;
+    background-image: linear-gradient(to bottom , #FFFFFF, #E6E6E6);
+    background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-image: -ms-linear-gradient(center top , #FFFFFF, #E6E6E6);
+    background-repeat: repeat-x;
+    border: 1px solid #d6d6d6;
+    border-radius: 5px 5px 5px 5px;
+    color: #000;
+    cursor: pointer;
+    float: right;
+    font: 12px/17px arial;
+    margin: 0 0 0 10px;
+    outline: none;
+    padding: 4px 7px;
+    text-align: center;
+    width: 60px;
+}
+
+.ui-dialog-buttonset .ui-button:hover
+{
+    background-color: #e6e6e6;
+    background-image: linear-gradient(to bottom , #e6e6e6, #E6E6E6);
+    background-image: -moz-linear-gradient(center top , #e6e6e6, #E6E6E6);
+    background-image: -ms-linear-gradient(center top , #e6e6e6, #E6E6E6);
+    background-repeat: repeat-x;
+}
+
+.ui-dialog-buttonset .ui-button:active
+{
+    background-color: #e6e6e6;
+    box-shadow: 0 2px 4px #cfcfcf inset;
+}
+
+.ui-dialog-buttonset .ui-button:first-child
+{
+    background-color: #FF1717;
+    background-image: linear-gradient(to bottom , #FF1717, #BF1717);
+    background-image: -moz-linear-gradient(center top , #FF1717, #BF1717);
+    background-image: -ms-linear-gradient(center top , #FF1717, #BF1717);
+    background-repeat: repeat-x;
+    border-color: #BF1717;
+    color:#fff;
+    margin-right: 5px;
+}
+
+.ui-dialog-buttonset .ui-button:first-child:hover
+{
+    background-color: #BF1717;
+    background-image: linear-gradient(to bottom , #BF1717, #BF1717);
+    background-image: -moz-linear-gradient(center top , #BF1717, #BF1717);
+    background-image: -ms-linear-gradient(center top , #BF1717, #BF1717);
+    background-repeat: repeat-x;
+}
+
+.ui-dialog-buttonset .ui-button:first-child:active
+{    
+    box-shadow: 0 2px 4px #9A0303 inset;
+}
+
+
+.ui-dialog-buttonpane .ui-dialog-buttonset
+{
+    background-color: #F4F4F4;
+    border-radius: 0 0 5px 5px;
+    float: left;
+    font: 12px arial;
+    padding: 3%;
+    width: 94%;
+}
+
+/*Modal de confirmação de excluir*/
+		
+		
+		.project-mask {display: inline-block;}
+		.thumbnail {
+		    position: relative;
+		    overflow: hidden;
+		    display: inline-block;
+		    height: auto;
+            /*max-height: 259px;*/
+		}
+		.descricao {
+		    position: absolute;
+		    bottom: -100%;
+		    background-color: rgba(0, 0, 0, .8);
+		    color: #FFF;
+		    width: 100%;
+			height: 100%;
+		}
+		
+/*COLOR PICKER*/
+
+#conteudo #conteudoPrincipal #colorSelector, #conteudo #conteudoPrincipal .colorSelector
+{
+    float: left;
+    cursor: pointer;
+    height: 37px;
+    width: 36px;
+}
+
+/*ESTILO DOS BOTÕES DAS ÁREAS (CORES)*/
+
+/*Cinza - BTN Voltar - PADRÃO*/
+#conteudo #conteudoPrincipal .btnGradientCinza
+{
+    background-color: #fff;
+    background-image: linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    background-image: -ms-linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    background-image: -webkit-linear-gradient(to bottom, #FFFFFF, #E6E6E6);    
+    background-image: -moz-linear-gradient(to bottom, #FFFFFF, #E6E6E6);
+    border: 1px solid #D6D6D6;
+    color: #000000;
+    margin: 0 15px 0 0 !important;
+    outline: none;
+    transition: none;
+}
+
+#conteudo #conteudoPrincipal .btnGradientCinza:hover
+{
+    background-color: #e6e6e6;
+    background-image: linear-gradient(to bottom, #E6E6E6, #E6E6E6);
+    background-image: -ms-linear-gradient(to bottom, #E6E6E6, #E6E6E6);
+    background-image: -webkit-linear-gradient(to bottom, #E6E6E6, #E6E6E6);    
+    background-image: -moz-linear-gradient(to bottom, #E6E6E6, #E6E6E6);
+}
+
+#conteudo #conteudoPrincipal .btnGradientCinza:active
+{
+    box-shadow: 0 0 10px #ccc inset;
+}
+
+/*azul*/
+#conteudo #conteudoPrincipal .btnGradientAzul
+{
+    background-color: #4B8DF8;
+    background-image: linear-gradient(to bottom, #4B8DF8, #336ECC);
+    background-image: -ms-linear-gradient(to bottom, #4B8DF8, #336ECC);
+    background-image: -webkit-linear-gradient(to bottom, #4B8DF8, #336ECC);    
+    background-image: -moz-linear-gradient(to bottom, #4B8DF8, #336ECC);
+    border: 1px solid #2266D3;
+    color: #fff;
+    margin: 0 15px 0 0 !important;
+    outline: none;
+    transition: none;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzul:hover
+{
+    background-color: #336ECC;
+    background-image: linear-gradient(to bottom, #336ECC, #336ECC);
+    background-image: -ms-linear-gradient(to bottom, #336ECC, #336ECC);
+    background-image: -webkit-linear-gradient(to bottom, #336ECC, #336ECC);    
+    background-image: -moz-linear-gradient(to bottom, #336ECC, #336ECC);
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzul:active
+{
+    box-shadow: 0 0 10px #24529A inset;
+}
+
+
+/*Modal para exibição de preview da mensagem newsletter*/
+
+#visualizarIframe
+{
+    background-color: #FFFFFF;
+    border: 1px solid #BFBFBF;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #D6D6D6;
+    display: none;
+    height: 600px;
+    left: 20%;
+    position: absolute;
+    top: 28%;
+    width: 850px;
+}
+
+#visualizarIframe .closeIframe
+{
+    background: url(/assets/closeIframe.png) no-repeat 5px 5px;
+    cursor: pointer;
+    float: right;
+    height: 16px;
+    padding: 5px;
+    position: absolute;
+    right: 0;
+    width: 16px;
+}
+
+/*Modal para exibição de preview da mensagem newsletter*/
+
+/* Div que exibe envio de teste da newsletter */
+
+#conteudo #conteudoPrincipal #divNewsTeste
+{
+    border: 1px solid #E7E7E7;
+    border-radius: 5px;
+    box-shadow: 0 0 15px #5E5E5E;
+    display: none;
+    float: left;
+    left: 40%;
+    position: absolute;
+    top: 40%;
+    width: 320px;
+    z-index: 20;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #tituloNewsTeste
+{
+    background-color: #F9F9F9;
+    border-bottom: 1px solid #e7e7e7;
+    float: left;
+    padding:8px 0;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #tituloNewsTeste h1
+{
+    color: #555555;
+    float: left;
+    font: lighter 16px "Titillium999","Trebuchet MS",Arial,sans-serif;
+    margin: 0 0 0 15px;
+    text-shadow: 0 1px 0 #FFFFFF;
+    width: 85%;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #tituloNewsTeste span.closeTeste
+{
+    background: url(/assets/fecharModal2.png) no-repeat scroll left top;
+    border: medium none;
+    cursor: pointer;
+    float: right;
+    height: 9px;
+    margin: 7px 15px 0 0;
+    opacity: 0.6;
+    width: 9px;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #tituloNewsTeste span.closeTeste:hover
+{
+    opacity: 1;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #inputNewsTeste
+{
+    background-color: #F9F9F9;
+    float: left;
+    padding: 20px 0;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #inputNewsTeste input
+{
+    margin: 0 24px 0;
+    width: 250px;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #submitNewsTeste
+{
+    background-color: #F4F4F4;
+    border-top: 1px solid #e7e7e7;
+    float: left;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #submitNewsTeste input
+{
+    background-color: #125B3A;
+    border: none;
+    border-radius: 3px;
+    color: #FFFFFF;
+    cursor: pointer;
+    float: right;
+    margin: 10px 22px 10px 0;
+    padding: 7px 10px;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+    width: 150px;
+}
+
+#conteudo #conteudoPrincipal #divNewsTeste #submitNewsTeste input:hover
+{
+    background-color: #287452;
+}
+
+#conteudo #maskNewsTeste
+{
+    background-color:#898989;
+    display: none;
+    filter: alpha(opacity=90);
+    -ms-filter: "alpha(opacity=90)";
+    height: 100%;
+    left: 0;
+    opacity: 0.90;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 15;
+}
+
+/* Div que exibe envio de teste da newsletter */
+#conteudo #conteudoPrincipal .formAddNovoConteudo input[type=radio]
+{
+    border: none;
+}
+
+/*Span com classe video rejeitado, form de videos*/
+
+#conteudo #conteudoPrincipal .formAddNovo span.spanVideoRejeitado
+{
+    font: 12px arial;
+    margin: 10px 10px 5px 110px;
+    text-align: left;
+    width: 355px;
+}
+
+/*Span com classe video rejeitado, form de videos*/

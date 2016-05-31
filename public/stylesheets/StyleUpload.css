@@ -1,0 +1,154 @@
+﻿
+.ui-progressbar
+{
+    background-color: #EFEFEF;
+    border: 1px solid #476A46;
+    border-radius: 4px 4px 4px 4px;
+    height: 2em;
+    position: relative;
+    width: 100%;
+}
+
+.progress-label
+{
+    font-weight: bold;
+    left: 47%;
+    position: absolute;
+    top: 4px;
+}
+
+.ui-widget-header
+{
+    background-color: #91C99C;
+    border-radius: 4px;
+    color: #222222;
+    font-weight: bold;
+    height: 100%;
+}
+
+.ui-progressbar .ui-progressbar-overlay
+{
+    background: url(../Imagens/loading.gif) repeat-x left top transparent;
+    border-radius: 4px;
+    height: 100%;
+}
+
+
+.cancelUpload, .okUpload
+{
+    background:url(../Imagens/cancelAccept.png) no-repeat left top;
+    cursor:pointer;
+    float:left;
+    height: 22px;
+    margin: 4px 0 0 10px;
+    width: 22px;
+}
+
+.okUpload
+{
+    background-position: 0 -22px;
+    cursor:default;
+}
+
+#upload
+{
+    background-color: #F4F4F4;
+    border: 2px solid #fff;
+    border-radius: 3px;
+    box-shadow: 0 0 3px #8E8E8E;
+    float: left;
+    height: 500px;
+    overflow-y: auto;
+    width: 600px;
+}
+
+    #upload #uploadTitulo
+    {
+        background-color: #DEEBE4;
+        border: 1px solid #fff;
+        float: left;
+        padding: 10px;
+        width: 96%;
+    }
+
+        #upload #uploadTitulo h2
+        {
+            float: left;
+            font-size: 18px;
+            font-weight: bold;
+        }
+
+        #upload #uploadTitulo img
+        {
+            background-color: transparent;
+            cursor: pointer;
+            float: right;
+            width: 17px;
+        }
+
+    #upload #uploadConteudo
+    {
+        float: left;
+        padding: 10px;
+        width: 96%;
+    }
+
+        #upload #uploadConteudo #uploadTotalArquivos
+        {
+            float: right;
+        }
+
+            #upload #uploadConteudo #uploadTotalArquivos span
+            {
+                float: left;
+                margin: 0 3px;
+            }
+
+                #upload #uploadConteudo #uploadTotalArquivos span.qtdadeArquivos
+                {
+                    font-weight: bold;
+                }
+
+        #upload #uploadConteudo #uploadDetalhes
+        {
+            float: left;
+            margin: 15px 0 10px;
+            width: 100%;
+        }
+
+            #upload #uploadConteudo #uploadDetalhes .uploadDetalhesArquivo
+            {
+                float: left;
+                margin: 5px 0 15px;
+                width: 100%;
+            }
+
+                #upload #uploadConteudo #uploadDetalhes .uploadDetalhesArquivo .uploadDetalhesArquivoTxt
+                {
+                    float: left;
+                    margin: 0 0 3px;
+                    width: 100%;
+                }
+
+                    #upload #uploadConteudo #uploadDetalhes .uploadDetalhesArquivo .uploadDetalhesArquivoTxt span
+                    {
+                        float: left;
+                        margin: 0 3px;
+                    }
+
+                    #upload #uploadConteudo #uploadDetalhes .uploadDetalhesArquivo .uploadDetalhesArquivoTxt .uploadDetalhesArquivoNome
+                    {
+                        float: left;
+                    }
+
+                    #upload #uploadConteudo #uploadDetalhes .uploadDetalhesArquivo .uploadDetalhesArquivoTxt .uploadDetalhesArquivoTamanho
+                    {
+                        float: right;
+                        margin: 0 35px 0 0;
+                    }
+
+                #upload #uploadConteudo #uploadDetalhes .uploadDetalhesArquivo .barraProgresso
+                {
+                    float: left;
+                    width: 93%;
+                }

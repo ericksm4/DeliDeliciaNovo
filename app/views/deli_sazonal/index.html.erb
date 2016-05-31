@@ -1,0 +1,22 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleSazonal.css' %>
+
+<script type="text/javascript">
+ 
+</script>
+
+<div id="banner" style="background-image: url('<%= retorna_banner("Deli Sazonal") %>');"></div>
+
+<div id="corpoSite">
+    <div id="content">
+      <% unless @sazonal.blank? %>
+
+        <div>
+          <%=raw(@sazonal.conteudo)%>
+        </div>
+
+        <%=image_tag @sazonal.imagem%>
+        
+      <%end%>
+    </div>
+</div>

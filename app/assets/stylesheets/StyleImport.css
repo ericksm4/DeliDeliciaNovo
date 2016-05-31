@@ -1,0 +1,174 @@
+.clearAll
+{
+    font-size: 0.1em;
+    line-height: 0.1em;
+    clear: both;
+}
+
+*
+{
+	margin: 0;
+	padding: 0;
+}
+
+body
+{
+	color: #333;
+	font:12px arial;
+}
+
+#master
+{
+	float: left;
+	width: 100%;
+}
+
+#master #topo
+{
+	border-bottom: 1px solid;
+    float: left;
+    margin: 0 0 25px;
+    padding: 3px 0 6px;
+    width: 100%;
+}
+
+#master #topo h1
+{
+	color: #333333;
+    float: left;
+    font-size: 18px;
+    margin: 0;
+}
+
+#master #conteudo
+{
+	float: left;
+	width: 100%;
+}
+
+/*Informação sobre como o arquivo txt deve estar escrito*/
+
+#master #conteudo #informacao
+{
+	float: left;
+    margin: 0 0 15px;
+}
+
+#master #conteudo #informacao p, #master #conteudo #informacao span
+{
+	float: left;
+	margin: 4px 0;
+}
+
+#master #conteudo #informacao span
+{
+	margin: 4px 0 4px 10px;
+}
+
+/*Área com a descrição e radio button para opção do tipo de arquivo*/
+
+#master #conteudo .botoesCustom 
+{
+    float: left;
+    position: relative;
+    width: 25px;
+}
+
+#master #conteudo #opcaoArquivo
+{
+	float: left;
+	margin: 0 0 15px;
+	width: 98%;
+}
+
+#master #conteudo #opcaoArquivo span
+{
+	float: left;
+	margin: 0 0 5px;
+	width: 100%;
+}
+
+#master #conteudo #opcaoArquivo .opcoes
+{
+	float: left;
+	margin: 4px 0 4px 5px;
+	width: 100%;
+}
+
+#master #conteudo #opcaoArquivo .opcoes p
+{
+	float: left;
+}
+
+/*Upload*/
+
+#master #conteudo #upload
+{
+	float: left;
+	position: relative;
+}
+
+#master #conteudo #upload p
+{
+	float: left;
+    margin: 0 0 10px;
+    width: 100%;
+}
+
+#master #conteudo #upload input.importar
+{
+	border: 1px solid #E3E3E3;
+    float: left;    
+    font-size: 11px;
+    margin: 0 15px 15px 0;
+    max-width: 328px;
+    outline: medium none;
+    padding: 10px;
+    transition: all 0.4s ease 0s;
+    width: 300px;
+}
+
+#master #conteudo #upload input.importar:hover
+{
+	border-color:#bfbfbf;
+}
+
+#master #conteudo #upload input.btnImportar
+{
+	background: url(/assets/import.png) no-repeat scroll 15px center #f1f1f1;
+	border: 1px solid #9A9A9A;
+	border-radius: 3px;
+    color: #333333;
+    cursor: pointer;
+	float: left;
+    padding: 11px 7px 11px 30px;
+    text-align: center;
+    transition: all 0.4s ease 0s;
+    width: 120px;
+}
+
+#master #conteudo #upload input.btnImportar:hover
+{
+	background-color: #f8f8f8;
+}
+
+#master #conteudo #upload label.error
+{
+	color: #F20909;
+    float: left;
+    font: bold 12px arial;
+    left: 0;
+    position: absolute;
+    top: 80px;
+    width: 100%;
+}
+
+#master #conteudo #upload input.error
+{
+	border-color: #F20909;
+}
+
+#master #conteudo #upload input.error:hover
+{
+	border-color: #F20909;
+}

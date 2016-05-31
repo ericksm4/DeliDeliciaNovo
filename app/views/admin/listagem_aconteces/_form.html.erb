@@ -1,0 +1,84 @@
+<%#= stylesheet_link_tag 'bootstrap-datepicker/css/datepicker' %>
+<%#= stylesheet_link_tag 'bootstrap-colorpicker/css/colorpicker' %>
+<%#= stylesheet_link_tag 'bootstrap-daterangepicker/daterangepicker' %>
+<script>
+
+//desaparecer mensagem de erro, sucesso e alerta após 5s
+setTimeout(function() {
+  $("#conteudo #conteudoPrincipal span.msgSucesso, #conteudo #conteudoPrincipal span.msgErro, #conteudo #conteudoPrincipal span.msgAlerta").fadeOut("slow");
+}, 5000);
+
+</script>
+
+	<%= form_for(@acontece, :style => 'form-horizontal') do |f| %>
+		
+		<div class="form-group">
+			<label for="acontece[titulo]" class="col-lg-2 col-sm-2 control-label">Evento</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :id_acontece, :class => 'form-control', :disabled => true, :value => @acontece.evento.titulo %>
+          	</div>
+			  
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label for="acontece[titulo]" class="col-lg-2 col-sm-2 control-label">Nome</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :nome, :class => 'form-control', :disabled => true %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Email</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :email, :class => 'form-control', :disabled => true %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Telefone</label>
+			<div class="col-lg-4 col-xs-11">
+              	<%= f.text_field :telefone, :class => 'form-control', :disabled => true %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Bairro</label>
+			<div class="col-lg-4 col-xs-11">
+              	<%= f.text_field :bairro, :class => 'form-control', :disabled => true %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+ 
+ 		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Cidade</label>
+			<div class="col-lg-5 col-xs-11">
+              	<%= f.text_field :cidade, :class => 'form-control', :disabled => true %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+			<label class="col-lg-2 col-sm-2 control-label">Comentário</label>
+			<div class="col-lg-8 col-xs-11">
+              	<%= f.text_area :comentario, :cols => 20, :rows => 6, :class => 'form-control', :disabled => true %>
+          	</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="divisaoBtnForm">
+			<div class="botoesForm botoesFormSaveCancel">
+				<%= link_to "Voltar", {:action => "index"}, :class => "btn btn-default" %>
+				
+				<%#= f.submit 'Salvar', :class => 'btn btn-info' %>
+			</div>
+		</div>
+		<%= f.hidden_field :id, :class=> 'form-control' %>
+<% end %>
+
+<script>
+
+</script>

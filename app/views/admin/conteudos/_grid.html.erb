@@ -1,0 +1,107 @@
+<script>
+//centralizar paginacao
+var a = $('.paginacao a').not('previous_page, next_page').length + 2;
+var b = $('.paginacao a').not('previous_page, next_page').outerWidth(true);
+var largura_total = (a * b) + 52;
+$('.paginacao').width(largura_total);
+
+$('.table th a, .paginacao a').on('click', function () {  
+  $.get(this.href, $(this).serialize(), null, 'script');  
+  return false;  
+}); 
+
+//desaparecer mensagem de erro, sucesso e alerta após 5s
+setTimeout(function() {
+  $("#conteudo #conteudoPrincipal span.msgSucesso, #conteudo #conteudoPrincipal span.msgErro, #conteudo #conteudoPrincipal span.msgAlerta").fadeOut("slow");
+}, 5000);
+
+$(function(){
+
+	//esconder o loader e a máscara caso seja clicado no botão 'não' do modal
+	$('body').on('click','button.ui-button:first-child', function() {
+		$('span.loader').show();
+        $('div.maskLoader').show();
+	});
+	
+	//quando clicar na paginação, exibir loader
+     $('.formAddNovo .btn.btn-info, .paginacao a, .table th a').click(function () {
+        $('span.loader').show();
+        $('div.maskLoader').show();
+    });
+
+});
+$(document).ready(function(){
+	$('.paginacao').show();
+})
+</script>
+
+<%= hidden_field_tag :direction, params[:direction] %>  
+<%= hidden_field_tag :sort, params[:sort] %> 
+
+<div class="tabelaResponsiva">
+
+	<div class="col-lg-12">
+		<section class="panel">
+			<table class="table table-hover">
+				<thead>
+					<tr>
+				    	<th><%= sortable "titulo", "Título" %></th>
+				    	<th>Url</th>
+				        <th class="status"><%= sortable "status", "Status" %></th>    	
+				        <th>Editar</th>
+				        <th>Excluir</th>
+					</tr>
+				</thead>
+				<tbody>
+					<% @conteudos.each_with_index do |conteudo, index| %>
+				      <tr>
+				        <td><%= conteudo.titulo %></td>
+				        <td><%= '/conteudos/'+conteudo.id.to_s%></td>
+				        <td class="status">
+							<% case conteudo.status %>
+							  <%when 0 then %>
+							    <%= 'Não publicado' %>
+							 <% when 1 then %>
+							    <%= 'Publicado' %>
+							 <% else %>
+							    <%= 'Oculto' %>
+							<%end %>
+						</td>
+							
+						<td>
+							<%= link_to(edit_admin_conteudo_path(conteudo)) do %>
+								<i class="fa fa-edit"></i>
+							<% end %>
+						</td>
+						
+						<td>
+							<%= button_to '', conteudo, method: :delete, 'data-confirm' => 'Tem certeza que deseja excluir essa área?', :remote => true, :class => "excluir"  %>
+							<i class="fa fa-times"></i>
+						</td>
+				      </tr>
+				    <% end %>
+				</tbody>
+			</table>
+		</section>
+	</div>
+
+<div>
+	<%= will_paginate @conteudos,
+    	:class => 'paginacao', 
+		:previous_label => '<img src="/images/setaPaginacaoEsq.png"/>',
+		:next_label => '<img src="/images/setaPaginacaoDir.png"/>' 
+	%>       
+</div>           
+
+<script type="text/javascript">
+
+    $('span.loader').hide();
+    $('div.maskLoader').hide();
+
+    $('.excluir').click(function(e){
+    	if(!confirm('Realmente deseja excluir esse conteudo?')){
+    		e.preventDefault();
+    	}
+    });
+
+</script>

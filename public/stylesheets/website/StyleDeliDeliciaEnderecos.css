@@ -1,0 +1,150 @@
+
+
+#master #conteudoDireita h1
+{
+	color: #631c5c;
+	float: left;
+	font: 34px 'museo700';
+	margin: 0 0 40px;
+	width: 100%;
+}
+
+#formEndereco
+{
+	float: left;
+	position: relative;
+	width: 100%;
+}
+
+#formEndereco div.campoEndereco
+{
+	float: left;
+	margin: 0 0 15px;
+	width: 100%;
+}
+
+#formEndereco div.campoEndereco label
+{
+	color: #878787;
+	float: left;
+	font: 18px 'museo700';
+	margin: 0 0 7px;
+	width: 100%;
+}
+
+#formEndereco div.campoEndereco input.inputContato
+{
+	border: 1px solid #DCDCDC;
+    color: #555555;
+    float: left;
+    font: 20px 'museo500';
+    height: 30px;
+    padding: 10px;
+    transition: all 0.3s ease 0s;
+    width: 95%;
+}
+
+#formEndereco div.campoEndereco input.inputContato:hover
+{
+	border-color: #CFCFCF;
+}
+
+#formEndereco div.campoEndereco input.inputContato:focus
+{
+	background-color: #fcfcfc;
+	border-color: #aaa;
+	border-radius: 5px;
+	box-shadow: 0 0 3px #d5d5d5;
+}
+
+#formEndereco div.campoEndereco input.inputSubmitForm,
+#formEndereco div.campoEndereco a.btnVoltarEndereco
+{
+	background-color: #641d5d;
+	border: none;
+	border-bottom: 5px solid #4a1544;
+	color: #fff;
+    cursor: pointer;
+    float: left;
+    font: 20px 'museo500';
+    margin: 10px 0 20px;
+    padding: 10px;
+    text-align: center;
+    width: 200px
+}
+
+#formEndereco div.campoEndereco input.inputSubmitForm:hover
+{
+	background-color: #591A53;
+}
+
+#formEndereco div.campoEndereco input.inputSubmitForm:active
+{
+	background-color: #4a1544;
+}
+
+#formEndereco div.campoEndereco a.btnVoltarEndereco
+{
+	background-color: #858585;
+	border-color: #585858;	
+	margin-right: 30px;
+	width: 160px;
+}
+
+#formEndereco div.campoEndereco a.btnVoltarEndereco:hover
+{
+	background-color: #807E7E;
+}
+
+#formEndereco div.campoEndereco a.btnVoltarEndereco:active
+{
+	background-color: #585858;
+}
+
+#formEndereco div.campoEndereco div
+{
+	float: left;
+}
+
+#formEndereco div.botoesCustom label
+{
+	margin: 0 0 0 30px;
+	width: auto;
+}
+
+#formEndereco div.botoesCustom .icheckbox_minimal
+{
+	float: none;
+}
+
+
+
+/* Mensagens de erro*/
+
+span.cepInvalido
+{
+	bottom: -15px;
+	color: #f20;
+	display: none;
+	float: left;
+	font: 12px 'museo300';
+	left: 0;
+	position: absolute;
+}
+
+div.errorForm
+{
+	color: #FF2200;
+	display: none;
+    float: left;
+    font: 18px 'museo700';
+    margin: 0 0 10px;
+    width: 100%;
+}
+
+#formEndereco div.campoEndereco input.error
+{
+	border-color: #f20;
+}
+
+/* Mensagens de erro*/

@@ -1,0 +1,155 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleContato.css' %>
+
+<script src="javascripts/jquery.validate.js"></script> <!-- Validar campos -->
+<script src="javascripts/jquery.maskedinput.js"></script> <!-- Mascara -->
+<script src="javascripts/jquery.mask.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+ $(function(){
+  //Validação dos campos
+    $("form").validate({
+        submitHandler: function(form) { //dispara loader qdo form ok
+            $('div.maskLoader').show();
+            $('span.loader').show();
+            //form.submit();
+            enviaForm();
+        },
+        rules: {
+            'nome':
+            {
+                required: true
+            },
+            'email':
+            {
+                required: true,
+                email: true
+            },
+            'sugestao':
+            {
+                required: true
+            }
+        },
+        messages: {
+            'nome': {
+                required: "O nome é obrigatório."
+            },
+            'email': {
+                required: "O e-mail é obrigatório.",
+                email: "Por favor, insira um e-mail válido"
+            },
+            'sugestao': {
+                required: "A mensagem é obrigatória."
+            }
+        }
+    });
+
+    $('input[name="telefone"]').mask('(99)9999-9999')
+
+    var masks = ['(00) 00000-0000', '(00) 0000-00009'],
+
+    maskBehavior = function (val, e, field, options) {
+        return val.length > 14 ? masks[0] : masks[1];
+    };
+
+    $('input[name="telefone"]').mask(maskBehavior, {
+        onKeyPress:
+           function (val, e, field, options) {
+               field.mask(maskBehavior(val, e, field, options), options);
+           }
+    });
+
+    $('#send').click(function(){
+      enviaForm()
+    })
+
+    function enviaForm(){
+      $('#maskLoader, #loader').show()
+
+      if ($('input[name="news"]').is(":checked")){
+        news = 1
+      }
+      else{
+        news = 0
+      }
+
+      $.ajax({
+        "crossDomain": true,
+        "type":"POST",
+        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        "url":"contato/enviaContato",
+        "data": {
+          nome: $('input[name="nome"]').val(), 
+          email: $('input[name="email"]').val(),
+          telefone: $('input[name="telefone"]').val(),
+          bairro: $('input[name="bairro"]').val(),
+          cidade: $('input[name="cidade"]').val(),
+          sugestoes: $('textarea[name="sugestoes"]').val(),
+          news: news
+        },
+        "dataType":"json",
+        "success":function(resp){
+          //console.log(resp)
+          if(resp){
+            $('#maskLoader, #loader').hide();
+            $('form h1').after('<label class="success">Contato realizado com sucesso !</label>')
+          }
+          
+        }
+
+      })
+    }
+ })
+</script>
+
+<div id="banner" style="background-image: url('<%= retorna_banner("Contato") %>')"></div>
+
+<div id="navigation">
+  <ul>
+    <li class="active">Contato</li>
+    <li>Quero Contribuir</li>
+  </ul>
+</div>
+
+<div id="corpoSite">
+  <div id="desc">
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras hendrerit mi at convallis finibus. In consequat ultrices eros ut tincidunt. In ullamcorper nisi vel dignissim molestie. Morbi luctus, tortor vitae pulvinar dictum, ligula lectus auctor nulla, ac posuere nunc quam eu enim. Curabitur sit amet libero augue.
+  </div>
+
+  <div id="form">
+    <form>
+
+      <h1>Contato</h1>
+      
+      <div class="form-line">
+        <input type="text" name="nome" placeholder="Nome">
+        <input type="text" name="email" placeholder="Email">
+      </div>
+
+      <div class="form-line">
+        <input type="text" name="telefone" placeholder="Telefone">
+        <input type="text" name="bairro" placeholder="Bairro">
+      </div>
+
+      <div class="form-line form-line2">
+        <input type="text" name="cidade" placeholder="Cidade"></input>
+      </div>
+
+      <div class="form-line form-line2">
+        <textarea placeholder="Sugestões" name="sugestoes"></textarea>
+      </div>
+
+      <div class="form-line">
+        <input type="checkbox" value="1" name="news"> <label>Gostaria de receber novidades da Deli Delícia</label>
+        <input type="button" id="send" value="Enviar">
+      </div>
+
+    </form>
+
+    <div id="maskLoader"></div>
+    <span id="loader">
+        <img src="/assets//website/loader3.gif">
+    </span>
+
+  </div>
+</div>

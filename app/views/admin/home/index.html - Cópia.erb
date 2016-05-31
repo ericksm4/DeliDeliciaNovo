@@ -1,0 +1,509 @@
+
+<% content_for :style do -%>
+    <%= stylesheet_link_tag "datetimepicker" %>
+    <%= stylesheet_link_tag "jquery.jqplot" %> <!-- gráfico -->
+
+    <style>
+        .div-chart{
+            margin-top: 30px;
+        }
+
+        .div-chart h4{
+            float: left;
+            margin: 20px 0 10px;
+            width: 100%;
+        }
+    </style>
+
+<% end -%>
+
+<% content_for :script do -%>
+    <!--[if lt IE 9]>
+    <%= javascript_include_tag "gestao/excanvas.min" %>
+    <![endif]-->
+    <%= javascript_include_tag "bootstrap-datetimepicker.min" %> <!-- date picker -->
+    <%= javascript_include_tag "bootstrap-datetimepicker.pt-BR" %> <!-- date picker -->
+    <%= javascript_include_tag "jquery.jqplot" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.dateAxisRenderer.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.canvasTextRenderer.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.canvasAxisTickRenderer.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.canvasAxisLabelRenderer.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.categoryAxisRenderer.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.barRenderer.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.pointLabels.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.pieRenderer.min" %> <!-- gráfico -->
+    <%= javascript_include_tag "jqplot.highlighter.min" %> <!-- gráfico -->
+
+    <!-- This demo uses the Chart.js graphing library and Moment.js to do date
+         formatting and manipulation. -->
+    <%= javascript_include_tag "relatorios-Chart.min" %>
+    <%= javascript_include_tag "relatorios-moment.min" %>
+    <!-- Include the ViewSelector2 component script. -->
+    <%#= javascript_include_tag "relatorios-view-selector2" %>
+    <!-- Include the DateRangeSelector component script. -->
+    <%#= javascript_include_tag "relatorios-date-range-selector" %>
+    <!-- Include the ActiveUsers component script. -->
+    <%#= javascript_include_tag "relatorios-active-users" %>
+
+    <!--<script src="http://analytics-api-samples.googlecode.com/svn/trunk/src/reporting/javascript/ez-ga-dash/gadash-1.0.js"></script>-->
+
+    <%= javascript_include_tag "admin-relatorios" %>
+<% end -%>
+
+<section class="panel">
+
+  <header class="panel-heading tab-bg-dark-navy-blue ">
+    <ul class="nav nav-tabs">
+      <li class="active">
+        <a data-toggle="tab" href="#pageviews">Google Analytics</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#usuarios">Usuários</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#pedidos">Pedidos</a>
+      </li>
+      <li>
+        <a data-toggle="tab" href="#faturamento">Faturamento</a>
+      </li>
+    </ul>
+    </header>
+    <!--<header class="panel-heading">-->
+        <!--Relatórios-->
+    <!--</header>-->
+
+    <div class="panel-body" style="padding-bottom: 110px;">
+        <div class="adv-table">
+          <div class="tab-content" style="position: relative;">
+
+            <div id="pageviews" class="tab-pane active"> <%# Início - PAGEVIEWS -%>
+
+              <script>
+              (function(w,d,s,g,js,fs){
+                g=w.gapi||(w.gapi={});g.analytics={q:[],ready:function(f){this.q.push(f);}};
+                js=d.createElement(s);fs=d.getElementsByTagName(s)[0];
+                js.src='https://apis.google.com/js/platform.js';
+                fs.parentNode.insertBefore(js,fs);js.onload=function(){g.load('analytics');};
+              }(window,document,'script'));
+              </script>
+
+             <div id="embed-api-auth-container"></div>
+              <div id="chart-container"></div>
+              <div id="view-selector-container"></div>
+
+              <div class="form-group form-horizontal">
+                <div class="col-lg-4">
+                  <label class="control-label col-lg-5">Data Inicial</label>
+
+                  <div class="input-group col-lg-6 date date-picker1" style="padding-left: 15px !important;">
+                    <%= text_field_tag :data_inicial, (Date.today - 30).strftime("%d/%m/%Y"), :class => "form-control", :size => '16' %>
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <label class="control-label col-lg-5">Data Final</label>
+
+                  <div class="input-group col-lg-6 date date-picker2" style="padding-left: 15px !important;">
+                    <%= text_field_tag :data_final, Date.today.strftime("%d/%m/%Y"), :class => "form-control", :size => '16' %>
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-group div-chart" style="height: 330px;">
+                  <h4>Páginas mais acessadas</h4>
+                  <div id="date-range-selector-1-container"></div>
+                  <div id="data-chart-1-container" style="float: left; width: 100%;"></div>
+              </div>
+
+              <div class="form-group div-chart" style="float: left; width: 100%;">
+                <h4>Países que mais visualizaram</h4>
+                <!--<div id="date-range-selector-2-container"></div>-->
+                <!--<div class="col-lg-12">-->
+                  <div id="data-chart-2-container" style=""></div>
+                <!--</div>-->
+              </div>
+
+              <div class="form-group div-chart" style="height: 310px;">
+                <div class="col-lg-6">
+                  <h4>Estados que mais visualizaram</h4>
+                  <!--<div id="date-range-selector-3-container"></div>-->
+                  <div id="data-chart-3-container" style="float: left;"></div>
+                </div>
+                <div class="col-lg-6">
+                  <h4>Cidades que mais visualizaram</h4>
+                  <!--<div id="date-range-selector-4-container"></div>-->
+                  <div id="data-chart-4-container" style="float: left;"></div>
+                </div>
+              </div>
+
+              <div style="clear:both;"></div>
+              <div class="form-group div-chart">
+                <h4>Palavras mais buscadas</h4>
+                <div style="clear:both;"></div>
+                  <!--<div id="date-range-selector-5-container"></div>-->
+                <div id="data-chart-5-container" style="float: left; width: 100%;"></div>
+              </div>
+
+              <br>
+
+              <div class="form-group div-chart">
+                <h4>Páginas mais acessadas</h4>
+                <div style="clear:both;"></div>
+                  <!--<div id="date-range-selector-6-container"></div>-->
+                <div id="data-chart-6-container" style="float: left; width: 100%;"></div>
+              </div>
+
+              <br>
+
+              <div class="form-group div-chart">
+                <h4>Produtos mais acessados</h4>
+                <div style="clear:both;"></div>
+                  <!--<div id="date-range-selector-7-container"></div>-->
+                <div id="data-chart-7-container" style="float:left; width: 100%;"></div>
+              </div>
+
+              <div style="clear:both;"></div>
+
+              <!-- Include the ViewSelector2 component script. -->
+              <%= javascript_include_tag "relatorios-view-selector2" -%>
+              <!-- Include the DateRangeSelector component script. -->
+              <%= javascript_include_tag "relatorios-date-range-selector" -%>
+
+              <script>
+                  gapi.analytics.ready(function() {
+
+                      /**
+                       * Authorize the user immediately if the user has already granted access.
+                       * If no access has been created, render an authorize button inside the
+                       * element with the ID "embed-api-auth-container".
+                       */
+                      console.log(gapi)
+                      gapi.analytics.auth.authorize({
+                          container: 'embed-api-auth-container',
+                          scopes: ['https://www.googleapis.com/auth/analytics.readonly'],
+                          serverAuth: {
+                              access_token: '<%= @token_api -%>'
+                          }
+                      });
+
+
+                      /*gapi.analytics.auth.on('error', function(response) {
+                        console.log('erro')
+                      });
+
+                      gapi.analytics.auth.on('success', function(response) {
+                        console.log('foi')
+                      });*/
+
+                      /**
+                       * Store a set of common DataChart config options since they're shared by
+                       * both of the charts we're about to make.
+                       */
+
+                      //número de visualizações
+                      var commonConfig = {
+                          query: {
+                              metrics: 'ga:pageviews',
+                              dimensions: 'ga:date'
+                          },
+                          chart: {
+                              type: 'LINE',
+                              options: {
+                                  width: '100%',
+                                  animation:{ 
+                                      duration: 1000,
+                                      easing: 'easeInOutQuart'
+                                  }
+//                                  title: 'Total de acessos'
+                              }
+                          }
+                      };
+                      //Países que mais visualizaram
+                      var commonConfig2 = {
+                          query: {
+                              metrics: 'ga:pageviews',
+                              dimensions: 'ga:country'
+                          },
+                          chart: {
+                              type: 'GEO',
+                              options: {
+                                  width: '100%'
+//                                  region: 'BR'
+                              }
+                          }
+                      };
+
+                      //Regiões que mais visualizaram
+                      var commonConfig3 = {
+                          query: {
+                              metrics: 'ga:pageviews',
+                              dimensions: 'ga:region'
+                          },
+                          chart: {
+                              type: 'PIE',
+                              options: {
+                                  width: '100%',
+//                                  title: 'Estados que mais visualizaram',
+                                  is3D: true
+                              }
+                          }
+                      };
+                      //Cidades que mais visualizaram
+                      var commonConfig4 = {
+                          query: {
+                              metrics: 'ga:pageviews',
+                              dimensions: 'ga:city'
+                          },
+                          chart: {
+                              type: 'PIE',
+                              options: {
+                                  width: '100%',
+                                  pieHole: 0.4
+//                                  title: 'Cidades que mais visualizaram'
+                              }
+                          }
+                      };
+                      //palavras mais buscadas
+                      var commonConfig5 = {
+                          query: {
+                              metrics: 'ga:sessions, ga:pageviews',
+                              dimensions: 'ga:keyword',
+                              sort: '-ga:sessions',
+                              'max-results': 10
+                          },
+                          chart: {
+                              type: 'TABLE',
+                              options: {
+                                  width: '100%'
+                              }
+                          }
+                      };
+                      //Páginas mais acessadas
+                      var commonConfig6 = {
+                          query: {
+                              dimensions: 'ga:pagePath',
+                              metrics: 'ga:pageviews,ga:uniquePageviews',
+                              sort: '-ga:pageviews',
+                              'max-results': 10
+                          },
+                          chart: {
+                              type: 'TABLE',
+                              options: {
+                                  width: '100%'
+                              }
+                          }
+                      };
+                      //Produtos mais acessados
+                      var commonConfig7 = {
+                          query: {
+                              dimensions: 'ga:pagePath',
+                              metrics: 'ga:pageviews,ga:uniquePageviews',
+                              sort: '-ga:pageviews',
+                              filters: 'ga:pagePath=~produtos/[0-9]',
+//                              filters: 'ga:pagePath=~Ofertas.*',
+                              'max-results': 10
+                          },
+                          chart: {
+                              type: 'TABLE',
+                              options: {
+                                  width: '100%'
+                              }
+                          }
+                      };
+
+                      var dateRange1 = {
+                          'start-date': '30daysAgo',
+                          'end-date': 'today'
+                      };
+                      var dateRange2 = {
+                          'start-date': '30daysAgo',
+                          'end-date': 'today'
+                      };
+                      var dateRange3 = {
+                          'start-date': '30daysAgo',
+                          'end-date': 'today'
+                      };
+                      var dateRange4 = {
+                          'start-date': '30daysAgo',
+                          'end-date': 'today'
+                      };
+                      var dateRange5 = {
+                          'start-date': '30daysAgo',
+                          'end-date': 'today'
+                      };
+                      var dateRange6 = {
+                          'start-date': '30daysAgo',
+                          'end-date': 'today'
+                      };
+                      var dateRange7 = {
+                          'start-date': '30daysAgo',
+                          'end-date': 'today'
+                      };
+                           
+                      var viewSelector = new gapi.analytics.ext.ViewSelector2({
+                          container: 'view-selector-container'
+                      }).execute();
+                              
+                      var dateRangeSelector1 = new gapi.analytics.ext.DateRangeSelector({
+                          container: 'date-range-selector-1-container'
+                      })
+                              .set(dateRange1)
+                              .execute();
+
+                      var dataChart1 = new gapi.analytics.googleCharts.DataChart(commonConfig)
+                              .set({query: dateRange1})
+                              .set({chart: {container: 'data-chart-1-container'}});
+                      var dataChart2 = new gapi.analytics.googleCharts.DataChart(commonConfig2)
+                              .set({query: dateRange2})
+                              .set({chart: {container: 'data-chart-2-container'}});
+                      var dataChart3 = new gapi.analytics.googleCharts.DataChart(commonConfig3)
+                              .set({query: dateRange3})
+                              .set({chart: {container: 'data-chart-3-container'}});
+                      var dataChart4 = new gapi.analytics.googleCharts.DataChart(commonConfig4)
+                              .set({query: dateRange4})
+                              .set({chart: {container: 'data-chart-4-container'}});
+                      var dataChart5 = new gapi.analytics.googleCharts.DataChart(commonConfig5)
+                              .set({query: dateRange5})
+                              .set({chart: {container: 'data-chart-5-container'}});
+                      var dataChart6 = new gapi.analytics.googleCharts.DataChart(commonConfig6)
+                              .set({query: dateRange6})
+                              .set({chart: {container: 'data-chart-6-container'}});
+                      var dataChart7 = new gapi.analytics.googleCharts.DataChart(commonConfig7)
+                              .set({query: dateRange7})
+                              .set({chart: {container: 'data-chart-7-container'}});
+
+
+                      dataChart5.on('success', function (response){
+                        var titleTableKeyword = $('#data-chart-5-container .gapi-analytics-data-chart-table-styles-thr');
+                        $(titleTableKeyword).children().eq(0).text("Palavra-Chave");
+                        $(titleTableKeyword).children().eq(1).text("Sessões");
+                        $(titleTableKeyword).children().eq(2).text("Visualizações");
+                      });
+
+                      dataChart6.on('success', function (response){
+                        var titleTableKeyword = $('#data-chart-6-container .gapi-analytics-data-chart-table-styles-thr');
+                        $(titleTableKeyword).children().eq(0).text("Página");
+                        $(titleTableKeyword).children().eq(1).text("Visualizações");
+                        $(titleTableKeyword).children().eq(2).text("Visualizações Únicas");
+                      });
+
+                      dataChart7.on('success', function (response){
+                          var titleTableKeyword = $('#data-chart-7-container .gapi-analytics-data-chart-table-styles-thr');
+                          $(titleTableKeyword).children().eq(0).text("Página");
+                          $(titleTableKeyword).children().eq(1).text("Visualizações");
+                          $(titleTableKeyword).children().eq(2).text("Visualizações Únicas");
+                      });
+
+                      /*viewSelector.on('viewChange', function(data) {
+                          dataChart1.set({query: {ids: "ga:61901802"}}).execute();
+                          dataChart2.set({query: {ids: "ga:61901802"}}).execute();
+                          dataChart3.set({query: {ids: "ga:61901802"}}).execute();
+                          dataChart4.set({query: {ids: "ga:61901802"}}).execute();
+                          dataChart5.set({query: {ids: "ga:61901802"}}).execute();
+                          dataChart6.set({query: {ids: "ga:61901802"}}).execute();
+                          dataChart7.set({query: {ids: "ga:61901802"}}).execute();
+
+                          //<%# data.ids -%>
+                          //gestao - "ga:61901802"
+                          //var title = document.getElementById('view-name');
+                          //title.innerHTML = data.property.name + ' (' + data.view.name + ')';
+                      });*/
+
+/*
+                      dateRangeSelector1.on('change', function(data) {
+                          dataChart1.set({query: data}).execute();
+                          dataChart2.set({query: data}).execute();
+                          dataChart3.set({query: data}).execute();
+                          dataChart4.set({query: data}).execute();
+                          dataChart5.set({query: data}).execute();
+                          dataChart6.set({query: data}).execute();
+                          dataChart7.set({query: data}).execute();
+                      });*/
+
+                  });
+
+                  gapi.analytics.ready(function() {
+                        $('.DateRangeSelector-item label, .DateRangeSelector-item input').css('display', 'none');
+                        $('#embed-api-auth-container').remove();
+                        $('#view-selector-container').remove();
+                  });
+              </script>
+
+              <br>
+
+            </div> <%# Fim - PAGEVIEWS -%>
+
+            <div id="usuarios" class="tab-pane" style="display: block;"> <%# Início - div usuários -%>
+
+              <div class="form-group" style="height: 400px;">
+                <div class="col-lg-12">
+                  <h4>Total de usuários vs. novos usuários (últ. 30 dias)</h4>
+                  <div id="chartUsuarios" style="top:55px"></div>
+                </div>
+              </div>
+              <br>
+
+            </div> <%# Fim - div usuários -%>
+
+            <div id="pedidos" class="tab-pane" style="display: block;"> <%# Início - div pedidos -%>
+
+              <div class="form-group" style="height: 400px;">
+                <div class="col-lg-12">
+                  <h4>Pedidos</h4>
+                  <div id="chartPedidos" style="top:55px"></div>
+                </div>
+              </div>
+
+            </div> <%# Fim - div pedidos -%>
+
+            <div id="faturamento" class="tab-pane" style="display: block;"> <%# Início - div faturamento -%>
+
+              <div class="form-group form-horizontal">
+                <h4>Faturamento</h4>
+                <div class="col-lg-4">
+                  <label class="control-label col-lg-5">Data Inicial</label>
+
+                  <div class="input-group col-lg-6 date date-picker3" style="padding-left: 15px !important;">
+                    <%= text_field_tag :data_inicial_chart_valor, (Date.today - 30).strftime("%d/%m/%Y"), :class => "form-control", :size => '16' %>
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-4">
+                  <label class="control-label col-lg-5">Data Final</label>
+
+                  <div class="input-group col-lg-6 date date-picker4" style="padding-left: 15px !important;">
+                    <%= text_field_tag :data_final_chart_valor, Date.today.strftime("%d/%m/%Y"), :class => "form-control", :size => '16' %>
+                    <div class="input-group-btn">
+                      <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-2">
+                  <button type="button" class="btn btn-primary atualizaChartValor">Atualizar</button>
+                </div>
+              </div>
+
+              <br>
+              <div id="chartValores" style="height:470px;max-width:1010px; width:100%;margin-top: 20px;"></div>
+
+            </div> <%# Fim - div faturamento -%>
+
+            <span class="loader" style="display:block; left:55%; position: fixed;z-index: 1000000;">
+                <%= image_tag "loading.gif", :width => "80px" %>
+            </span>
+            <div style="display:block;" class="maskLoader"></div>
+          </div>
+
+
+
+
+        </div>
+    </div>
+</section>

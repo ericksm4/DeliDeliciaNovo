@@ -1,0 +1,77 @@
+#corpoSite{
+	margin-top: 75px;
+}
+
+h1{
+	color: #aa0e79;
+	text-align: center;
+	font-family: "Roboto Medium";
+	font-weight: normal;
+	margin: 25px 0 20px;
+}
+
+#corpoEncarte{
+	width: 100%;
+}
+
+#encarteNavigation{
+	background: #faa635;
+	color: #fff;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0;
+}
+
+#encarteNavigation i,
+#encarteNavigation label,
+#encarteNavigation2 i,
+#encarteNavigation2 label{
+	display: inline-block;
+	margin: 0 10px;
+}
+
+#encarteNavigation i:hover,
+#encarteNavigation2 i:hover{
+	color: #aa0e79;
+}
+
+#encarteNavigation label,
+#encarteNavigation2 label{
+	font-size: 23px;
+}
+
+#encarteNavigation i,
+#encarteNavigation2 i{
+	font-size: 28px;
+	cursor: pointer;
+}
+
+#slideEncarte img{
+	width: 95%;
+	display: block;
+	margin: 0 auto;
+}
+
+#encarteNavigation2{
+	background: #FFF;
+	color: #333;
+	text-align: center;
+	width: 100%;
+	padding: 10px 0;
+}
+
+@media screen and (max-width: 600px){
+	h1{
+		font-size: 22px;
+	}
+
+	#encarteNavigation label,
+	#encarteNavigation2 label{
+		font-size: 16px;
+	}
+
+	#encarteNavigation i,
+	#encarteNavigation2 i{
+		font-size: 20px;
+	}
+}

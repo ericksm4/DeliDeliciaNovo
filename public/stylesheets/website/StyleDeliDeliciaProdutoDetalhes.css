@@ -1,0 +1,152 @@
+/*Foto do produto, valor, quantidade e botão de adicionar*/
+
+#listaProdutos
+{
+
+}
+
+#listaProdutos #produtoDetalhes
+{
+	float: left;
+	margin: 15px 0 0;
+	width: 100%;
+}
+
+#listaProdutos #produtoDetalhes .boxProduto
+{
+	border: none; 
+	border-right: 1px solid #7f4478;
+	height: auto;
+	margin: 0;
+	width: 430px;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .precoProduto
+{
+	border: none;
+	padding: 0;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .precoProduto span
+{
+	font-family: 'museo300';
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .tituloQtdMinimaProduto
+{
+	height: auto;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .tituloQtdMinimaProduto h4
+{
+	display: none;
+	height: auto;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .tituloQtdMinimaProduto h4 a
+{
+	height: auto;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto img
+{
+	height: auto;
+	max-height: none;
+	max-width: none;
+	width: 390px;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .tituloQtdMinimaProduto span
+{
+	font-size: 18px;
+	margin: 7px 0 3px;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .qtdAddCarrinho
+{
+	border: none;
+	display: block;
+	margin: 0;
+	width: 100%;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .valorTotalProduto
+{
+	margin: 0 auto;
+	width: 275px;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .valorTotalProduto span
+{
+	border-bottom: 1px solid #D2D2D2;
+    border-top: 1px solid #D2D2D2;
+    color: #692162;
+    float: left;
+    font: 28px 'museo700';
+    margin: 10px 0 15px;
+    padding: 15px 0;
+    text-align: center;
+    width: 100%;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .qtdAddCarrinho span.adicionarCarrinho,
+#master #listaProdutos #produtoDetalhes .boxProduto .qtdAddCarrinho span.produtoIndisponivel
+{
+	clear: both;
+    display: block;
+    float: none;
+    font-size: 20px;
+    height: auto;
+    margin: 15px auto;
+    padding: 5px 0;
+    width: 270px;
+}
+
+#master #listaProdutos #produtoDetalhes .boxProduto .qtdAddCarrinho span.produtoIndisponivel
+{
+}
+
+/*Foto do produto, valor, quantidade e botão de adicionar*/
+
+
+/*Descrição do produto e tabela nutricional*/
+
+#master #listaProdutos #produtoDetalhes #infoProduto
+{
+	border-left: 1px solid #7F4478;
+    float: left;
+    margin: 0 0 0 -1px;
+    padding: 10px 10px 10px 40px;
+    width: 460px;
+}
+
+#master #listaProdutos #produtoDetalhes #infoProduto p
+{
+	color: #878787;
+	font: 24px/32px 'museo300';
+	float: left;
+	width: 100%;
+}
+
+#master #listaProdutos #produtoDetalhes #infoProduto #tabelaNutricional
+{
+	float: left;
+	margin: 45px 0 30px;
+	width: 100%;
+}
+
+#master #listaProdutos #produtoDetalhes #infoProduto #tabelaNutricional h4
+{
+	color: #631c5b;
+	font: 18px 'museo700';
+	float: left;
+	margin: 0 0 20px;
+	width: 100%;
+}
+
+#master #listaProdutos #produtoDetalhes #infoProduto #tabelaNutricional p
+{
+	font-size: 18px;
+}
+
+/*Descrição do produto e tabela nutricional*/

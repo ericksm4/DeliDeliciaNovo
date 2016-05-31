@@ -1,0 +1,52 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleLojas.css' %>
+
+<script type="text/javascript">
+  $(function(){
+    $('#lojas > div a').click(function(){
+      $('#lojas > div a').removeClass('active')
+      $(this).addClass('active')
+      $('#lojas iframe').hide();
+      $(this).closest('.loja').find('.'+$(this).attr('btn')).show();
+    })
+  })
+</script>
+
+<div id="banner" style="background-image: url('<%= retorna_banner("Lojas") %>');"></div>
+
+<div id="corpoSite">
+
+  <div id="lojas">
+    
+    <%@lojas.each do |loja|%>
+      <div class="loja">
+        <%=image_tag loja.imagem %>
+        <div>
+          <h2>
+            <label>
+              <%= loja.nome %>
+            </label>
+          </h2>
+
+          <span><%= loja.endereco %></span>
+          <span><%= loja.cidade %></span>
+          <span><%= loja.horario_funcionamento %></span>
+          <span><%= loja.telefone %></span>
+        
+          <div class="clearAll"></div>
+
+          <a btn="tourmap">Tour Virtual</a>
+          <a btn="map">Como Chegar</a>
+        </div>
+
+        <br />
+
+        <iframe class="tourmap" webkitAllowFullScreen mozallowfullscreen allowFullScreen src="<%= loja.url_tour %>" frameBorder="0" style="width:100%;height:500px"></iframe>
+
+        <iframe class="map" src="<%= loja.url_maps %>" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
+      
+  <% end %>
+  </div>
+
+</div>

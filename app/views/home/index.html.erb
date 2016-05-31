@@ -1,0 +1,249 @@
+<%= stylesheet_link_tag 'website/StyleHome.css' %>
+
+<script type="text/javascript">
+  $(function(){
+    $('#banner, #banner .item-banner').height($(window).height()+'px')
+
+    var header = $('header')
+
+    var scrollTop = $(this).scrollTop();
+    var windowHeight = $(window).height();
+
+    if (scrollTop > windowHeight){
+      header.css({ 'background': 'rgba(170, 14,121, 1)' });
+      header.height(75)
+      $('header #logo').height(65)
+      $('header #rightMenu').css('margin-top', '25px')
+      $('header .fa.fa-bars').css('margin-top', '17.5px')
+    }
+
+    $(window).on('scroll', function () {
+
+      scrollTop = $(this).scrollTop();
+      windowHeight = $(window).height();
+
+      //if (scrollTop < windowHeight){
+        var fatorComum = (windowHeight + (1 - (windowHeight - scrollTop)))/windowHeight
+
+        //opacidade
+        var opacidade = fatorComum
+
+        header.css({ 'background': 'rgba(170, 14,121, '+opacidade+')' });
+
+        if ( opacidade > '1' ) {
+          header.css({ 'background': 'rgba(170, 14,121, 1)' });
+        } else if ( opacidade < '0' ) {
+          header.css({ 'background': 'rgba(170, 14,121, 0)' });
+        }
+
+        //tamanho img
+        var headerImg = $('header #logo')
+
+        alturaImg = (95 - (fatorComum*100*95)/200)
+
+        if (alturaImg > 95){
+          headerImg.height(95)
+          header.height(100) //tamanho header
+        }
+        else if (alturaImg < 65){
+          headerImg.height(65)
+          header.height(75) //tamanho header
+        }
+        else{
+          headerImg.height(alturaImg)
+          header.height(alturaImg+10) //tamanho header
+        }
+
+        var marginBarsDiv = $('header > div').height()/2 
+        
+        $('header #rightMenu').css('margin-top', marginBarsDiv - 7.5)
+        $('header .fa.fa-bars').css('margin-top', marginBarsDiv - 15)
+
+        /*
+        console.log('w '+ windowHeight)
+        console.log('s '+ scrollTop)
+        console.log('o '+ (windowHeight + (1 - (windowHeight - scrollTop)))/windowHeight)
+        */
+
+      //}
+
+    });
+
+    $('#rectBanner').click(function(){
+      $('html,body').animate({
+        scrollTop: $(window).height() - 75},
+        700);
+    })
+
+    $('#banner').slick({
+        slide: 'a',
+        dots: false,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: true,
+        autoplay: true,
+        autoplaySpeed: 15000,
+        fade: true,
+    });
+
+  })
+  
+</script>
+
+<div id="banner">
+
+  <% @banners.each do |banner|%>
+    <% unless banner.link.blank? %>
+      <a href="<%= banner.link %>" target="<%= banner.target_link unless banner.target_link.blank? %>">
+        <div class="item-banner" style="background: url('<%= banner.imagem %>') no-repeat center; background-size: cover"></div>
+      </a>
+    <%else%>
+      <a href="#">
+        <div class="item-banner" style="background: url('<%= banner.imagem %>') no-repeat center; background-size: cover"></div>
+      </a>
+    <%end%>
+  <% end %>
+
+  <%=image_tag "website/rect-banner.png", :id=>"rectBanner"%>
+
+</div>
+
+<div id="corpoSite">
+
+  <!--encarte-->
+  <div id="encarte">
+    <%=image_tag @encarte.imagem_destaque unless @encarte.blank?%>
+    <div>
+      <h2>Encarte de Maio</h2>
+      <p>Junto, sabores e delícias típicos da estação. Nem aquele calor de verão, nem aquele frio de inverno. O clima do outono é mais ameno, propício a novos sabores e temperos.</p>
+    </div>
+  </div>
+
+  <div class="clearAll"></div>
+
+  <!--lamina-->
+  <div id="lamina">
+    <div>
+      <h2>Lâmina Especial Dia das Mães</h2>
+      <p>A mulher mais importante da sua vida merece
+        um presente mais do que especial..</p>
+    </div>
+    <%=image_tag @lamina.imagem_destaque unless @lamina.blank?%>
+  </div>
+  
+  <!--aconteceLancamentoOferta-->
+  <div id="aconteceLancamentoOferta">
+
+    <div>
+      <h2>Acontece na Deli</h2>
+      <div>
+        <div class="maskImg">
+          <img data-src="/assets/website/acontece.jpg" data-src-retina="/assets/website/acontece.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <p>
+          Shows, eventos e degustações. Tão importante quanto oferecer delícias para você, é ter a certeza de que aqui é um dos seus lugares preferidos. Venha e volte sempre!
+        </p>
+      </div>
+      <a class="saibamais">SAIBA MAIS</a>
+    </div>
+
+    <div>
+      <h2>Lançamentos Deli</h2>
+      <div>
+        <div class="maskImg">
+          <img data-src="/assets/website/lancamento.jpg" data-src-retina="/assets/website/lancamento.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <p>
+          A gente não para de pesquisar e criar novos produtos e sabores. Conheça as últimas novidades!
+        </p>
+      </div>
+      <a class="saibamais">SAIBA MAIS</a>
+    </div>
+
+    <div>
+      <h2>Oferta da semana</h2>
+      <div>
+        <div class="maskImg">
+          <img data-src="/assets/website/oferta.jpg" data-src-retina="/assets/website/oferta.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" />
+        </div>
+        <p>
+          Confira as ofertas que selecionamos especialmente pra você.
+        </p>
+      </div>
+      <a class="saibamais">SAIBA MAIS</a>
+    </div>
+
+  </div>
+
+  <!--artefatos-->
+  <div id="artefatos">
+    <hr >
+    <h2>A Deli tem tudo para você comer e beber muito bem</h2>
+
+    <div>
+
+      <div class="item-artefato">
+        <div class="maskItemImg">
+          <img data-src="/assets/website/artefato.jpg" data-src-retina="/assets/website/artefato.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <div class="info">
+          <h3>Boulangerie</h3>
+          <p>Pães artesanais assados na pedra.</p>
+        </div>
+      </div>
+
+      <div class="item-artefato">
+        <div class="maskItemImg">
+          <img data-src="/assets/website/artefato.jpg" data-src-retina="/assets/website/artefato.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <div class="info">
+          <h3>Boulangerie</h3>
+          <p>Pães artesanais assados na pedra.</p>
+        </div>
+      </div>
+
+      <div class="item-artefato">
+        <div class="maskItemImg">
+          <img data-src="/assets/website/artefato.jpg" data-src-retina="/assets/website/artefato.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <div class="info">
+          <h3>Boulangerie</h3>
+          <p>Pães artesanais assados na pedra.</p>
+        </div>
+      </div>
+
+      <div class="item-artefato">
+        <div class="maskItemImg">
+          <img data-src="/assets/website/artefato.jpg" data-src-retina="/assets/website/artefato.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <div class="info">
+          <h3>Boulangerie</h3>
+          <p>Pães artesanais assados na pedra.</p>
+        </div>
+      </div>
+
+      <div class="item-artefato">
+        <div class="maskItemImg">
+          <img data-src="/assets/website/artefato.jpg" data-src-retina="/assets/website/artefato.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <div class="info">
+          <h3>Boulangerie</h3>
+          <p>Pães artesanais assados na pedra.</p>
+        </div>
+      </div>
+
+      <div class="item-artefato">
+        <div class="maskItemImg">
+          <img data-src="/assets/website/artefato.jpg" data-src-retina="/assets/website/artefato.jpg" class="imgUnveil" src="data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7"/>
+        </div>
+        <div class="info">
+          <h3>Boulangerie</h3>
+          <p>Pães artesanais assados na pedra.</p>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+
+</div>

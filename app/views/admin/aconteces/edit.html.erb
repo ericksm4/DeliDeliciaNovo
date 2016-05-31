@@ -1,0 +1,62 @@
+<% content_for :style do -%>
+  <%= stylesheet_link_tag 'StyleAreas' %>
+  <%= stylesheet_link_tag 'StyleForm' %> 
+  <%= stylesheet_link_tag "minimal" %>
+  <%= stylesheet_link_tag "select2" %>
+  <%= stylesheet_link_tag "StyleCores" %>
+  <%= stylesheet_link_tag "spectrum" %>
+  <%= stylesheet_link_tag 'bootstrap-datetimepicker.min' %>
+<% end -%>
+
+<% content_for :script do -%>
+  <!-- CKEditor -->
+  <%= javascript_include_tag "init" %>
+  
+  <%= javascript_include_tag "ckeditor/config.js" %>
+  <%= javascript_include_tag "ckeditor/filebrowser/javascripts/jquery.tmpl.min.js" %>
+  <%= javascript_include_tag "ckeditor/filebrowser/javascripts/fileuploader.js" %>
+  <%= javascript_include_tag "ckeditor/filebrowser/javascripts/rails.js" %>
+  <!-- CKEditor -->
+
+  <%= javascript_include_tag "jquery.icheck.min" %>
+  <%= javascript_include_tag "select2.min" %>
+  <%= javascript_include_tag "select2_locale_pt-BR" %>
+  <%= javascript_include_tag "spectrum" %>
+  <%= javascript_include_tag "jquery.validate" %>
+  <%= javascript_include_tag "fuelux/js/spinner.min" %>
+  <%= javascript_include_tag "bootstrap-datetimepicker.min" %>
+<% end -%>
+
+<div class="row">
+    <div class="col-lg-12">
+      <div class="row">
+        <div class="col-lg-12">
+              <!--breadcrumbs start -->
+              <ul class="breadcrumb" style="background: #fff">
+                  <li><a href="/admin/home"><i class="fa fa-home"></i> Home</a></li>
+                  <li><a href="/admin/aconteces">Eventos acontece</a></li>
+                  <li class="active"><a href="#">Editar Evento acontece</a></li>
+              </ul>
+              <!--breadcrumbs end -->
+          </div>
+      </div>
+    </div>
+</div>
+<div class="row">
+        <div class="col-lg-12">
+            <div class="panel">
+                <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      Editar evento acontece 
+                    </div>
+                </div>
+                <div class="panel-body">
+                  <div class="col-lg-7">
+                    <div class="boxForm"><%= render 'form' %></div>
+                  </div>
+                </div>
+            </div>
+        </div>
+</div>
+    
+<div class="clearAll">&nbsp;</div>

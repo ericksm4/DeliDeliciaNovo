@@ -1,0 +1,160 @@
+
+/*Inputs*/
+
+#conteudo #conteudoPrincipal .formAddNovo .divTourBusca
+{
+	position: relative;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTourBusca input
+{
+	max-width: 128px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTourBusca input.inputBusca
+{
+	float: right;
+	margin: 0 15px 0 115px;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTourBusca input.inputExportar
+{
+	background: url(/images/exportar.png) no-repeat scroll 10px center #f4f4f4;
+	border: 1px solid #929292 !important;
+    color: #444444;
+    font-weight: bold;
+    margin: 0 15px 0 0;
+    padding: 9px 10px 9px 35px;
+    width: 110px !important;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .divTourBusca input.inputExportar:hover
+{
+	background-color: #fbfbfb;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .datePicker
+{
+	float: left;
+	margin: 0 15px 15px 0;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .datePicker input
+{
+	max-width: 80px !important;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .dropDownEstilizado
+{
+	max-width: 100px;
+	position: absolute;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .select2-container
+{
+	margin: 0;
+}
+
+#conteudo #conteudoPrincipal .formAddNovo .select2-container .select2-choice
+{
+	padding: 4px 0 4px 8px;
+}
+
+.select2-container .select2-choice .select2-arrow b
+{
+	background-position: 0 5px;
+}
+
+.select2-dropdown-open .select2-choice .select2-arrow b
+{
+	background-position: -18px 5px;
+}
+
+/*Inputs*/
+
+#conteudo #conteudoPrincipal .formAddNovo #gridItens .dropDownEstilizado
+{
+	margin: 0 0 10px;
+	max-width: 210px;
+	position: static;
+}
+
+.tabela tbody tr td
+{
+	font-size: 12px; 
+}
+
+.tabela tbody tr.tabelaHeader td
+{
+	font-size: 14px; 
+}
+
+
+/*Box com todas informações do pagamento*/
+
+
+#conteudo .boxForm .tituloForm h2
+{
+	float: left;
+	margin: 0;
+}
+
+#conteudo #conteudoPrincipal #centraBoxPg
+{
+	margin: -50px auto 0;
+	width: 580px;
+}
+
+#conteudo #conteudoPrincipal #boxInfoPagamento
+{
+	/*border: 1px solid;*/
+	float: left;
+	padding: 2%;
+	width: 96%;
+}
+
+#conteudo #conteudoPrincipal #boxInfoPagamento #cabecalhoBoxInfoPagamento
+{
+	float: left;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal #boxInfoPagamento #cabecalhoBoxInfoPagamento h2
+{
+	border-bottom: 1px solid #d4d4d4;
+    color: #555;
+    float: left;
+    font: 22px arial;
+    padding: 0 0 5px;
+    width: 100%;
+}
+
+#conteudo #conteudoPrincipal #boxInfoPagamento #conteudoBoxInfoPagamento
+{
+	float: left;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal #boxInfoPagamento #conteudoBoxInfoPagamento .linhaBoxInfoPagamento
+{
+	float: left;
+	margin: 15px 0 5px;
+	width: 100%;
+}
+
+#conteudo #conteudoPrincipal #boxInfoPagamento #conteudoBoxInfoPagamento .linhaBoxInfoPagamento p
+{
+	float: left;
+	font: bold 14px arial;
+	margin: 0 5px 0 0;
+}
+
+#conteudo #conteudoPrincipal #boxInfoPagamento #conteudoBoxInfoPagamento .linhaBoxInfoPagamento span
+{
+	float: left;
+	font: 14px arial;
+	margin: 0 30px 0 0;
+	width: auto;
+}
+
+/*Box com todas informações do pagamento*/

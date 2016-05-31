@@ -1,0 +1,106 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleEncarteLamina.css' %>
+
+<script type="text/javascript">
+  $(function () {
+        var atual = 1;
+        var total = $('#slideEncarte img').size();
+        $('#total').text(total);
+        $('#total2').text(total);
+
+        $('#slideEncarte').on('swipe', function (event, slick, direction) {
+            if (direction == "left") {
+                chamaProximo();
+            }
+            else {
+                chamaAnterior();
+            }
+        })
+
+        $('#encarteNavigation .fa, #encarteNavigation2 .fa').click(function () {
+            if ($(this).hasClass('fa-angle-right')) {
+                chamaProximo();
+            }
+            else {
+                chamaAnterior();
+            }
+        })
+
+        function chamaProximo() {
+            if ((atual + 1) <= total) {
+                atual++;
+                $('#slideEncarte').slick("slickNext");
+                $('#atual').text(atual);
+                $('#atual2').text(atual);
+            }
+        }
+
+        function chamaAnterior() {
+            if ((atual - 1) > 0) {
+                atual--;
+                $('#slideEncarte').slick("slickPrev");
+                $('#atual').text(atual);
+                $('#atual2').text(atual);
+            }
+        }
+
+        $('#slideEncarte').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            dots: false,
+            arrows: true,
+            infinite: false
+        })
+
+        $('.slick-arrow').click(function () {
+            if ($(this).hasClass('slick-next')) {
+                if (atual + 1 <= total) {
+                    atual++;
+                    $('#atual').text(atual);
+                    $('#atual2').text(atual);
+                }
+            }
+            else {
+                if ((atual - 1) > 0) {
+                    atual--;
+                    $('#atual').text(atual);
+                    $('#atual2').text(atual);
+                }
+            }
+        })
+    })
+</script>
+
+<div id="corpoSite">
+  <% unless @lamina.blank? %>
+    <h1><%=@lamina.nome%></h1>
+
+    <div id="corpoEncarte">
+
+        <div id="encarteNavigation">
+            <i class="fa fa-angle-left"></i>
+            <label id="atual">1</label>
+            de
+            <label id="total">5</label>
+            <i class="fa fa-angle-right"></i>
+        </div>
+
+        <div id="slideEncarte">
+            <%@lamina.imagens.each do |img|%>
+              <div class="encartes">
+                <%=image_tag img.imagem%>
+              </div>
+            <%end%>
+        </div>
+
+        <div id="encarteNavigation2">
+            <i class="fa fa-angle-left"></i>
+            <label id="atual2">1</label>
+            de
+            <label id="total2">5</label>
+            <i class="fa fa-angle-right"></i>
+        </div>
+
+      </div>
+    <% end %>
+</div>

@@ -1,0 +1,505 @@
+@font-face {
+    font-family: 'Roboto';
+    src: url('/assets/roboto-regular_0-webfont.eot');
+    src: url('/assets/roboto-regular_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/roboto-regular_0-webfont.woff2') format('woff2'),
+         url('/assets/roboto-regular_0-webfont.woff') format('woff'),
+         url('/assets/roboto-regular_0-webfont.ttf') format('truetype'),
+         url('/assets/roboto-regular_0-webfont.svg#robotoregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto Medium';
+    src: url('/assets/roboto-medium_0-webfont.eot');
+    src: url('/assets/roboto-medium_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/roboto-medium_0-webfont.woff2') format('woff2'),
+         url('/assets/roboto-medium_0-webfont.woff') format('woff'),
+         url('/assets/roboto-medium_0-webfont.ttf') format('truetype'),
+         url('/assets/roboto-medium_0-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+	font-family: "Roboto Bold";
+	src: url('/assets/roboto-bold_0-webfont.eot');
+    src: url('/assets/roboto-bold_0-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/roboto-bold_0-webfont.woff2') format('woff2'),
+         url('/assets/roboto-bold_0-webfont.woff') format('woff'),
+         url('/assets/roboto-bold_0-webfont.ttf') format('truetype'),
+         url('/assets/roboto-bold_0-webfont.svg#robotomedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto';
+	background: #fff;
+}
+
+/*header,
+#banner,
+#corpoSite,
+footer,
+ul#menu{
+	transition: 0.4s;
+}*/
+
+/*header.active,
+#banner.active,
+#corpoSite.active,
+footer.active{
+	margin-left: 250px;
+}*/
+
+*{
+	outline: none !important;
+}
+
+a{
+	color: #000;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+a:hover{
+	text-decoration: underline;
+}
+
+.clearAll{
+	width: 100%;
+	clear: both;
+}
+
+.imgUnveil{
+	background-repeat: no-repeat;
+    background-image: url('/assets/loader3.gif');
+    background-position: center;
+}
+
+#bgMenu{
+	display: none;
+	background: #444;
+	opacity: 0.4;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 99999998;
+	position: fixed;
+}
+
+ul#menu{
+	position: fixed;
+	left: 0;
+	top: -100%;
+	z-index: 9999999999999999;
+	background: rgb(170, 14,121);
+	width: 250px;
+	height: 100%;
+	text-align: center;
+	margin: 0;
+	padding: 0;
+	transition: 0.4s;
+}
+
+ul#menu li{
+    text-transform: uppercase;
+    border-top: solid 1px #801E61;
+    transition: 0.4s;
+    list-style: none;
+}
+
+ul#menu li a{
+	color: #fff;
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+}
+
+ul#menu li a:hover{
+	text-decoration: none;
+}
+
+ul#menu li:hover{
+	background: #801E61;
+}
+
+ul#menu li:hover a{
+	color: #faa634;
+}
+
+ul#menu li#logoMenu{
+	border: none;
+	margin-top: 15px;
+	margin-bottom: 20px;
+}
+
+ul#menu li:last-child{
+	border-bottom: solid 1px #801E61;
+}
+
+ul#menu.active{
+	top: 0;
+}
+
+header{
+	position: fixed;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100px;
+	background: rgba(170, 14,121, 0);
+	z-index: 2;
+}
+
+header > div{
+	margin: 0 auto;
+	width: auto;
+	padding: 0 10px;
+	max-width: 1200px;
+	position: relative;
+}
+
+header .fa.fa-bars{
+	position: absolute;
+	color: #fff;
+	margin-top: 32.5px;
+	font-size: 35px;
+	left: 10px;
+	cursor: pointer;
+}
+
+header #divLogo{
+	float: left;
+}
+
+header #logo{
+	margin: 3px auto 0;
+	display: block;
+	height: 95px;
+}
+
+header #rightMenu{
+	position: absolute;
+	right: 10px;
+	top: 0;
+	margin-top: 40px;
+}
+
+header #rightMenu .fa{
+	color: #fff;
+	cursor: pointer;
+	font-size: 20px;
+	margin-left: 25px;
+	transition: 0.4s;
+}
+
+header #rightMenu .fa.fa-instagram,
+header #rightMenu .fa.fa-facebook{
+	float: left;
+}
+
+header #rightMenu span{
+	float: left;
+}
+
+header #rightMenu span .fa{
+	float: right;
+	margin-left: 5px;
+}
+
+header #rightMenu .fa:hover{
+	color: #faa634;
+}
+
+#rightMenu span input{
+    border: none;
+    display: none;
+    padding: 3px 5px;
+}
+
+#corpoSite{
+	margin: 30px auto;
+	width: auto;
+	padding: 0 10px;
+	max-width: 1200px;
+	overflow: hidden;
+}
+
+footer #cadastroNewsletter{
+	background: #aa0e79;
+	width: 100%;
+	padding: 40px 0;
+	text-align: center;
+}
+
+footer #cadastroNewsletter ul{
+	display: inline-block;
+    border: solid 1px #fff;
+    transition: 0.5s;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 17px;
+    background: #fff;
+    color: #999;
+    position: relative;
+    z-index: 1;
+    padding: 0;
+    width: 255px;
+    /*faa634*/
+}
+
+#cadastroNewsletter ul li{
+    position: absolute;
+    top: 0;
+    z-index: 1;
+    background: #fff;
+    width: 100%;
+    border-top: solid 1px #DEDEDE;
+    border-right: solid 1px #fff;
+    border-left: solid 1px #fff;
+    margin-left: -1px;
+    list-style: none;
+    transition: 0.2s;
+    cursor: pointer;
+    font-size: 15px;
+    padding: 5px 0;
+}
+
+
+#cadastroNewsletter ul li#liHeader{
+    position: relative;
+	padding: 0;
+    z-index: 2;
+    border-top: none;
+    background: #fff;
+    cursor: pointer;
+    margin: 0;
+    border: none;
+}
+
+#cadastroNewsletter ul li#liHeader font{
+    display: inline-block;
+    border-left: solid 1px #c1c1c1;
+    text-align: right;
+    padding: 9px 0;
+    margin-right: 18px;
+}
+
+#cadastroNewsletter ul li#liHeader font:after{
+    content: '\25BC';
+    position: absolute;
+    right: 5px;
+    top: 24%;
+    width: 26px;
+    text-align: center;
+    font-size: 15px;
+    line-height: 24px;
+}
+
+#cadastroNewsletter ul li.li-interno:hover{
+    color: #faa634;
+    border-right: solid 1px #f4f4f4;
+    border-left: solid 1px #f4f4f4;
+    background: #f4f4f4;
+}
+
+#cadastroNewsletter ul li#liHeader label{
+    display: inline-block;
+    width: 201px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#cadastroNewsletter ul li#liHeader.active{
+    color: #faa634;
+}
+
+footer #cadastroNewsletter .fa{
+	
+}
+
+footer #cadastroNewsletter #btnSendNewsletter{
+	background: #f68634;
+    color: #fff;
+    text-align: center;
+    width: 40px;
+    font-size: 25px;
+    display: inline-block;
+    padding: 4px 4px 3px 4px;
+    vertical-align: sub;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+footer #cadastroNewsletter #btnSendNewsletter:hover{
+	background: #D8752C;
+}
+
+
+footer #cadastroNewsletter h4{
+    text-align: center;
+    color: #fff;
+    margin: 0;
+    font-size: 21px;
+    font-weight: normal;
+    font-family: "Roboto Medium";
+}
+
+footer #cadastroNewsletter input{
+    padding: 9px 7px;
+    border: solid 1px #FFF;
+    display: inline-block;
+    font-family: 'Roboto';
+    text-align: center;
+    font-size: 15px;
+    width: 220px;
+    margin-top: 7px;
+}
+
+footer #beijaFlorFooter{
+	background: url('/assets/website/bejafro.png') #e6e6e6;
+	height: 60px;
+	width: 100%;
+}
+
+footer #info{
+	background: #e6e6e6;
+	padding: 40px 0 30px;
+	width: 100%;
+	text-align: center;
+}
+
+footer #info label{
+	color: #f68634;
+	font-size: 18px;
+}
+
+footer #info > div{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+footer #lojasFooter{
+	width: 465px;
+}
+
+footer #lojasFooter i{
+	font-size: 15px;	
+}
+
+footer #menuFooter{
+	width: 280px;
+	text-align: left;
+}
+
+footer #menuFooter li{
+	list-style: none;
+	text-align: left;
+}
+
+footer #menuFooter ul,
+footer #menuFooter li{
+	margin: 0;
+	padding: 0;
+}
+
+footer #menuFooter > ul{
+	margin-top: 15px;
+}
+
+footer #menuFooter > ul > li{
+	float: left;
+	width: 50%;
+}
+
+footer #menuFooter label{
+	text-align: left;
+}
+
+footer #menuFooter a.active{
+	font-weight: bold;
+}
+
+footer #lojasFooter{
+	text-align: center;
+}
+
+footer #lojasFooter ul{
+	margin: 15px 0 0;
+	padding: 0;
+	display: inline-block;
+	width: 152px;
+}
+
+footer #lojasFooter ul > li:first-child{
+	font-family: "Roboto Medium";
+}
+
+footer #lojasFooter li{
+	list-style: none;
+	font-size: 14px;
+	margin: 0 0 4px;
+}
+
+footer #info > div#instagram,
+footer #info > div#instagram-resp{
+	width: 230px;
+	text-align: left;
+	margin-left: 55px;
+}
+
+footer #info > div#instagram-resp{
+	display: none;
+}
+
+@media screen and (max-width: 1054px){
+	footer #info > div#instagram{
+		display: none;
+	}
+
+	footer #info > div#instagram-resp{
+		display: inline-block;
+	}
+
+	footer #info > div#instagram-resp,
+	footer #menuFooter{
+		height: 180px;
+		margin-bottom: 10px;
+	}
+}
+
+@media screen and (max-width: 600px){
+	footer #info > div{
+		margin: 0 auto 20px !important;
+	}
+
+	footer #menuFooter li{
+		text-align: center;
+	}
+
+	footer #menuFooter{
+		text-align: center;
+	}
+
+	footer #lojasFooter{
+		width: 100%;
+	}
+
+	header #rightMenu .fa{
+		margin-left: 8px;
+		font-size: 17px;
+	}
+
+	footer #info > div#instagram-resp{
+		text-align: center;
+	}
+}

@@ -1,0 +1,54 @@
+#banner{
+	margin-top: 75px;
+}
+
+#banner img{
+	display: block;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 950px;
+}
+
+h1{
+    font-family: "Roboto";
+    color: #a21984;
+    margin: 25px auto 30px;
+    padding: 0 25px;
+    display: table;
+    font-size: 20px;
+    background: url('/assets/website/h2-bg.png') no-repeat center;
+    background-size: 100% 100%;
+    text-align: center;
+    font-weight: normal;
+}
+
+#corpoSite div{
+	text-align: center;
+	font-size: 14px;
+}
+
+#corpoSite div .telefones{
+	display: inline-block;
+	text-align: left;
+    margin: 0 20px;
+}
+
+#corpoSite div .telefones h3,
+#corpoSite div .telefones span{
+	display: block;
+}
+
+#corpoSite div .telefones h3{
+	color: #a32385;
+	margin-bottom: 5px;
+}
+
+
+#corpoSite div .telefones .fa{
+	color: #a32385;
+	margin-right: 3px;
+}
+
+#corpoSite div .telefones span{
+	font-size: 15px;
+}

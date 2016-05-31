@@ -1,0 +1,715 @@
+﻿/*Verde*/
+
+#conteudo .boxFormVerde
+{
+	border-color: #28B779; 
+}
+
+#conteudo .boxFormVerde .tituloFormVerde
+{
+	background-color: #28B779; 
+}
+
+#conteudo .btnTituloFormVerde
+{
+	background-color: #1F9D65;
+	border-color: #1B8F5B;
+}
+
+#conteudo .btnTituloFormVerde:hover
+{
+	background-color: #1D8858;
+}
+
+#conteudo #conteudoPrincipal .boxFormVerde input.inputBuscaVerde
+{
+	background-color: #28B779;
+}
+
+#conteudo #conteudoPrincipal .boxFormVerde input.inputBuscaVerde:hover
+{
+	background-color: #219D66;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerde
+{
+    background-color: #28B779;
+    background-image: linear-gradient(to bottom, #28B779, #229662);
+    background-image: -ms-linear-gradient(to bottom, #28B779, #229662);
+    background-image: -webkit-linear-gradient(to bottom, #28B779, #229662);    
+    background-image: -moz-linear-gradient(to bottom, #28B779, #229662);
+    border-color:#269563;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerde:hover
+{
+    background-color: #229662;
+    background-image: linear-gradient(to bottom, #229662, #229662);
+    background-image: -ms-linear-gradient(to bottom, #229662, #229662);
+    background-image: -webkit-linear-gradient(to bottom, #229662, #229662);    
+    background-image: -moz-linear-gradient(to bottom, #229662, #229662);
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerde:active
+{
+    box-shadow: 0 0 10px #1E7B52 inset;
+}
+
+#conteudo .boxFormVerde .paginacao a
+{
+    color: #28B779;
+}
+
+/*Verde*/
+
+/*Roxo*/
+
+#conteudo .boxFormRoxo
+{
+	border-color: #852B99; 
+}
+
+#conteudo .boxFormRoxo .tituloFormRoxo
+{
+	background-color: #852B99; 
+}
+
+#conteudo .btnTituloFormRoxo
+{
+	background-color: #853F96;
+    border-color: #6C227E;
+}
+
+#conteudo .btnTituloFormRoxo:hover
+{
+	background-color: #723B80;
+}
+
+#conteudo #conteudoPrincipal .boxFormRoxo input.inputBuscaRoxo
+{
+	background-color: #852B99;
+}
+
+#conteudo #conteudoPrincipal .boxFormRoxo input.inputBuscaRoxo:hover
+{
+	background-color: #6F2781;
+}
+
+#conteudo #conteudoPrincipal .btnGradientRoxo
+{
+    background-color: #852B99;
+    background-image: linear-gradient(to bottom, #852B99, #5A126C);
+    background-image: -ms-linear-gradient(to bottom, #852B99, #5A126C);
+    background-image: -webkit-linear-gradient(to bottom, #852B99, #5A126C);    
+    background-image: -moz-linear-gradient(to bottom, #852B99, #5A126C);
+    border-color:#5B0A6F;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientRoxo:hover
+{
+    background-color: #5A126C;
+    background-image: linear-gradient(to bottom, #5A126C, #5A126C);
+    background-image: -ms-linear-gradient(to bottom, #5A126C, #5A126C);
+    background-image: -webkit-linear-gradient(to bottom, #5A126C, #5A126C);    
+    background-image: -moz-linear-gradient(to bottom, #5A126C, #5A126C);
+}
+
+#conteudo #conteudoPrincipal .btnGradientRoxo:active
+{
+    box-shadow: 0 0 10px #431A4D inset;
+}
+
+#conteudo .boxFormRoxo .paginacao a
+{
+    color: #852B99;
+}
+
+/*Roxo*/
+
+/*Amarelo*/
+
+#conteudo .boxFormAmarelo
+{
+	border-color: #E3A741; 
+}
+
+#conteudo .boxFormAmarelo .tituloFormAmarelo
+{
+	background-color: #E3A741; 
+}
+
+#conteudo .btnTituloFormAmarelo
+{
+	background-color: #CD9941;
+    border-color: #B59153;
+}
+
+#conteudo .btnTituloFormAmarelo:hover
+{
+	background-color: #BC8C3B;
+}
+
+#conteudo #conteudoPrincipal .boxFormAmarelo input.inputBuscaAmarelo
+{
+	background-color: #E3A741;
+}
+
+#conteudo #conteudoPrincipal .boxFormAmarelo input.inputBuscaAmarelo:hover
+{
+	background-color: #D39326;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAmarelo
+{
+    background-color: #E3A741;
+    background-image: linear-gradient(to bottom, #E3A741, #CD8710);
+    background-image: -ms-linear-gradient(to bottom, #E3A741, #CD8710);
+    background-image: -webkit-linear-gradient(to bottom, #E3A741, #CD8710);    
+    background-image: -moz-linear-gradient(to bottom, #E3A741, #CD8710);
+    border-color:#C48824;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAmarelo:hover
+{
+    background-color: #CD8710;
+    background-image: linear-gradient(to bottom, #CD8710, #CD8710);
+    background-image: -ms-linear-gradient(to bottom, #CD8710, #CD8710);
+    background-image: -webkit-linear-gradient(to bottom, #CD8710, #CD8710);    
+    background-image: -moz-linear-gradient(to bottom, #CD8710, #CD8710);
+}
+
+#conteudo #conteudoPrincipal .btnGradientAmarelo:active
+{
+    box-shadow: 0 0 10px #A77217 inset;
+}
+
+#conteudo .boxFormAmarelo .paginacao a
+{
+    color: #E3A741;
+}
+
+/*Amarelo*/
+
+/*Laranja*/
+
+#conteudo .boxFormLaranja
+{
+	border-color: #E65A0A; 
+}
+
+#conteudo .boxFormLaranja .tituloFormLaranja
+{
+	background-color: #E65A0A; 
+}
+
+#conteudo .btnTituloFormLaranja
+{
+	background-color: #CC4A00;
+    border-color: #DA814E;
+}
+
+#conteudo .btnTituloFormLaranja:hover
+{
+	background-color: #BF4A06;
+}
+
+#conteudo #conteudoPrincipal .boxFormLaranja input.inputBuscaLaranja
+{
+	background-color: #E65A0A;
+}
+
+#conteudo #conteudoPrincipal .boxFormLaranja input.inputBuscaLaranja:hover
+{
+	background-color: #D54D00;
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranja
+{
+    background-color: #E65A0A;
+    background-image: linear-gradient(to bottom, #E65A0A, #BC4F11);
+    background-image: -ms-linear-gradient(to bottom, #E65A0A, #BC4F11);
+    background-image: -webkit-linear-gradient(to bottom, #E65A0A, #BC4F11);    
+    background-image: -moz-linear-gradient(to bottom, #E65A0A, #BC4F11);
+    border-color:#AE490F;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranja:hover
+{
+    background-color: #BC4F11;
+    background-image: linear-gradient(to bottom, #BC4F11, #BC4F11);
+    background-image: -ms-linear-gradient(to bottom, #BC4F11, #BC4F11);
+    background-image: -webkit-linear-gradient(to bottom, #BC4F11, #BC4F11);    
+    background-image: -moz-linear-gradient(to bottom, #BC4F11, #BC4F11);
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranja:active
+{
+    box-shadow: 0 0 10px #823D15 inset;
+}
+
+#conteudo .boxFormLaranja .paginacao a
+{
+    color: #E65A0A;
+}
+
+
+/*Laranja*/
+
+/*Azul escuro*/
+
+#conteudo .boxFormAzulEscuro
+{
+	border-color: #0C49A9; 
+}
+
+#conteudo .boxFormAzulEscuro .tituloFormAzulEscuro
+{
+	background-color: #0C49A9; 
+}
+
+#conteudo .btnTituloFormAzulEscuro
+{
+	background-color: #3969B5;
+    border-color: #70819A;
+}
+
+#conteudo .btnTituloFormAzulEscuro:hover
+{
+	background-color: #305591;
+}
+
+#conteudo #conteudoPrincipal .boxFormAzulEscuro input.inputBuscaAzulEscuro
+{
+	background-color: #0C49A9;
+}
+
+#conteudo #conteudoPrincipal .boxFormAzulEscuro input.inputBuscaAzulEscuro:hover
+{
+	background-color: #123E84;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzulEscuro
+{
+    background-color: #0C49A9;
+    background-image: linear-gradient(to bottom, #0C49A9, #1A417E);
+    background-image: -ms-linear-gradient(to bottom, #0C49A9, #1A417E);
+    background-image: -webkit-linear-gradient(to bottom, #0C49A9, #1A417E);    
+    background-image: -moz-linear-gradient(to bottom, #0C49A9, #1A417E);
+    border-color:#0A2959;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzulEscuro:hover
+{
+    background-color: #1A417E;
+    background-image: linear-gradient(to bottom, #1A417E, #1A417E);
+    background-image: -ms-linear-gradient(to bottom, #1A417E, #1A417E);
+    background-image: -webkit-linear-gradient(to bottom, #1A417E, #1A417E);    
+    background-image: -moz-linear-gradient(to bottom, #1A417E, #1A417E);
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzulEscuro:active
+{
+    box-shadow: 0 0 10px #0F2952 inset;
+}
+
+#conteudo .boxFormAzulEscuro .paginacao a
+{
+    color: #0C49A9;
+}
+/*Azul escuro*/
+
+/*Verde escuro*/
+
+#conteudo .boxFormVerdeEscuro
+{
+    border-color: #125B3A; 
+}
+
+#conteudo .boxFormVerdeEscuro .tituloFormVerdeEscuro
+{
+    background-color: #125B3A; 
+}
+
+#conteudo .btnTituloFormVerdeEscuro
+{
+    background-color: #1B6D48;
+    border-color: #2E7857;
+}
+
+#conteudo .btnTituloFormVerdeEscuro:hover
+{
+    background-color: #0F5636;
+}
+
+#conteudo #conteudoPrincipal .boxFormVerdeEscuro input.inputBuscaVerdeEscuro
+{
+    background-color: #125B3A;
+}
+
+#conteudo #conteudoPrincipal .boxFormVerdeEscuro input.inputBuscaVerdeEscuro:hover
+{
+    background-color: #257B55;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerdeEscuro
+{
+    background-color: #125B3A;
+    background-image: linear-gradient(to bottom, #125B3A, #0E482E);
+    background-image: -ms-linear-gradient(to bottom, #125B3A, #0E482E);
+    background-image: -webkit-linear-gradient(to bottom, #125B3A, #0E482E);    
+    background-image: -moz-linear-gradient(to bottom, #125B3A, #0E482E);
+    border-color:#214535;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerdeEscuro:hover
+{
+    background-color: #0E482E;
+    background-image: linear-gradient(to bottom, #0E482E, #0E482E);
+    background-image: -ms-linear-gradient(to bottom, #0E482E, #0E482E);
+    background-image: -webkit-linear-gradient(to bottom, #0E482E, #0E482E);    
+    background-image: -moz-linear-gradient(to bottom, #0E482E, #0E482E);
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerdeEscuro:active
+{
+    box-shadow: 0 0 10px #23563F inset;
+}
+
+#conteudo .boxFormVerdeEscuro .paginacao a
+{
+    color: #125B3A;
+}
+
+/*Verde escuro*/
+
+/*Vinho*/
+
+#conteudo .boxFormVinho
+{
+    border-color: #7E2727; 
+}
+
+#conteudo .boxFormVinho .tituloFormVinho
+{
+    background-color: #7E2727; 
+}
+
+#conteudo .btnTituloFormVinho
+{
+    background-color: #541414;
+    border-color: #9C4F4F;
+}
+
+#conteudo .btnTituloFormVinho:hover
+{
+    background-color: #712323;
+}
+
+#conteudo #conteudoPrincipal .boxFormVinho input.inputBuscaVinho
+{
+    background-color: #7E2727;
+}
+
+#conteudo #conteudoPrincipal .boxFormVinho input.inputBuscaVinho:hover
+{
+    background-color: #632828;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVinho
+{
+    background-color: #983434;
+    background-image: linear-gradient(to bottom, #983434, #6D1E1E);
+    background-image: -ms-linear-gradient(to bottom, #983434, #6D1E1E);
+    background-image: -webkit-linear-gradient(to bottom, #983434, #6D1E1E);    
+    background-image: -moz-linear-gradient(to bottom, #983434, #6D1E1E);
+    border-color:#4E1F1F;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVinho:hover
+{
+    background-color: #6D1E1E;
+    background-image: linear-gradient(to bottom, #6D1E1E, #6D1E1E);
+    background-image: -ms-linear-gradient(to bottom, #6D1E1E, #6D1E1E);
+    background-image: -webkit-linear-gradient(to bottom, #6D1E1E, #6D1E1E);    
+    background-image: -moz-linear-gradient(to bottom, #6D1E1E, #6D1E1E);
+}
+
+#conteudo #conteudoPrincipal .btnGradientVinho:active
+{
+    box-shadow: 0 0 10px #4A1616 inset;
+}
+
+#conteudo .boxFormVinho .paginacao a
+{
+    color: #7E2727;
+}
+
+/*Vinho*/
+
+/*Laranja escuro*/
+
+#conteudo .boxFormLaranjaEscuro
+{
+    border-color: #A65A00; 
+}
+
+#conteudo .boxFormLaranjaEscuro .tituloFormLaranjaEscuro
+{
+    background-color: #A65A00; 
+}
+
+#conteudo .btnTituloFormLaranjaEscuro
+{
+    background-color: #C46F0F;
+    border-color: #9C590D;
+}
+
+#conteudo .btnTituloFormLaranjaEscuro:hover
+{
+    background-color: #B06512;
+}
+
+#conteudo #conteudoPrincipal .boxFormLaranjaEscuro input.inputBuscaLaranjaEscuro
+{
+    background-color: #A65A00;
+}
+
+#conteudo #conteudoPrincipal .boxFormLaranjaEscuro input.inputBuscaLaranjaEscuro:hover
+{
+    background-color: #C87110;
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranjaEscuro
+{
+    background-color: #A65A00;
+    background-image: linear-gradient(to bottom, #A65A00, #7D4C15);
+    background-image: -ms-linear-gradient(to bottom, #A65A00, #7D4C15);
+    background-image: -webkit-linear-gradient(to bottom, #A65A00, #7D4C15);    
+    background-image: -moz-linear-gradient(to bottom, #A65A00, #7D4C15);
+    border-color:#855724;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranjaEscuro:hover
+{
+    background-color: #7D4C15;
+    background-image: linear-gradient(to bottom, #7D4C15, #7D4C15);
+    background-image: -ms-linear-gradient(to bottom, #7D4C15, #7D4C15);
+    background-image: -webkit-linear-gradient(to bottom, #7D4C15, #7D4C15);    
+    background-image: -moz-linear-gradient(to bottom, #7D4C15, #7D4C15);
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranjaEscuro:active
+{
+    box-shadow: 0 0 10px #855724 inset;
+}
+
+#conteudo .boxFormLaranjaEscuro .paginacao a
+{
+    color: #A65A00;
+}
+
+/*Laranja escuro*/
+
+/*Azul enseada*/
+
+#conteudo .boxFormAzulEnseada
+{
+    border-color: #057D9F; 
+}
+
+#conteudo .boxFormAzulEnseada .tituloFormAzulEnseada
+{
+    background-color: #057D9F; 
+}
+
+#conteudo .btnTituloFormAzulEnseada
+{
+    background-color: #126981;
+    border-color: #086984;
+}
+
+#conteudo .btnTituloFormAzulEnseada:hover
+{
+    background-color: #1E7992;
+}
+
+#conteudo #conteudoPrincipal .boxFormAzulEnseada input.inputBuscaAzulEnseada
+{
+    background-color: #057D9F;
+}
+
+#conteudo #conteudoPrincipal .boxFormAzulEnseada input.inputBuscaAzulEnseada:hover
+{
+    background-color: #1E91B1;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzulEnseada
+{
+    background-color: #057D9F;
+    background-image: linear-gradient(to bottom, #057D9F, #11718B);
+    background-image: -ms-linear-gradient(to bottom, #057D9F, #11718B);
+    background-image: -webkit-linear-gradient(to bottom, #057D9F, #11718B);    
+    background-image: -moz-linear-gradient(to bottom, #057D9F, #11718B);
+    border-color:#206E84;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzulEnseada:hover
+{
+    background-color: #11718B;
+    background-image: linear-gradient(to bottom, #11718B, #11718B);
+    background-image: -ms-linear-gradient(to bottom, #11718B, #11718B);
+    background-image: -webkit-linear-gradient(to bottom, #11718B, #11718B);    
+    background-image: -moz-linear-gradient(to bottom, #11718B, #11718B);
+}
+
+#conteudo #conteudoPrincipal .btnGradientAzulEnseada:active
+{
+    box-shadow: 0 0 10px #155A6D inset;
+}
+
+#conteudo .boxFormAzulEnseada .paginacao a
+{
+    color: #057D9F;
+}
+
+/*Laranja escuro*/
+
+/*Verde BR*/
+
+#conteudo .boxFormVerdeBR
+{
+    border-color: #24913C; 
+}
+
+#conteudo .boxFormVerdeBR .tituloFormVerdeBR
+{
+    background-color: #24913C; 
+}
+
+#conteudo .btnTituloFormVerdeBR
+{
+    background-color: #1F7132;
+    border-color: #256232;
+}
+
+#conteudo .btnTituloFormVerdeBR:hover
+{
+    background-color: #1D8033;
+}
+
+#conteudo #conteudoPrincipal .boxFormVerdeBR input.inputBuscaVerdeBR
+{
+    background-color: #24913C;
+}
+
+#conteudo #conteudoPrincipal .boxFormVerdeBR input.inputBuscaVerdeBR:hover
+{
+    background-color: #237635;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerdeBR
+{
+    background-color: #24913C;
+    background-image: linear-gradient(to bottom, #24913C, #217133);
+    background-image: -ms-linear-gradient(to bottom, #24913C, #217133);
+    background-image: -webkit-linear-gradient(to bottom, #24913C, #217133);    
+    background-image: -moz-linear-gradient(to bottom, #24913C, #217133);
+    border-color:#1A6F2D;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerdeBR:hover
+{
+    background-color: #217133;
+    background-image: linear-gradient(to bottom, #217133, #217133);
+    background-image: -ms-linear-gradient(to bottom, #217133, #217133);
+    background-image: -webkit-linear-gradient(to bottom, #217133, #217133);    
+    background-image: -moz-linear-gradient(to bottom, #217133, #217133);
+}
+
+#conteudo #conteudoPrincipal .btnGradientVerdeBR:active
+{
+    box-shadow: 0 0 10px #1A6F2D inset;
+}
+
+#conteudo .boxFormVerdeBR .paginacao a
+{
+    color: #24913C;
+}
+
+/*Verde BR*/
+
+/*Laranja 2*/
+
+#conteudo .boxFormLaranja2
+{
+    border-color: #BF4330; 
+}
+
+#conteudo .boxFormLaranja2 .tituloFormLaranja2
+{
+    background-color: #BF4330; 
+}
+
+#conteudo .btnTituloFormLaranja2
+{
+    background-color: #933627;
+    border-color: #88382C;
+}
+
+#conteudo .btnTituloFormLaranja2:hover
+{
+    background-color: #A44131;
+}
+
+#conteudo #conteudoPrincipal .boxFormLaranja2 input.inputBuscaLaranja2
+{
+    background-color: #BF4330;
+}
+
+#conteudo #conteudoPrincipal .boxFormLaranja2 input.inputBuscaLaranja2:hover
+{
+    background-color: #A0392A;
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranja2
+{
+    background-color: #BF4330;
+    background-image: linear-gradient(to bottom, #BF4330, #992F1F);
+    background-image: -ms-linear-gradient(to bottom, #BF4330, #992F1F);
+    background-image: -webkit-linear-gradient(to bottom, #BF4330, #992F1F);    
+    background-image: -moz-linear-gradient(to bottom, #BF4330, #992F1F);
+    border-color:#993C2E;
+    color: #fff;
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranja2:hover
+{
+    background-color: #992F1F;
+    background-image: linear-gradient(to bottom, #992F1F, #992F1F);
+    background-image: -ms-linear-gradient(to bottom, #992F1F, #992F1F);
+    background-image: -webkit-linear-gradient(to bottom, #992F1F, #992F1F);    
+    background-image: -moz-linear-gradient(to bottom, #992F1F, #992F1F);
+}
+
+#conteudo #conteudoPrincipal .btnGradientLaranja2:active
+{
+    box-shadow: 0 0 10px #993C2E inset;
+}
+
+#conteudo .boxFormLaranja2 .paginacao a
+{
+    color: #BF4330;
+}
+
+
+/*Laranja 2*/

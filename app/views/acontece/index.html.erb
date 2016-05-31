@@ -1,0 +1,146 @@
+<%= stylesheet_link_tag 'website/StyleMenuInterno.css' %>
+<%= stylesheet_link_tag 'website/StyleAcontece.css' %>
+
+<script src="javascripts/jquery.validate.js"></script> <!-- Validar campos -->
+<script src="javascripts/jquery.maskedinput.js"></script> <!-- Mascara -->
+<script src="javascripts/jquery.mask.min.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+ $(function(){
+  //Validação dos campos
+    $('form').each(function(){
+
+      $(this).validate({
+        submitHandler: function(form) { //dispara loader qdo form ok
+            $('#maskLoader').show();
+            $('#loader').show();
+   
+            enviaForm($(form).closest('.evento'));
+        },
+        rules: {
+            'email':
+            {
+                required: true,
+                email: true
+            },
+            'sugestao':
+            {
+                required: true
+            }
+        },
+        messages: {
+            'email': {
+                required: "O e-mail é obrigatório.",
+                email: "Por favor, insira um e-mail válido"
+            },
+            'sugestao': {
+                required: "A mensagem é obrigatória."
+            }
+        }
+      });
+    });
+
+    $('input[name="telefone"]').mask('(99)9999-9999')
+
+    var masks = ['(00) 00000-0000', '(00) 0000-00009'],
+
+    maskBehavior = function (val, e, field, options) {
+        return val.length > 14 ? masks[0] : masks[1];
+    };
+
+    $('input[name="telefone"]').mask(maskBehavior, {
+        onKeyPress:
+           function (val, e, field, options) {
+               field.mask(maskBehavior(val, e, field, options), options);
+           }
+    });
+
+    /*$('.send').click(function(){
+      enviaForm($(this).closest('.evento'))
+    })*/
+
+    function enviaForm(btn){
+
+      $.ajax({
+        "crossDomain": true,
+        "type":"POST",
+        beforeSend: function(xhr) {xhr.setRequestHeader('X-CSRF-Token', $('meta[name="csrf-token"]').attr('content'))},
+        "url":"acontece/reserva",
+        "data": {
+          nome: $(btn).find('input[name="nome"]').val(), 
+          email: $(btn).find('input[name="email"]').val(),
+          telefone: $(btn).find('input[name="telefone"]').val(),
+          bairro: $(btn).find('input[name="bairro"]').val(),
+          cidade: $(btn).find('input[name="cidade"]').val(),
+          comentario: $(btn).find('textarea[name="comentario"]').val(),
+          nome_evento: $(btn).find('h2').text()
+        },
+        "dataType":"json",
+        "success":function(resp){
+          //console.log(resp)
+          if(resp){
+            $('#maskLoader, #loader').hide();
+            $(btn).find('h3').after('<label class="success">Reserva realizada com sucesso !</label>')
+          }
+          
+        }
+
+      })
+    }
+ })
+</script>
+
+<div id="banner" style="background-image: url('<%= retorna_banner("Acontece") %>')"></div>
+
+<div id="corpoSite">
+
+  <% @eventos.each do |evento| %>
+
+    <div class="evento">
+      <h2><%= evento.titulo %></h2>
+      
+      <div class="maskImg" style="background: url('<%= evento.imagem %>') no-repeat center; background-size: cover"></div>
+
+      <%= raw(evento.conteudo) %>
+
+      <div class="form">
+
+        <form>
+          <h3>Reserve seu lugar</h3>
+          
+          <div class="form-line">
+            <input type="text" name="nome" placeholder="Nome">
+            <input type="text" name="email" placeholder="Email">
+          </div>
+
+          <div class="form-line">
+            <input type="text" name="telefone" placeholder="Telefone">
+            <input type="text" name="bairro" placeholder="Bairro">
+          </div>
+
+          <div class="form-line form-line2">
+            <input type="text" name="cidade" placeholder="Cidade">
+          </div>
+
+          <div class="form-line form-line2">
+            <textarea placeholder="Comentário" name="comentario"></textarea>
+          </div>
+
+          <div class="form-line">
+            <input type="submit" class="send" value="Reservar">
+          </div>
+        </form>
+
+      </div>
+    </div>
+
+    <div class="clearAll"></div>
+  <% end %>
+
+
+  <div id="maskLoader"></div>
+  <span id="loader">
+      <img src="/assets//website/loader3.gif">
+  </span>
+
+</div>

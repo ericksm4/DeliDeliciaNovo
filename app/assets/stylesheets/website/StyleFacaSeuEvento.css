@@ -1,0 +1,172 @@
+#banner{
+	background-image: url('/assets/website/banner_evento.jpg');
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	height: 390px;
+	width: 100%;
+	margin-top: 75px;
+}
+
+#navigation{
+	border-bottom: solid 1px #ff9201;
+	width: 100%;
+	padding-top: 20px;
+	margin-bottom: 30px;
+}
+
+#navigation ul {
+	margin: 0 auto;
+	padding: 0;
+	width: 100%;
+	max-width: 1200px;
+}
+
+#navigation ul li{
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	border-bottom: solid 4px #FFF;
+	font-size: 19px;
+	cursor: pointer;
+	padding: 5px 20px;
+	margin-right: 50px;
+	opacity: 0.7;
+}
+
+#navigation ul li:hover,
+#navigation ul li.active{
+	opacity: 1;
+	border-bottom: solid 4px #ff9201;
+}
+
+#corpoSite h2{
+	font-family: "Roboto Medium";
+	font-weight: normal;
+    color: #a21984;
+    margin: 0 0 20px;
+    padding: 0 25px;
+    display: inline-block;
+    font-size: 20px;
+    background: url('/assets/website/h2-bg.png') no-repeat center;
+    background-size: 100% 100%;
+}
+
+#brunch,
+#reuniao,
+#mesa{
+	display: none;
+}
+
+.evento{
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.evento .imgMask{
+	width: 100%;
+	height: 280px;
+	margin: 30px auto;
+}
+
+.evento span{
+	color: #ffad41;
+	font-family: "Roboto Medium";
+}
+
+.evento ul{
+	padding: 0;
+	margin: 0;
+}
+
+.evento ul li label{
+	display: inline-block;
+	width: 400px;
+}
+
+.evento ul li span{
+	text-align: left;
+	color: #a81887;
+	display: inline-block;
+}
+
+.evento .maskImg{
+	width: 100%;
+	height: 290px;
+}
+
+.evento#cafe .maskImg{
+	background: url('/assets/website/cafe_da_manha.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.evento#brunch .maskImg{
+	background: url('/assets/website/brunch.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.evento#reuniao .maskImg{
+	background: url('/assets/website/reuniao.jpg') no-repeat center;
+	background-size: cover;
+}
+
+.evento#mesa .maskImg{
+	background: url('/assets/website/mesa2.jpg') no-repeat center;
+	background-size: cover;
+}
+
+#navigation .fa-bars{
+	display: none;
+}
+
+@media screen and (max-width: 900px){
+	#navigation .fa-bars{
+		color: #ff9201;
+		padding: 0 10px 7px;
+		display: inline-block;
+		font-size: 33px;
+		cursor: pointer;
+		transition: 0.4s;
+	}
+
+	#navigation .fa-bars.active,
+	#navigation .fa-bars:hover{
+		color: #C77405;
+	}
+
+	#navigation ul{
+		position: absolute;
+	    width: 205px;
+	    display: none;
+	    background: #fff;
+    	border-left: 0;
+    	box-shadow: 2px 2px 2px #B5B5B5;
+	}
+
+	#navigation ul li{
+	    padding: 5px 0;
+	    margin-right: 0;
+	    opacity: 0.7;
+	    width: 100%;
+	    border-bottom: solid 1px #ff9201;
+	    transition: 0.4s;
+	}
+
+	#navigation ul li.active,
+	#navigation ul li:hover{
+		border-bottom: solid 1px #ff9201;
+		color: #fff;
+		background: #ff9201;
+	}
+}
+
+@media screen and (max-width: 700px){
+	.evento ul li label{
+		width: auto;
+		margin-right: 10px;
+	}
+
+	.evento .maskImg{
+		height: 190px;
+	}
+}

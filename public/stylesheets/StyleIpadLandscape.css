@@ -1,0 +1,92 @@
+﻿/*Home*/
+
+.collapsed #conteudo
+{
+    left:47px;
+}
+
+#conteudo #conteudoPrincipal .boxInfoHome
+{
+    margin: 10px 0 0 2%;
+    max-width: initial;
+    width: 46%;
+}
+
+/*Home*/
+
+
+
+/*Galeria de Imagens*/
+
+#conteudo #conteudoPrincipal #centralizarListagemGaleria
+{
+    width: 90%;
+}
+
+#conteudo #conteudoPrincipal .boxGaleriaImagens
+{
+    max-width: initial;
+    padding: 1.5%;
+    width: 97%;
+}
+
+    #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria
+    {
+        position: relative;
+    }
+
+        #conteudo #conteudoPrincipal .boxGaleriaImagens .listaGaleria .edicaoTemplate
+        {
+            position: absolute;
+        }
+
+
+
+/*Galeria de Imagens*/
+
+
+
+/*Criar Nova Galeria de Imagens*/
+
+#conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes
+{
+    width: 100%;
+}
+
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesEsq,
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesDir
+    {
+        padding: 2%;
+        width: 30%;
+    }
+
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesDir
+    {
+        width: 62%;
+    }
+
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes #novaGaleriaDetalhesEsq img
+    {
+        width: 94%;
+    }
+
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes input,
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes textArea
+    {
+        width: 90%;
+    }
+
+    #conteudo #conteudoPrincipal #novaGaleria #novaGaleriaDetalhes a.btnAlterarImagem
+    {
+        float: right;
+        margin: 10px 4% 10px 1%;
+        padding: 5%;
+    }
+
+/*Criar Nova Galeria de Imagens*/
+
+
+#conteudo #conteudoPrincipal .gridNewsletterGrupos
+{
+    width: 100%;
+}

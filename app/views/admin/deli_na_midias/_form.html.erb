@@ -1,0 +1,145 @@
+<%#= stylesheet_link_tag 'bootstrap-datepicker/css/datepicker' %>
+<%#= stylesheet_link_tag 'bootstrap-colorpicker/css/colorpicker' %>
+<%#= stylesheet_link_tag 'bootstrap-daterangepicker/daterangepicker' %>
+<script>
+
+//desaparecer mensagem de erro, sucesso e alerta após 5s
+setTimeout(function() {
+  $("#conteudo #conteudoPrincipal span.msgSucesso, #conteudo #conteudoPrincipal span.msgErro, #conteudo #conteudoPrincipal span.msgAlerta").fadeOut("slow");
+}, 5000);
+
+</script>
+
+	<%= form_for(@midia, :url => admin_deli_na_midias_path, :style => 'form-horizontal') do |f| %>
+		
+		<div class="form-group">
+			<label for="midia[nome]" class="col-lg-2 col-sm-2 control-label">Título</label>
+			<div class="col-lg-6 col-xs-11">
+              	<%= f.text_field :titulo, :placeholder => "Título de exibição do registro", :class => 'form-control' %>
+          	</div>
+			  
+		</div>
+		<div class="clearAll">&nbsp;</div>
+		
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Imagem</label>
+		    <div class="col-lg-10">
+		    	<%@midia.imagens.each do |img|%>
+		    		<div class="project-mask">
+				        <div class="thumbnail">
+							<%= image_tag(img.imagem, :class => 'imagemArea') %>
+				            <div class="descricao">
+								<%= link_to 'Excluir imagem', {:action => "excluiImagemMidia", :id => img.id}, :class => 'btnConfirmarNovo btnCancelarNovo btnWidthFixo excluirImagemArea btn btn-danger' %>	
+				            </div>
+				        </div>
+				    </div>
+		    	<%end%>
+		 		<%= f.file_field :imagem, :multiple => true, :class => 'inputImportar form-control' %>	
+			</div>
+	    </div>
+				
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Data Início</label>
+		    <div class="col-lg-4 col-xs-11">
+			  	<div id="datetimepicker" class="input-group date form_datetime-component datePicker">
+			  		<%= if @midia.data_inicio.blank?
+			        		f.text_field :data_inicio, :class=> 'form-control startdate', :size => '16', :value => Time.now.to_datetime.strftime("%d/%m/%Y")
+			        	else
+			        		f.text_field :data_inicio, :class=> 'form-control startdate', :size => '16', :value => @midia.data_inicio.try(:strftime, '%d/%m/%Y')
+			        	end
+			        %>
+			        <span class="input-group-btn">
+			            <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+			        </span>
+			    </div>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+	  	<div class="form-group">
+		    <label class="col-lg-2 col-sm-2 control-label">Data Fim</label>
+		    <div class="col-lg-4 col-xs-11">
+			  	<div id="datetimepicker" class="input-group date form_datetime-component datePicker">
+
+			        <%= if @midia.data_fim.blank?
+			        		f.text_field :data_fim, :class=> 'form-control enddate', :size => '16' 
+			        	else
+			        		f.text_field :data_fim, :class=> 'form-control enddate', :size => '16', :value => @midia.data_fim.try(:strftime, '%d/%m/%Y')
+			        	end
+			        %>
+			        <span class="input-group-btn">
+			             <button type="button" class="btn btn-primary date-set"><i class="fa fa-calendar"></i></button>
+			        </span>
+			    </div>
+			</div>
+		</div>
+		<div class="clearAll">&nbsp;</div>
+
+		<div class="divisaoBtnForm">
+			<div class="botoesForm botoesFormSaveCancel">
+				<%= link_to "Voltar", {:action => "index"}, :class => "btn btn-default" %>
+				
+				<%= f.submit 'Salvar', :class => 'btn btn-info' %>
+			</div>
+		</div>
+		<%= f.hidden_field :id, :class=> 'form-control' %>
+<% end %>
+
+<script>
+
+	$('.thumbnail').hover(function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: 0
+	    }, 200);
+	}, function () {
+	    $('.descricao', this).stop().animate({
+	        bottom: '-100%'
+	    }, 200);
+	});
+
+	$('.datePicker').datetimepicker({
+        format: 'dd/MM/yyyy',
+        language: 'pt-BR'
+    })
+
+    $("form").validate({
+       rules: {
+        'admin_deli_na_midia[nome]': {
+          required: true
+        },
+        'admin_deli_na_midia[data_fim]': {
+            greaterThan: ["#admin_deli_na_midia_data_inicio"]
+        }
+      },
+      messages: {
+        'admin_deli_na_midia[nome]': {
+         	required: "O título do registro é obrigatório."
+     	},
+     	'admin_deli_na_midia[data_fim]':
+        { 
+            greaterThan:"Data fim menor que data inicio."
+        }
+      }
+  	});
+
+
+	$.validator.addMethod("greaterThan", 
+	function(value, element, params) {
+		data_inicial = value.split('/')
+        data_inicial = new Date(data_inicial[1]+'-'+data_inicial[0]+'-'+data_inicial[2])
+
+        data_final = $(params).val().split('/')
+        data_final = new Date(data_final[1]+'-'+data_final[0]+'-'+data_final[2])
+
+	    if (!/Invalid|NaN/.test(data_inicial)) {
+	        return data_inicial > data_final;
+	    }
+
+	    return  data_inicial > data_final; 
+	},'Data início maior que data fim.');
+
+	$(".enddate").rules('add', { greaterThan: ".startdate" });
+
+</script>
